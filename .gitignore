@@ -1,0 +1,11 @@
+# Java ignores
+target/
+*.class
+
+# Eclipse ignores
+.settings/
+.project
+.classpath
+
+# IntelliJ ignores
+.idea/
