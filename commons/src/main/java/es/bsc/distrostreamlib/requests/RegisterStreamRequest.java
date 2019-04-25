@@ -1,5 +1,7 @@
 package es.bsc.distrostreamlib.requests;
 
+import java.util.List;
+
 import es.bsc.distrostreamlib.types.ConsumerMode;
 import es.bsc.distrostreamlib.types.RequestType;
 import es.bsc.distrostreamlib.types.StreamType;
@@ -9,6 +11,7 @@ public class RegisterStreamRequest extends Request {
 
     private final StreamType streamType;
     private final ConsumerMode accessMode;
+    private final List<String> internalStreamInfo;
 
 
     /**
@@ -17,18 +20,22 @@ public class RegisterStreamRequest extends Request {
      * @param streamType Stream type.
      * @param accessMode Consumer access mode.
      */
-    public RegisterStreamRequest(StreamType streamType, ConsumerMode accessMode) {
+    public RegisterStreamRequest(StreamType streamType, ConsumerMode accessMode, List<String> internalStreamInfo) {
         super(RequestType.REGISTER_STREAM);
         this.streamType = streamType;
         this.accessMode = accessMode;
+        this.internalStreamInfo = internalStreamInfo;
     }
 
     @Override
     public String getRequestMessage() {
         StringBuilder sb = new StringBuilder();
-        sb.append(this.rt.name());
-        sb.append(this.streamType);
+        sb.append(this.rt.name()).append(" ");
+        sb.append(this.streamType).append(" ");
         sb.append(this.accessMode);
+        for (String si : this.internalStreamInfo) {
+            sb.append(" ").append(si);
+        }
 
         return sb.toString();
     }

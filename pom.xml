@@ -116,6 +116,13 @@
 				<version>${log4j.version}</version>
 			</dependency>
 
+			<!-- DistroStream Stream -->
+			<dependency>
+				<groupId>es.bsc.distro-stream-lib</groupId>
+				<artifactId>distro-stream</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
 			<!-- DistroStream Commons -->
 			<dependency>
 				<groupId>es.bsc.distro-stream-lib</groupId>

@@ -53,6 +53,11 @@
 		<!-- DistroStream dependencies -->
 		<dependency>
 			<groupId>es.bsc.distro-stream-lib</groupId>
+			<artifactId>distro-stream</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>es.bsc.distro-stream-lib</groupId>
 			<artifactId>commons</artifactId>
 		</dependency>
 

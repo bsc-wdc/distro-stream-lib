@@ -38,12 +38,14 @@ public abstract class DistroStream<T> implements Externalizable {
      * 
      * @param streamType DistroStream internal type.
      * @param accessMode DistroStream consumer mode.
+     * @param internalStreamInfo Specific information about hte DistroStream implementation to be stored in the server
      * @throws RegistrationException When server cannot register the stream.
      */
-    public DistroStream(StreamType streamType, ConsumerMode accessMode) throws RegistrationException {
+    public DistroStream(StreamType streamType, ConsumerMode accessMode, List<String> internalStreamInfo)
+            throws RegistrationException {
         LOGGER.info("Registering new Stream...");
         // Register stream creation and get stream id
-        RegisterStreamRequest req = new RegisterStreamRequest(streamType, accessMode);
+        RegisterStreamRequest req = new RegisterStreamRequest(streamType, accessMode, internalStreamInfo);
         DistroStreamClient.request(req);
 
         req.waitProcessed();

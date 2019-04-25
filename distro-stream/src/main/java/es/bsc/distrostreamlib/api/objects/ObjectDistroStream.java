@@ -3,6 +3,7 @@ package es.bsc.distrostreamlib.api.objects;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -38,7 +39,7 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
      * @throws RegistrationException When server cannot register stream.
      */
     public ObjectDistroStream(ConsumerMode mode) throws RegistrationException {
-        super(StreamType.OBJECT, mode);
+        super(StreamType.OBJECT, mode, new LinkedList<>());
 
         this.publisher = null;
         this.consumer = null;

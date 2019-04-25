@@ -10,12 +10,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -125,12 +130,16 @@ public class DistroStreamServer extends Thread {
                 answer = "DONE";
                 break;
             case REGISTER_STREAM:
-                assert (content.length == 3);
+                assert (content.length >= 3);
                 StreamType streamType = StreamType.valueOf(content[1].trim().toUpperCase());
                 ConsumerMode accessMode = ConsumerMode.valueOf(content[2].trim().toUpperCase());
+                List<String> internalStreamInfo = new LinkedList<>();
+                for (int i = 3; i < content.length; ++i) {
+                    internalStreamInfo.add(content[i]);
+                }
 
                 UUID id = UUID.randomUUID();
-                StreamInfo streamInfo = new StreamInfo(id, streamType, accessMode);
+                StreamInfo streamInfo = new StreamInfo(id, streamType, accessMode, internalStreamInfo);
                 this.registeredStreams.put(id, streamInfo);
                 answer = id.toString();
                 break;
@@ -174,8 +183,51 @@ public class DistroStreamServer extends Thread {
     }
 
     private String pollFileStream(StreamInfo streamInfo) {
-        // TODO
-        return "";
+        List<String> internalStreamInfo = streamInfo.getInternalStreamInfo();
+        String baseFolderPath = internalStreamInfo.get(0);
+        if (DEBUG) {
+            LOGGER.debug("Polling new files at " + baseFolderPath);
+        }
+
+        // Search new files
+        Path baseFolder = Paths.get(baseFolderPath);
+        List<Path> filePaths = new ArrayList<>();
+        try {
+            filePaths = Files.list(baseFolder).collect(Collectors.toList());
+        } catch (IOException ioe) {
+            LOGGER.warn("Cannot list files in baseFolder. Returning empty file list.", ioe);
+        }
+        List<Path> newFilePaths = new ArrayList<>();
+        long lastPollTimestamp = streamInfo.getLastPollTimestamp();
+        long lastTimestamp = lastPollTimestamp;
+        for (Path p : filePaths) {
+            long fileModificationTimestamp = lastPollTimestamp;
+            try {
+                fileModificationTimestamp = Files.getLastModifiedTime(p).toMillis();
+            } catch (IOException ioe) {
+                LOGGER.warn("Cannot retrieve modification date from " + p.getFileName() + ". Skipping file...", ioe);
+            }
+
+            if (fileModificationTimestamp > lastPollTimestamp) {
+                // Register file as new file
+                newFilePaths.add(p);
+                // Update timestamp
+                if (fileModificationTimestamp >= lastTimestamp) {
+                    lastTimestamp = fileModificationTimestamp;
+                }
+            }
+        }
+
+        // Update the timestamp to the highest timestamp of the registered new files
+        streamInfo.setPollTimestamp(lastTimestamp);
+
+        // Log information
+        if (DEBUG) {
+            LOGGER.debug("Registered new files: " + newFilePaths);
+        }
+
+        // Convert list and return as answer
+        return newFilePaths.stream().map(s -> String.valueOf(s)).collect(Collectors.joining(" ", "", ""));
     }
 
     private void setStopFlag() {

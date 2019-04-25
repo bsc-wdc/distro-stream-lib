@@ -1,5 +1,6 @@
 package es.bsc.distrostreamlib.server.types;
 
+import java.util.List;
 import java.util.UUID;
 
 import es.bsc.distrostreamlib.types.ConsumerMode;
@@ -11,6 +12,7 @@ public class StreamInfo {
     private final UUID id;
     private final StreamType streamType;
     private final ConsumerMode accessMode;
+    private final List<String> internalStreamInfo;
     private long pollTimestamp;
 
 
@@ -21,11 +23,12 @@ public class StreamInfo {
      * @param streamType Stream type.
      * @param accessMode Stream consumer access mode.
      */
-    public StreamInfo(UUID id, StreamType streamType, ConsumerMode accessMode) {
+    public StreamInfo(UUID id, StreamType streamType, ConsumerMode accessMode, List<String> internalStreamInfo) {
         this.id = id;
         this.streamType = streamType;
         this.accessMode = accessMode;
-        this.pollTimestamp = System.currentTimeMillis();
+        this.internalStreamInfo = internalStreamInfo;
+        this.pollTimestamp = -1;
     }
 
     /**
@@ -53,6 +56,15 @@ public class StreamInfo {
      */
     public ConsumerMode getAccessMode() {
         return this.accessMode;
+    }
+
+    /**
+     * Returns the specific stream information.
+     * 
+     * @return The specific stream information. Empty list if no specific information was registered.
+     */
+    public List<String> getInternalStreamInfo() {
+        return this.internalStreamInfo;
     }
 
     /**

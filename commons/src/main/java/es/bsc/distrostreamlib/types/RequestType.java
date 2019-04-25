@@ -9,5 +9,4 @@ public enum RequestType {
     REGISTER_STREAM, // Registers a stream
     POLL, // Polls changes on a given stream
     STOP; // Marks the server to stop
-
 }
