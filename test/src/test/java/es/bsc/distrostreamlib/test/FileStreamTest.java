@@ -79,10 +79,13 @@ public class FileStreamTest {
 
     private static final void removeDirectory(String baseDirPath) {
         File baseDir = new File(baseDirPath);
-        for (File f : baseDir.listFiles()) {
-            f.delete();
+        File[] files = baseDir.listFiles();
+        if (files != null) {
+            for (File f : files) {
+                f.delete();
+            }
+            baseDir.delete();
         }
-        baseDir.delete();
     }
 
     private static final void createDirectory(String baseDirPath) {
