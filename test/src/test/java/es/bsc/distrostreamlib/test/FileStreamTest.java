@@ -2,17 +2,17 @@ package es.bsc.distrostreamlib.test;
 
 import static org.junit.Assert.assertEquals;
 
+import es.bsc.distrostreamlib.api.files.FileDistroStream;
+import es.bsc.distrostreamlib.exceptions.BackendException;
+import es.bsc.distrostreamlib.exceptions.DistroStreamClientInitException;
+import es.bsc.distrostreamlib.exceptions.RegistrationException;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.List;
 
 import org.junit.Test;
-
-import es.bsc.distrostreamlib.api.files.FileDistroStream;
-import es.bsc.distrostreamlib.exceptions.BackendException;
-import es.bsc.distrostreamlib.exceptions.DistroStreamClientInitException;
-import es.bsc.distrostreamlib.exceptions.RegistrationException;
 
 
 public class FileStreamTest {

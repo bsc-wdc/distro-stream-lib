@@ -141,7 +141,10 @@ public class DistroStreamClient extends Thread {
         if (DEBUG) {
             LOGGER.debug("Adding new request to client queue: " + r.getType());
         }
-        this.requests.offer(r);
+        boolean success = this.requests.offer(r);
+        if (!success) {
+            LOGGER.error("Unexpected error adding request to queue. Skipping request.");
+        }
     }
 
     /*

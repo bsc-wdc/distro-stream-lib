@@ -53,9 +53,10 @@ public class DistroStreamServer extends Thread {
     public DistroStreamServer(String serverName, Integer serverPort) {
         this.serverName = serverName;
         if (serverPort == null) {
-            serverPort = DEFAULT_SERVER_PORT;
+            this.serverPort = DEFAULT_SERVER_PORT;
+        } else {
+            this.serverPort = serverPort;
         }
-        this.serverPort = serverPort;
 
         this.keepRunning = true;
         this.registeredClients = new LinkedList<>();
@@ -122,19 +123,19 @@ public class DistroStreamServer extends Thread {
         RequestType token = RequestType.valueOf(content[0].trim().toUpperCase());
         switch (token) {
             case REGISTER_CLIENT:
-                assert (content.length == 2);
+                assert content.length == 2;
                 String regClientIP = content[1].trim();
                 this.registeredClients.add(regClientIP);
                 answer = "DONE";
                 break;
             case UNREGISTER_CLIENT:
-                assert (content.length == 2);
+                assert content.length == 2;
                 String unregClientIP = content[1].trim();
                 this.registeredClients.remove(unregClientIP);
                 answer = "DONE";
                 break;
             case REGISTER_STREAM:
-                assert (content.length >= 3);
+                assert content.length >= 3;
                 StreamType streamType = StreamType.valueOf(content[1].trim().toUpperCase());
                 ConsumerMode accessMode = ConsumerMode.valueOf(content[2].trim().toUpperCase());
                 List<String> internalStreamInfo = new LinkedList<>();
@@ -148,7 +149,7 @@ public class DistroStreamServer extends Thread {
                 answer = id.toString();
                 break;
             case POLL:
-                assert (content.length == 2);
+                assert content.length == 2;
                 UUID streamId = UUID.fromString(content[1].trim());
                 answer = pollFromStream(streamId);
                 break;

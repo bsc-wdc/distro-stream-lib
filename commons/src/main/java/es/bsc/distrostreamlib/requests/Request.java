@@ -1,8 +1,8 @@
 package es.bsc.distrostreamlib.requests;
 
-import java.util.concurrent.Semaphore;
-
 import es.bsc.distrostreamlib.types.RequestType;
+
+import java.util.concurrent.Semaphore;
 
 
 public abstract class Request {

@@ -1,5 +1,12 @@
 package es.bsc.distrostreamlib.api.objects;
 
+import es.bsc.distrostreamlib.DistroStream;
+import es.bsc.distrostreamlib.exceptions.BackendException;
+import es.bsc.distrostreamlib.exceptions.RegistrationException;
+import es.bsc.distrostreamlib.loggers.Loggers;
+import es.bsc.distrostreamlib.types.ConsumerMode;
+import es.bsc.distrostreamlib.types.StreamType;
+
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
@@ -8,13 +15,6 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import es.bsc.distrostreamlib.DistroStream;
-import es.bsc.distrostreamlib.exceptions.BackendException;
-import es.bsc.distrostreamlib.exceptions.RegistrationException;
-import es.bsc.distrostreamlib.loggers.Loggers;
-import es.bsc.distrostreamlib.types.ConsumerMode;
-import es.bsc.distrostreamlib.types.StreamType;
 
 
 public class ObjectDistroStream<T> extends DistroStream<T> {

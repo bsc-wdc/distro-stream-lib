@@ -2,13 +2,13 @@ package es.bsc.distrostreamlib.test;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Random;
-
 import es.bsc.distrostreamlib.client.DistroStreamClient;
 import es.bsc.distrostreamlib.exceptions.DistroStreamClientInitException;
 import es.bsc.distrostreamlib.requests.Request;
 import es.bsc.distrostreamlib.requests.StopRequest;
 import es.bsc.distrostreamlib.server.DistroStreamServer;
+
+import java.util.Random;
 
 
 public class CommonMethods {
@@ -22,6 +22,9 @@ public class CommonMethods {
     public static final String CLIENT_IP = "localhost";
 
 
+    /**
+     * Starts the server.
+     */
     public static void startServer() {
         // Wait for previous sockets to close
         System.out.println("Wait for previous sockets to close");
@@ -38,12 +41,20 @@ public class CommonMethods {
         DistroStreamServer.initAndStart(MASTER_IP, masterPort);
     }
 
+    /**
+     * Stops the server.
+     */
     public static void stopServer() {
         // Send server stop
         System.out.println("Stop server");
         DistroStreamServer.setStop();
     }
 
+    /**
+     * Starts the client.
+     * 
+     * @throws DistroStreamClientInitException When an internal error occurs.
+     */
     public static void startClient() throws DistroStreamClientInitException {
         // Start client
         System.out.println("Start client");
@@ -55,6 +66,9 @@ public class CommonMethods {
         }
     }
 
+    /**
+     * Stops the client.
+     */
     public static void stopClient() {
         // Send client stop
         System.out.println("Stop client");
@@ -65,6 +79,11 @@ public class CommonMethods {
         printRequestAnswer(stopRequest);
     }
 
+    /**
+     * Prints the given request answer.
+     * 
+     * @param req Processed request.
+     */
     public static void printRequestAnswer(Request req) {
         System.out.println("ERROR CODE: " + req.getErrorCode());
         System.out.println("ERROR MESSAGE: " + req.getErrorMessage());

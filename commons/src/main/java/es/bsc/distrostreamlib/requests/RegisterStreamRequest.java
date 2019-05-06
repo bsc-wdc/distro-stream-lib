@@ -1,10 +1,10 @@
 package es.bsc.distrostreamlib.requests;
 
-import java.util.List;
-
 import es.bsc.distrostreamlib.types.ConsumerMode;
 import es.bsc.distrostreamlib.types.RequestType;
 import es.bsc.distrostreamlib.types.StreamType;
+
+import java.util.List;
 
 
 public class RegisterStreamRequest extends Request {

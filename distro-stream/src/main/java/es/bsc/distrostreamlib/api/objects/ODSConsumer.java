@@ -21,11 +21,16 @@ public class ODSConsumer<T> {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.ODS_CONSUMER);
 
-    private static final String PROPERTIES_FILE_PATH_CONSUMER = "/home/cramonco/svn/compss/framework/trunk/tests/sources/basic/77-streams/src/main/resources/consumer.props";
+    private static final String PROPERTIES_FILE_PATH_CONSUMER = "$BASE_DIR/src/main/resources/consumer.props";
 
     private final KafkaConsumer<String, T> kafkaConsumer;
 
 
+    /**
+     * Creates a new ODSConsumer instance.
+     * 
+     * @throws BackendException When a exception in the backend occurs.
+     */
     public ODSConsumer() throws BackendException {
         LOGGER.debug("Creating Consumer...");
 
@@ -45,6 +50,11 @@ public class ODSConsumer<T> {
         LOGGER.debug("DONE Creating Consumer");
     }
 
+    /**
+     * Polls the regular messages.
+     * 
+     * @return A list containing the processed regular messages.
+     */
     public final List<T> pollRegularMessages() {
         LOGGER.debug("Polling Messages...");
         // No timeout to avoid hanging

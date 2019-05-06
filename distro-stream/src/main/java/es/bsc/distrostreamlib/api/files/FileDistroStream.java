@@ -1,5 +1,14 @@
 package es.bsc.distrostreamlib.api.files;
 
+import es.bsc.distrostreamlib.DistroStream;
+import es.bsc.distrostreamlib.client.DistroStreamClient;
+import es.bsc.distrostreamlib.exceptions.BackendException;
+import es.bsc.distrostreamlib.exceptions.RegistrationException;
+import es.bsc.distrostreamlib.loggers.Loggers;
+import es.bsc.distrostreamlib.requests.PollRequest;
+import es.bsc.distrostreamlib.types.ConsumerMode;
+import es.bsc.distrostreamlib.types.StreamType;
+
 import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
@@ -9,15 +18,6 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import es.bsc.distrostreamlib.DistroStream;
-import es.bsc.distrostreamlib.client.DistroStreamClient;
-import es.bsc.distrostreamlib.exceptions.BackendException;
-import es.bsc.distrostreamlib.exceptions.RegistrationException;
-import es.bsc.distrostreamlib.loggers.Loggers;
-import es.bsc.distrostreamlib.requests.PollRequest;
-import es.bsc.distrostreamlib.types.ConsumerMode;
-import es.bsc.distrostreamlib.types.StreamType;
 
 
 public class FileDistroStream extends DistroStream<String> implements Externalizable {
@@ -87,7 +87,7 @@ public class FileDistroStream extends DistroStream<String> implements Externaliz
         LOGGER.info("Polling new stream items...");
         PollRequest req = new PollRequest(this.id);
         DistroStreamClient.request(req);
-        
+
         req.waitProcessed();
         int error = req.getErrorCode();
         if (error != 0) {

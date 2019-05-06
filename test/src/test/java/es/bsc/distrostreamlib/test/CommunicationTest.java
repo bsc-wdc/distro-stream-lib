@@ -2,12 +2,12 @@ package es.bsc.distrostreamlib.test;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
-
 import es.bsc.distrostreamlib.client.DistroStreamClient;
 import es.bsc.distrostreamlib.exceptions.DistroStreamClientInitException;
 import es.bsc.distrostreamlib.requests.RegisterClientRequest;
 import es.bsc.distrostreamlib.requests.UnregisterClientRequest;
+
+import org.junit.Test;
 
 
 public class CommunicationTest {

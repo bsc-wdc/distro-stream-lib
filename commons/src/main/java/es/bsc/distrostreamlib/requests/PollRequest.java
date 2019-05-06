@@ -21,7 +21,7 @@ public class PollRequest extends Request {
     @Override
     public String getRequestMessage() {
         StringBuilder sb = new StringBuilder();
-        sb.append(this.rt.name()).append(" ");;
+        sb.append(this.rt.name()).append(" ");
         sb.append(this.streamId);
 
         return sb.toString();

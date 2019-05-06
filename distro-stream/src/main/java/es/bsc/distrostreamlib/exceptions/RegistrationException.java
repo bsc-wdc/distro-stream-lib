@@ -3,7 +3,7 @@ package es.bsc.distrostreamlib.exceptions;
 public class RegistrationException extends Exception {
 
     /**
-     * Exceptions Version UID are 3L in all Tests
+     * Exception Version UID are 2L in all Runtime.
      */
     private static final long serialVersionUID = 3L;
 

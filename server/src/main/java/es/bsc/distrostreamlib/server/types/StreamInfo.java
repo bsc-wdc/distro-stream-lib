@@ -1,10 +1,10 @@
 package es.bsc.distrostreamlib.server.types;
 
-import java.util.List;
-import java.util.UUID;
-
 import es.bsc.distrostreamlib.types.ConsumerMode;
 import es.bsc.distrostreamlib.types.StreamType;
+
+import java.util.List;
+import java.util.UUID;
 
 
 public class StreamInfo {

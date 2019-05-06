@@ -4,7 +4,7 @@ import es.bsc.distrostreamlib.exceptions.NonInstantiableException;
 
 
 /**
- * Loggers' names for DistroStreamLib components
+ * Loggers' names for DistroStreamLib components.
  */
 public class Loggers {
 

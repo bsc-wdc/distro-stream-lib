@@ -3,7 +3,7 @@ package es.bsc.distrostreamlib.exceptions;
 public class BackendException extends Exception {
 
     /**
-     * Exceptions Version UID are 3L in all Tests
+     * Exception Version UID are 2L in all Runtime.
      */
     private static final long serialVersionUID = 3L;
 
@@ -12,7 +12,6 @@ public class BackendException extends Exception {
      * Creates a new exception for registration with the given message {@code msg}.
      * 
      * @param msg Exception message.
-     * @param e Nested exception.
      */
     public BackendException(String msg) {
         super(msg);
