@@ -2,6 +2,8 @@ package es.bsc.distrostreamlib.test;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Random;
+
 import es.bsc.distrostreamlib.client.DistroStreamClient;
 import es.bsc.distrostreamlib.exceptions.DistroStreamClientInitException;
 import es.bsc.distrostreamlib.requests.Request;
@@ -11,8 +13,12 @@ import es.bsc.distrostreamlib.server.DistroStreamServer;
 
 public class CommonMethods {
 
-    public static final String MASTER_IP = "localhost";
-    public static final int MASTER_PORT = 49_049;
+    private static final String MASTER_IP = "localhost";
+
+    private static final int BASE_MASTER_PORT = 49_049;
+    private static final int MP_MAX_RAND = 100;
+    private static int masterPort;
+
     public static final String CLIENT_IP = "localhost";
 
 
@@ -26,8 +32,10 @@ public class CommonMethods {
         }
 
         // Start server
+        Random r = new Random();
+        masterPort = BASE_MASTER_PORT + r.nextInt(MP_MAX_RAND);
         System.out.println("Start server");
-        DistroStreamServer.initAndStart(MASTER_PORT);
+        DistroStreamServer.initAndStart(masterPort);
     }
 
     public static void stopServer() {
@@ -40,7 +48,7 @@ public class CommonMethods {
         // Start client
         System.out.println("Start client");
         try {
-            DistroStreamClient.initAndStart(MASTER_IP, MASTER_PORT);
+            DistroStreamClient.initAndStart(MASTER_IP, masterPort);
         } catch (DistroStreamClientInitException dcie) {
             System.err.println(dcie.getMessage());
             throw dcie;
