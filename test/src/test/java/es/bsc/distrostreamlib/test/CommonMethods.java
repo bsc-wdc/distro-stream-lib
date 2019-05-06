@@ -35,7 +35,7 @@ public class CommonMethods {
         Random r = new Random();
         masterPort = BASE_MASTER_PORT + r.nextInt(MP_MAX_RAND);
         System.out.println("Start server");
-        DistroStreamServer.initAndStart(masterPort);
+        DistroStreamServer.initAndStart(MASTER_IP, masterPort);
     }
 
     public static void stopServer() {

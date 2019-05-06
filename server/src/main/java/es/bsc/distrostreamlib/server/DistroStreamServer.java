@@ -1,6 +1,7 @@
 package es.bsc.distrostreamlib.server;
 
 import es.bsc.distrostreamlib.loggers.Loggers;
+import es.bsc.distrostreamlib.requests.StopRequest;
 import es.bsc.distrostreamlib.server.types.StreamInfo;
 import es.bsc.distrostreamlib.types.ConsumerMode;
 import es.bsc.distrostreamlib.types.RequestType;
@@ -36,6 +37,7 @@ public class DistroStreamServer extends Thread {
     // Static access to server
     private static DistroStreamServer SERVER;
 
+    private final String serverName;
     private final int serverPort;
     private boolean keepRunning;
     private List<String> registeredClients;
@@ -45,9 +47,11 @@ public class DistroStreamServer extends Thread {
     /**
      * Creates a new DistroStream Server instance.
      * 
+     * @param serverName Server name.
      * @param serverPort Server port.
      */
-    public DistroStreamServer(Integer serverPort) {
+    public DistroStreamServer(String serverName, Integer serverPort) {
+        this.serverName = serverName;
         if (serverPort == null) {
             serverPort = DEFAULT_SERVER_PORT;
         }
@@ -150,7 +154,7 @@ public class DistroStreamServer extends Thread {
                 break;
             case STOP:
                 // Should never receive this request from clients
-                LOGGER.warn("Received STOP request from client. Skipping");
+                LOGGER.info("Received STOP request, stopping...");
                 answer = null;
                 break;
         }
@@ -235,6 +239,22 @@ public class DistroStreamServer extends Thread {
         this.keepRunning = false;
     }
 
+    private void autoSendStopRequest() {
+        // Enqueue petition to wake up internal thread
+        StopRequest sr = new StopRequest();
+        try (Socket socket = new Socket(this.serverName, this.serverPort);
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
+            // Send petition
+            String reqMsg = sr.getRequestMessage();
+            out.println(reqMsg);
+
+            // We do not process the socket reply
+        } catch (IOException ioe) {
+            LOGGER.error("Error auto-sending stop request", ioe);
+            sr.setError(1, ioe.getMessage());
+        }
+    }
+
     /*
      * INTERFACE METHODS
      */
@@ -242,10 +262,11 @@ public class DistroStreamServer extends Thread {
     /**
      * Initializes and starts the DistroStream Server.
      * 
-     * @param masterPort Master port to use.
+     * @param serverName Master name to use.
+     * @param serverPort Master port to use.
      */
-    public static void initAndStart(Integer masterPort) {
-        SERVER = new DistroStreamServer(masterPort);
+    public static void initAndStart(String serverName, Integer serverPort) {
+        SERVER = new DistroStreamServer(serverName, serverPort);
         SERVER.setName("DistroStreamServer");
         SERVER.start();
 
@@ -256,6 +277,7 @@ public class DistroStreamServer extends Thread {
      */
     public static void setStop() {
         SERVER.setStopFlag();
+        SERVER.autoSendStopRequest();
     }
 
 }
