@@ -2,6 +2,9 @@
 target/
 *.class
 
+# Mvn ignores
+pom.xml.versionsBackup
+
 # Eclipse ignores
 .settings/
 .project
