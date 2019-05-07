@@ -13,6 +13,7 @@ import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -101,7 +102,11 @@ public class FileDistroStream extends DistroStream<String> implements Externaliz
         if (DEBUG) {
             LOGGER.debug("Retrieved stream items: " + response);
         }
-        return Arrays.asList(response.split(" "));
+        if (response != null && !response.isEmpty()) {
+            return Arrays.asList(response.split(" "));
+        } else {
+            return new ArrayList<>();
+        }
     }
 
     /*
