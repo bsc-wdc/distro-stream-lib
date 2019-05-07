@@ -4,7 +4,9 @@ import es.bsc.distrostreamlib.client.DistroStreamClient;
 import es.bsc.distrostreamlib.exceptions.BackendException;
 import es.bsc.distrostreamlib.exceptions.RegistrationException;
 import es.bsc.distrostreamlib.loggers.Loggers;
+import es.bsc.distrostreamlib.requests.CloseStreamRequest;
 import es.bsc.distrostreamlib.requests.RegisterStreamRequest;
+import es.bsc.distrostreamlib.requests.StreamStatusRequest;
 import es.bsc.distrostreamlib.types.ConsumerMode;
 import es.bsc.distrostreamlib.types.StreamType;
 
@@ -95,6 +97,56 @@ public abstract class DistroStream<T> implements Externalizable {
      * @return List of unread messages. Can be an empty list if any message have been published.
      */
     public abstract List<T> poll() throws BackendException;
+
+    /*
+     * CONTROL METHODS
+     */
+
+    /**
+     * Returns whether the stream is closed or not.
+     * 
+     * @return {@code true} if the stream is closed, {@code false} otherwise.
+     */
+    public boolean isClosed() {
+        StreamStatusRequest req = new StreamStatusRequest(this.id);
+        DistroStreamClient.request(req);
+
+        req.waitProcessed();
+        int error = req.getErrorCode();
+        if (error != 0) {
+            // Only log the error, no need to raise an exception
+            StringBuilder sb = new StringBuilder();
+            sb.append("ERROR: Cannot close stream").append("\n");
+            sb.append("  - Error Code: ").append(error).append("\n");
+            sb.append("  - Nested Error Message: ").append(req.getErrorMessage()).append("\n");
+            LOGGER.error(sb.toString());
+            return false;
+        }
+
+        // Return stream status
+        return Boolean.parseBoolean(req.getResponseMessage());
+    }
+
+    /**
+     * Marks the stream as closed.
+     */
+    public void close() {
+        CloseStreamRequest req = new CloseStreamRequest(this.id);
+        DistroStreamClient.request(req);
+
+        req.waitProcessed();
+        int error = req.getErrorCode();
+        if (error != 0) {
+            // Only log the error, no need to raise an exception
+            StringBuilder sb = new StringBuilder();
+            sb.append("ERROR: Cannot close stream").append("\n");
+            sb.append("  - Error Code: ").append(error).append("\n");
+            sb.append("  - Nested Error Message: ").append(req.getErrorMessage()).append("\n");
+            LOGGER.error(sb.toString());
+            return;
+        }
+        // No need to process the answer message. Checking the error is enough.
+    }
 
     /*
      * SERIALIZATION METHODS

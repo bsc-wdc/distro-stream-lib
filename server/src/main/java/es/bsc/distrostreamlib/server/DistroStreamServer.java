@@ -148,10 +148,20 @@ public class DistroStreamServer extends Thread {
                 this.registeredStreams.put(id, streamInfo);
                 answer = id.toString();
                 break;
+            case STREAM_STATUS:
+                assert content.length == 2;
+                UUID statusStreamId = UUID.fromString(content[1].trim());
+                answer = getStreamStatus(statusStreamId);
+                break;
+            case CLOSE_STREAM:
+                assert content.length == 2;
+                UUID closeStreamId = UUID.fromString(content[1].trim());
+                answer = closeStream(closeStreamId);
+                break;
             case POLL:
                 assert content.length == 2;
-                UUID streamId = UUID.fromString(content[1].trim());
-                answer = pollFromStream(streamId);
+                UUID pollStreamId = UUID.fromString(content[1].trim());
+                answer = pollFromStream(pollStreamId);
                 break;
             case STOP:
                 // Should never receive this request from clients
@@ -161,6 +171,35 @@ public class DistroStreamServer extends Thread {
         }
 
         return answer;
+    }
+
+    private String getStreamStatus(UUID streamId) {
+        StreamInfo streamInfo = this.registeredStreams.get(streamId);
+
+        // Check if stream is registered
+        if (streamInfo == null) {
+            LOGGER.warn("Skipping status on unregistered stream with ID = " + streamId.toString());
+            return "";
+        }
+
+        // Return stream status
+        return String.valueOf(streamInfo.isStreamClosed());
+    }
+
+    private String closeStream(UUID streamId) {
+        StreamInfo streamInfo = this.registeredStreams.get(streamId);
+
+        // Check if stream is registered
+        if (streamInfo == null) {
+            LOGGER.warn("Skipping close on unregistered stream with ID = " + streamId.toString());
+            return "";
+        }
+
+        // Mark stream as closed
+        streamInfo.markAsClosed();
+
+        // No answer needed
+        return "";
     }
 
     private String pollFromStream(UUID streamId) {

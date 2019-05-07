@@ -14,6 +14,7 @@ public class StreamInfo {
     private final ConsumerMode accessMode;
     private final List<String> internalStreamInfo;
     private long pollTimestamp;
+    private boolean isClosed;
 
 
     /**
@@ -29,6 +30,7 @@ public class StreamInfo {
         this.accessMode = accessMode;
         this.internalStreamInfo = internalStreamInfo;
         this.pollTimestamp = -1;
+        this.isClosed = false;
     }
 
     /**
@@ -90,6 +92,22 @@ public class StreamInfo {
      */
     public void setPollTimestamp(long timestamp) {
         this.pollTimestamp = timestamp;
+    }
+
+    /**
+     * Returns whether the stream has been marked to be closed or not.
+     * 
+     * @return {@code true} if the stream has been marked to be closed, {@code false} otherwise.
+     */
+    public boolean isStreamClosed() {
+        return this.isClosed;
+    }
+
+    /**
+     * Marks the stream as closed.
+     */
+    public void markAsClosed() {
+        this.isClosed = true;
     }
 
 }
