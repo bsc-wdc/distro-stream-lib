@@ -2,6 +2,7 @@ package es.bsc.distrostreamlib.server;
 
 import es.bsc.distrostreamlib.loggers.Loggers;
 import es.bsc.distrostreamlib.requests.StopRequest;
+import es.bsc.distrostreamlib.server.types.StreamBackend;
 import es.bsc.distrostreamlib.server.types.StreamInfo;
 import es.bsc.distrostreamlib.types.ConsumerMode;
 import es.bsc.distrostreamlib.types.RequestType;
@@ -33,12 +34,16 @@ public class DistroStreamServer extends Thread {
     private static final boolean DEBUG = LOGGER.isDebugEnabled();
 
     private static final int DEFAULT_SERVER_PORT = 49_049;
+    private static final int DEFAULT_BOOTSTRAP_PORT = 9092;
 
     // Static access to server
     private static DistroStreamServer SERVER;
 
     private final String serverName;
     private final int serverPort;
+
+    private final StreamBackend streamBackend;
+
     private boolean keepRunning;
     private List<String> registeredClients;
     private Map<UUID, StreamInfo> registeredStreams;
@@ -49,14 +54,17 @@ public class DistroStreamServer extends Thread {
      * 
      * @param serverName Server name.
      * @param serverPort Server port.
+     * @param streamBackend Streaming backend implementation type.
      */
-    public DistroStreamServer(String serverName, Integer serverPort) {
+    public DistroStreamServer(String serverName, Integer serverPort, StreamBackend streamBackend) {
         this.serverName = serverName;
         if (serverPort == null) {
             this.serverPort = DEFAULT_SERVER_PORT;
         } else {
             this.serverPort = serverPort;
         }
+
+        this.streamBackend = streamBackend;
 
         this.keepRunning = true;
         this.registeredClients = new LinkedList<>();
@@ -80,6 +88,10 @@ public class DistroStreamServer extends Thread {
         }
 
         LOGGER.info("DS Server stopped");
+    }
+
+    public StreamBackend getStreamBackend() {
+        return this.streamBackend;
     }
 
     /**
@@ -134,6 +146,10 @@ public class DistroStreamServer extends Thread {
                 this.registeredClients.remove(unregClientIP);
                 answer = "DONE";
                 break;
+            case BOOTSTRAP_SERVER:
+                assert content.length == 1;
+                answer = this.serverName + ":" + DEFAULT_BOOTSTRAP_PORT;
+                break;
             case REGISTER_STREAM:
                 assert content.length >= 3;
                 StreamType streamType = StreamType.valueOf(content[1].trim().toUpperCase());
@@ -164,7 +180,8 @@ public class DistroStreamServer extends Thread {
                 answer = pollFromStream(pollStreamId);
                 break;
             case STOP:
-                // Should never receive this request from clients
+                // This request is only self-emited (never received through clients)
+                assert content.length == 1;
                 LOGGER.info("Received STOP request, stopping...");
                 answer = null;
                 break;
@@ -304,9 +321,10 @@ public class DistroStreamServer extends Thread {
      * 
      * @param serverName Master name to use.
      * @param serverPort Master port to use.
+     * @param streamBackend Streaming backend implementation type.
      */
-    public static void initAndStart(String serverName, Integer serverPort) {
-        SERVER = new DistroStreamServer(serverName, serverPort);
+    public static void initAndStart(String serverName, Integer serverPort, StreamBackend streamBackend) {
+        SERVER = new DistroStreamServer(serverName, serverPort, streamBackend);
         SERVER.setName("DistroStreamServer");
         SERVER.start();
 

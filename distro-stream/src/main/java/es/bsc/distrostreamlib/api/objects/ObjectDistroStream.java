@@ -1,9 +1,11 @@
 package es.bsc.distrostreamlib.api.objects;
 
 import es.bsc.distrostreamlib.DistroStream;
+import es.bsc.distrostreamlib.client.DistroStreamClient;
 import es.bsc.distrostreamlib.exceptions.BackendException;
 import es.bsc.distrostreamlib.exceptions.RegistrationException;
 import es.bsc.distrostreamlib.loggers.Loggers;
+import es.bsc.distrostreamlib.requests.BootstrapServerRequest;
 import es.bsc.distrostreamlib.types.ConsumerMode;
 import es.bsc.distrostreamlib.types.StreamType;
 
@@ -20,9 +22,11 @@ import org.apache.logging.log4j.Logger;
 public class ObjectDistroStream<T> extends DistroStream<T> {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.OBJECT_DISTRO_STREAM);
+    private static final boolean DEBUG = LOGGER.isDebugEnabled();
 
     private ODSPublisher<T> publisher;
     private ODSConsumer<T> consumer;
+    private String bootstrapServer;
 
 
     /**
@@ -43,6 +47,7 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
 
         this.publisher = null;
         this.consumer = null;
+        this.bootstrapServer = null;
     }
 
     /*
@@ -84,14 +89,50 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
 
     private void registerPublisher() throws BackendException {
         if (this.publisher == null) {
-            this.publisher = new ODSPublisher<>();
+            if (this.bootstrapServer == null) {
+                this.bootstrapServer = requestBoostrapServerInformation();
+            }
+
+            // Instantiate internal producer
+            LOGGER.info("Creating internal producer...");
+            this.publisher = new ODSPublisher<>(bootstrapServer);
         }
     }
 
     private void registerConsumer() throws BackendException {
         if (this.consumer == null) {
-            this.consumer = new ODSConsumer<>();
+            if (this.bootstrapServer == null) {
+                this.bootstrapServer = requestBoostrapServerInformation();
+            }
+
+            // Instantiate internal consumer
+            LOGGER.info("Creating internal consumer...");
+            this.consumer = new ODSConsumer<>(bootstrapServer);
         }
+    }
+
+    private String requestBoostrapServerInformation() throws BackendException {
+        // Request the server through the client for the bootstrap server name and port
+        LOGGER.info("Requesting bootstrap server...");
+        BootstrapServerRequest req = new BootstrapServerRequest();
+        DistroStreamClient.request(req);
+
+        req.waitProcessed();
+        int error = req.getErrorCode();
+        if (error != 0) {
+            StringBuilder sb = new StringBuilder();
+            sb.append("ERROR: Cannot request bootstrap server name and port").append("\n");
+            sb.append("  - Error Code: ").append(error).append("\n");
+            sb.append("  - Nested Error Message: ").append(req.getErrorMessage()).append("\n");
+            throw new BackendException(sb.toString());
+        }
+
+        String response = req.getResponseMessage();
+        if (DEBUG) {
+            LOGGER.debug("Retrieved bootstrap server information: " + response);
+        }
+
+        return response;
     }
 
     /*
@@ -104,6 +145,7 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
         // Do not serialize publisher nor consumer because we will force to instantiate them upon transfer.
         this.publisher = null;
         this.consumer = null;
+        this.bootstrapServer = null;
     }
 
     @Override

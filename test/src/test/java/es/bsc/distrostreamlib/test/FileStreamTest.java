@@ -6,6 +6,7 @@ import es.bsc.distrostreamlib.api.files.FileDistroStream;
 import es.bsc.distrostreamlib.exceptions.BackendException;
 import es.bsc.distrostreamlib.exceptions.DistroStreamClientInitException;
 import es.bsc.distrostreamlib.exceptions.RegistrationException;
+import es.bsc.distrostreamlib.server.types.StreamBackend;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -32,7 +33,7 @@ public class FileStreamTest {
         createDirectory(TEST_PATH);
 
         // Start server
-        CommonMethods.startServer();
+        CommonMethods.startServer(StreamBackend.FILES);
 
         // Start client
         CommonMethods.startClient();

@@ -6,6 +6,7 @@ import es.bsc.distrostreamlib.client.DistroStreamClient;
 import es.bsc.distrostreamlib.exceptions.DistroStreamClientInitException;
 import es.bsc.distrostreamlib.requests.RegisterClientRequest;
 import es.bsc.distrostreamlib.requests.UnregisterClientRequest;
+import es.bsc.distrostreamlib.server.types.StreamBackend;
 
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ public class CommunicationTest {
     @Test
     public void communicationClientServer() throws DistroStreamClientInitException {
         // Start server
-        CommonMethods.startServer();
+        CommonMethods.startServer(StreamBackend.FILES);
 
         // Start client
         CommonMethods.startClient();

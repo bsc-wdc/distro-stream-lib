@@ -7,6 +7,7 @@ import es.bsc.distrostreamlib.exceptions.DistroStreamClientInitException;
 import es.bsc.distrostreamlib.requests.Request;
 import es.bsc.distrostreamlib.requests.StopRequest;
 import es.bsc.distrostreamlib.server.DistroStreamServer;
+import es.bsc.distrostreamlib.server.types.StreamBackend;
 
 import java.util.Random;
 
@@ -25,7 +26,7 @@ public class CommonMethods {
     /**
      * Starts the server.
      */
-    public static void startServer() {
+    public static void startServer(StreamBackend streamBackend) {
         // Wait for previous sockets to close
         System.out.println("Wait for previous sockets to close");
         try {
@@ -38,7 +39,7 @@ public class CommonMethods {
         Random r = new Random();
         masterPort = BASE_MASTER_PORT + r.nextInt(MP_MAX_RAND);
         System.out.println("Start server");
-        DistroStreamServer.initAndStart(MASTER_IP, masterPort);
+        DistroStreamServer.initAndStart(MASTER_IP, masterPort, streamBackend);
     }
 
     /**
