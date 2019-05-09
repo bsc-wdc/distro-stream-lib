@@ -34,7 +34,7 @@ public class DistroStreamServer extends Thread {
     private static final boolean DEBUG = LOGGER.isDebugEnabled();
 
     private static final int DEFAULT_SERVER_PORT = 49_049;
-    private static final int DEFAULT_BOOTSTRAP_PORT = 9092;
+    private static final int DEFAULT_BOOTSTRAP_PORT = 49_001;
 
     // Static access to server
     private static DistroStreamServer SERVER;
