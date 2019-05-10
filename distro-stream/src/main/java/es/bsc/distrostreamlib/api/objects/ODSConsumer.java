@@ -20,9 +20,11 @@ public class ODSConsumer<T> {
 
     // Logger
     private static final Logger LOGGER = LogManager.getLogger(Loggers.ODS_CONSUMER);
+    private static final boolean DEBUG = LOGGER.isDebugEnabled();
 
     // Kafka consumer default properties
     private static final Map<String, String> DEFAULT_CONSUMER_PROPERTIES;
+    private static final int TIMEOUT = 0; // ms
 
     // Internal Kafka consumer
     private final KafkaConsumer<String, T> kafkaConsumer;
@@ -34,8 +36,9 @@ public class ODSConsumer<T> {
         DEFAULT_CONSUMER_PROPERTIES.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         DEFAULT_CONSUMER_PROPERTIES.put("value.deserializer",
                 "es.bsc.distrostreamlib.api.objects.serializer.KafkaObjectDeserializer");
+        DEFAULT_CONSUMER_PROPERTIES.put("auto.offset.reset", "earliest");
         DEFAULT_CONSUMER_PROPERTIES.put("session.timeout.ms", "10000");
-        DEFAULT_CONSUMER_PROPERTIES.put("fetch.min.bytes", "50000");
+        DEFAULT_CONSUMER_PROPERTIES.put("fetch.min.bytes", "1");
         DEFAULT_CONSUMER_PROPERTIES.put("receive.buffer.bytes", "262144");
         DEFAULT_CONSUMER_PROPERTIES.put("max.partition.fetch.bytes", "2097152");
     }
@@ -70,11 +73,9 @@ public class ODSConsumer<T> {
      */
     public final List<T> pollRegularMessages() {
         LOGGER.debug("Polling Messages...");
-        // No timeout to avoid hanging
-        final int timeout = 0; // ms
 
         // Retrieve published messages
-        ConsumerRecords<String, T> records = this.kafkaConsumer.poll(timeout);
+        ConsumerRecords<String, T> records = this.kafkaConsumer.poll(TIMEOUT);
 
         // Parse messages
         List<T> messages = new LinkedList<>();
@@ -91,7 +92,9 @@ public class ODSConsumer<T> {
                     processUnknownTopicValue(record.topic(), record.value());
             }
         }
-        LOGGER.debug("DONE Polling Messages");
+        if (DEBUG) {
+            LOGGER.debug("DONE Polling Messages (" + messages.size() + " elements)");
+        }
         return messages;
     }
 

@@ -29,7 +29,7 @@ public class ODSPublisher<T> {
         DEFAULT_PRODUCER_PROPERTIES.put("acks", "all");
         DEFAULT_PRODUCER_PROPERTIES.put("retries", "0");
         DEFAULT_PRODUCER_PROPERTIES.put("batch.size", "16384");
-        DEFAULT_PRODUCER_PROPERTIES.put("auto.commit.interval.ms", "1000");
+        DEFAULT_PRODUCER_PROPERTIES.put("auto.commit.interval.ms", "100");
         DEFAULT_PRODUCER_PROPERTIES.put("linger.ms", "0");
         DEFAULT_PRODUCER_PROPERTIES.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         DEFAULT_PRODUCER_PROPERTIES.put("value.serializer",

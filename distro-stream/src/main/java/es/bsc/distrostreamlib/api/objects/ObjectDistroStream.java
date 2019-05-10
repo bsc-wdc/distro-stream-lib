@@ -95,7 +95,7 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
 
             // Instantiate internal producer
             LOGGER.info("Creating internal producer...");
-            this.publisher = new ODSPublisher<>(bootstrapServer);
+            this.publisher = new ODSPublisher<>(this.bootstrapServer);
         }
     }
 
@@ -107,7 +107,7 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
 
             // Instantiate internal consumer
             LOGGER.info("Creating internal consumer...");
-            this.consumer = new ODSConsumer<>(bootstrapServer);
+            this.consumer = new ODSConsumer<>(this.bootstrapServer);
         }
     }
 
