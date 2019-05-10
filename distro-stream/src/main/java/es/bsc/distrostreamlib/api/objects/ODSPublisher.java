@@ -32,7 +32,8 @@ public class ODSPublisher<T> {
         DEFAULT_PRODUCER_PROPERTIES.put("auto.commit.interval.ms", "1000");
         DEFAULT_PRODUCER_PROPERTIES.put("linger.ms", "0");
         DEFAULT_PRODUCER_PROPERTIES.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-        DEFAULT_PRODUCER_PROPERTIES.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        DEFAULT_PRODUCER_PROPERTIES.put("value.serializer",
+                "es.bsc.distrostreamlib.api.objects.serializer.KafkaObjectSerializer");
         DEFAULT_PRODUCER_PROPERTIES.put("block.on.buffer.full", "true");
     }
 

@@ -1,0 +1,43 @@
+package es.bsc.distrostreamlib.api.objects.serializer;
+
+import es.bsc.distrostreamlib.loggers.Loggers;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
+import java.util.Map;
+
+import org.apache.kafka.common.serialization.Deserializer;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
+public class KafkaObjectDeserializer implements Deserializer<Object> {
+
+    private static final Logger LOGGER = LogManager.getLogger(Loggers.OBJECT_DISTRO_STREAM);
+
+
+    @Override
+    public void configure(Map<String, ?> arg0, boolean arg1) {
+
+    }
+
+    @Override
+    public Object deserialize(String arg0, byte[] arg1) {
+        try (ByteArrayInputStream bis = new ByteArrayInputStream(arg1); ObjectInput in = new ObjectInputStream(bis)) {
+
+            return in.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            LOGGER.error("ERROR: Exception deserializing object " + arg1.hashCode(), e);
+        }
+
+        return null;
+    }
+
+    @Override
+    public void close() {
+
+    }
+
+}

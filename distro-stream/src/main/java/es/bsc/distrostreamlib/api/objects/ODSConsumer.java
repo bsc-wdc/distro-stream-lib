@@ -33,7 +33,7 @@ public class ODSConsumer<T> {
         DEFAULT_CONSUMER_PROPERTIES.put("enable.auto.commit", "true");
         DEFAULT_CONSUMER_PROPERTIES.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         DEFAULT_CONSUMER_PROPERTIES.put("value.deserializer",
-                "org.apache.kafka.common.serialization.StringDeserializer");
+                "es.bsc.distrostreamlib.api.objects.serializer.KafkaObjectDeserializer");
         DEFAULT_CONSUMER_PROPERTIES.put("session.timeout.ms", "10000");
         DEFAULT_CONSUMER_PROPERTIES.put("fetch.min.bytes", "50000");
         DEFAULT_CONSUMER_PROPERTIES.put("receive.buffer.bytes", "262144");
