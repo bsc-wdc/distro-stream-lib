@@ -31,6 +31,7 @@ public class ODSProperties {
 
         DEFAULT_CONSUMER_PROPERTIES = new HashMap<>();
         DEFAULT_CONSUMER_PROPERTIES.put("enable.auto.commit", "true");
+        DEFAULT_CONSUMER_PROPERTIES.put("auto.commit.interval.ms", String.valueOf(COMMIT_INTERVAL));
         DEFAULT_CONSUMER_PROPERTIES.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         DEFAULT_CONSUMER_PROPERTIES.put("value.deserializer",
                 "es.bsc.distrostreamlib.api.objects.serializer.KafkaObjectDeserializer");
