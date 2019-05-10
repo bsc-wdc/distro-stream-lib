@@ -28,11 +28,11 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
     private String topicName;
 
     // Handlers for Kafka
-    private String bootstrapServer;
+    private transient String bootstrapServer;
 
     // Internal Kafka publisher/consumer
-    private ODSPublisher<T> publisher;
-    private ODSConsumer<T> consumer;
+    private transient ODSPublisher<T> publisher;
+    private transient ODSConsumer<T> consumer;
 
 
     /**

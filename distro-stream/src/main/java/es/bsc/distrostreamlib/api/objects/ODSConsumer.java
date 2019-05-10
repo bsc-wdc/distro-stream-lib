@@ -92,7 +92,7 @@ public class ODSConsumer<T> {
         LOGGER.debug("Polling Messages from " + this.topicName + " ...");
 
         // Retrieve published messages
-        ConsumerRecords<String, T> records = null;
+        ConsumerRecords<String, T> records;
         // TODO: Sync to avoid concurrent accesses to kafka consumer copy in the same worker
         synchronized (this.kafkaConsumer) {
             records = this.kafkaConsumer.poll(Duration.ofMillis(ODSProperties.TIMEOUT));

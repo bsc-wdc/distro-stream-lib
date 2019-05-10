@@ -6,6 +6,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectInputStream;
+import java.util.Arrays;
 import java.util.Map;
 
 import org.apache.kafka.common.serialization.Deserializer;
@@ -29,7 +30,7 @@ public class KafkaObjectDeserializer implements Deserializer<Object> {
 
             return in.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            LOGGER.error("ERROR: Exception deserializing object " + arg1.hashCode(), e);
+            LOGGER.error("ERROR: Exception deserializing object " + Arrays.hashCode(arg1), e);
         }
 
         return null;
