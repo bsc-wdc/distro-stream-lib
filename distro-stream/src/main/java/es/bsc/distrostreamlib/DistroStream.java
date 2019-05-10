@@ -25,7 +25,7 @@ public abstract class DistroStream<T> implements Externalizable {
     private static final Logger LOGGER = LogManager.getLogger(Loggers.DISTRO_STREAM);
 
     protected String id;
-    private ConsumerMode mode;
+    protected ConsumerMode mode;
 
 
     /**

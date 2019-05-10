@@ -28,7 +28,7 @@ public class FileDistroStream extends DistroStream<String> implements Externaliz
 
     private static final String WARN_PUBLISH = "WARN: Unnecessary call on publish on FileDistroStream";
 
-    private static final ConsumerMode DEFAULT_CONSUMER_MODE = ConsumerMode.READ_BY_ANY;
+    private static final ConsumerMode DEFAULT_CONSUMER_MODE = ConsumerMode.AT_MOST_ONCE;
 
     private String baseDir;
 

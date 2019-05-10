@@ -4,6 +4,6 @@ package es.bsc.distrostreamlib.types;
  * Consumer access modes.
  */
 public enum ConsumerMode {
-    READ_BY_ANY, // Each message is read once by any consumer
-    READ_BY_ALL; // Each message is read once per consumer
+    AT_MOST_ONCE, // Messages are read only once
+    AT_LEAST_ONCE; // Messages can be read many times
 }

@@ -17,4 +17,14 @@ public class RegistrationException extends Exception {
         super(msg);
     }
 
+    /**
+     * Creates a new exception for registration with the given message {@code msg} and nested exception {@code e}.
+     * 
+     * @param msg Exception message.
+     * @param e Nested exception
+     */
+    public RegistrationException(String msg, Exception e) {
+        super(msg, e);
+    }
+
 }

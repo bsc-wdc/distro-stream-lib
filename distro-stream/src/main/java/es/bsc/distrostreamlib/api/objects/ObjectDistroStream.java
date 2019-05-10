@@ -24,9 +24,15 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
     private static final Logger LOGGER = LogManager.getLogger(Loggers.OBJECT_DISTRO_STREAM);
     private static final boolean DEBUG = LOGGER.isDebugEnabled();
 
+    // Associated topic name for this stream
+    private String topicName;
+
+    // Handlers for Kafka
+    private String bootstrapServer;
+
+    // Internal Kafka publisher/consumer
     private ODSPublisher<T> publisher;
     private ODSConsumer<T> consumer;
-    private String bootstrapServer;
 
 
     /**
@@ -45,9 +51,15 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
     public ObjectDistroStream(ConsumerMode mode) throws RegistrationException {
         super(StreamType.OBJECT, mode, new LinkedList<>());
 
+        // Build topic name
+        this.topicName = ODSTopics.TOPIC_REGULAR_MESSAGES_PREFIX + "-" + this.id;
+
+        // Initialize Kafka handlers
+        this.bootstrapServer = null;
+
+        // Initialize internal Kafka publisher/consumer
         this.publisher = null;
         this.consumer = null;
-        this.bootstrapServer = null;
     }
 
     /*
@@ -58,7 +70,7 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
     public final void publish(T message) throws BackendException {
         LOGGER.info("Publishing new Object message...");
         registerPublisher();
-        this.publisher.publish(ODSTopics.TOPIC_REGULAR_MESSAGES, message);
+        this.publisher.publish(this.topicName, message);
         LOGGER.info("Published new Object message");
     }
 
@@ -67,7 +79,7 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
         LOGGER.info("Publishing new List of Object messages");
         registerPublisher();
         for (T msg : messages) {
-            this.publisher.publish(ODSTopics.TOPIC_REGULAR_MESSAGES, msg);
+            this.publisher.publish(this.topicName, msg);
         }
         LOGGER.info("Published new List of Object messages");
     }
@@ -80,7 +92,7 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
     public final List<T> poll() throws BackendException {
         LOGGER.info("Polling new stream entries...");
         registerConsumer();
-        return this.consumer.pollRegularMessages();
+        return this.consumer.pollMessages();
     }
 
     /*
@@ -104,10 +116,9 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
             if (this.bootstrapServer == null) {
                 this.bootstrapServer = requestBoostrapServerInformation();
             }
-
             // Instantiate internal consumer
             LOGGER.info("Creating internal consumer...");
-            this.consumer = new ODSConsumer<>(this.bootstrapServer);
+            this.consumer = new ODSConsumer<>(this.bootstrapServer, this.topicName, this.mode);
         }
     }
 
@@ -142,18 +153,20 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
     @Override
     public void readExternal(ObjectInput oi) throws IOException, ClassNotFoundException {
         super.readExternal(oi);
-        // Do not serialize publisher nor consumer because we will force to instantiate them upon transfer.
+        this.topicName = (String) oi.readObject();
+
+        // Do not serialize attributes to force the instantiation on transfer
+        this.bootstrapServer = null;
         this.publisher = null;
         this.consumer = null;
-        this.bootstrapServer = null;
     }
 
     @Override
     public void writeExternal(ObjectOutput oo) throws IOException {
         super.writeExternal(oo);
-        // Do not serialize publisher nor consumer because we will force to instantiate them upon transfer.
-        // oo.writeObject(this.publisher);
-        // oo.writeObject(this.consumer);
+        oo.writeObject(this.topicName);
+
+        // Do not serialize attributes to force the instantiation on transfer
     }
 
 }
