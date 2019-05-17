@@ -76,7 +76,7 @@ public abstract class DistroStream<T> implements Externalizable {
      * 
      * @return The stream type.
      */
-    public StreamType getStreamType() {
+    public final StreamType getStreamType() {
         return this.streamType;
     }
 
@@ -120,7 +120,7 @@ public abstract class DistroStream<T> implements Externalizable {
      * 
      * @return {@code true} if the stream is closed, {@code false} otherwise.
      */
-    public boolean isClosed() {
+    public final boolean isClosed() {
         StreamStatusRequest req = new StreamStatusRequest(this.id);
         DistroStreamClient.request(req);
 
@@ -143,7 +143,7 @@ public abstract class DistroStream<T> implements Externalizable {
     /**
      * Marks the stream as closed.
      */
-    public void close() {
+    public final void close() {
         CloseStreamRequest req = new CloseStreamRequest(this.id);
         DistroStreamClient.request(req);
 
