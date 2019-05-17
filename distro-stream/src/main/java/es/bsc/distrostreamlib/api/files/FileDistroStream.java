@@ -63,6 +63,15 @@ public class FileDistroStream extends DistroStream<String> implements Externaliz
         this.baseDir = baseDir;
     }
 
+    /**
+     * Returns the base directory of the file distributed stream.
+     * 
+     * @return The base directory of the file distributed stream.
+     */
+    public String getBaseDir() {
+        return this.baseDir;
+    }
+
     /*
      * PUBLISH METHODS
      */
