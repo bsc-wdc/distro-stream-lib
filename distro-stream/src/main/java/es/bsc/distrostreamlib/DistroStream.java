@@ -24,6 +24,7 @@ public abstract class DistroStream<T> implements Externalizable {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.DISTRO_STREAM);
 
+    protected StreamType streamType;
     protected String id;
     protected ConsumerMode mode;
 
@@ -45,8 +46,11 @@ public abstract class DistroStream<T> implements Externalizable {
      */
     public DistroStream(StreamType streamType, ConsumerMode accessMode, List<String> internalStreamInfo)
             throws RegistrationException {
-        LOGGER.info("Registering new Stream...");
+
+        this.streamType = streamType;
+
         // Register stream creation and get stream id
+        LOGGER.info("Registering new Stream...");
         RegisterStreamRequest req = new RegisterStreamRequest(streamType, accessMode, internalStreamInfo);
         DistroStreamClient.request(req);
 
@@ -65,6 +69,15 @@ public abstract class DistroStream<T> implements Externalizable {
         this.mode = accessMode;
 
         LOGGER.info("New Stream registered with ID = " + this.id);
+    }
+
+    /**
+     * Returns the stream type.
+     * 
+     * @return The stream type.
+     */
+    public StreamType getStreamType() {
+        return this.streamType;
     }
 
     /*
@@ -154,12 +167,14 @@ public abstract class DistroStream<T> implements Externalizable {
 
     @Override
     public void readExternal(ObjectInput oi) throws IOException, ClassNotFoundException {
+        this.streamType = (StreamType) oi.readObject();
         this.id = (String) oi.readObject();
         this.mode = (ConsumerMode) oi.readObject();
     }
 
     @Override
     public void writeExternal(ObjectOutput oo) throws IOException {
+        oo.writeObject(this.streamType);
         oo.writeObject(this.id);
         oo.writeObject(this.mode);
     }
