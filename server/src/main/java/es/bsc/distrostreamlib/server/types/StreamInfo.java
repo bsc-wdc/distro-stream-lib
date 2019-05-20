@@ -10,6 +10,7 @@ import java.util.UUID;
 public class StreamInfo {
 
     private final UUID id;
+    private final String alias;
     private final StreamType streamType;
     private final ConsumerMode accessMode;
     private final List<String> internalStreamInfo;
@@ -21,11 +22,16 @@ public class StreamInfo {
      * Creates a new StreamInfo instance.
      * 
      * @param id Associated stream id.
+     * @param alias Associated stream alias.
      * @param streamType Stream type.
      * @param accessMode Stream consumer access mode.
+     * @param internalStreamInfo Internal stream information.
      */
-    public StreamInfo(UUID id, StreamType streamType, ConsumerMode accessMode, List<String> internalStreamInfo) {
+    public StreamInfo(UUID id, String alias, StreamType streamType, ConsumerMode accessMode,
+            List<String> internalStreamInfo) {
+
         this.id = id;
+        this.alias = alias;
         this.streamType = streamType;
         this.accessMode = accessMode;
         this.internalStreamInfo = internalStreamInfo;
@@ -40,6 +46,15 @@ public class StreamInfo {
      */
     public UUID getId() {
         return this.id;
+    }
+
+    /**
+     * Returns the associated stream alias.
+     * 
+     * @return The associated stream alias.
+     */
+    public String getAlias() {
+        return this.alias;
     }
 
     /**

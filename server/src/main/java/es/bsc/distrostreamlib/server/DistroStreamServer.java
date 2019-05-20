@@ -47,6 +47,7 @@ public class DistroStreamServer extends Thread {
     private boolean keepRunning;
     private List<String> registeredClients;
     private Map<UUID, StreamInfo> registeredStreams;
+    private Map<String, UUID> registeredStreamAlias;
 
 
     /**
@@ -69,6 +70,7 @@ public class DistroStreamServer extends Thread {
         this.keepRunning = true;
         this.registeredClients = new LinkedList<>();
         this.registeredStreams = new HashMap<>();
+        this.registeredStreamAlias = new HashMap<>();
     }
 
     @Override
@@ -151,18 +153,15 @@ public class DistroStreamServer extends Thread {
                 answer = this.serverName + ":" + DEFAULT_BOOTSTRAP_PORT;
                 break;
             case REGISTER_STREAM:
-                assert content.length >= 3;
+                assert content.length >= 4;
                 StreamType streamType = StreamType.valueOf(content[1].trim().toUpperCase());
                 ConsumerMode accessMode = ConsumerMode.valueOf(content[2].trim().toUpperCase());
+                String alias = content[3].trim();
                 List<String> internalStreamInfo = new LinkedList<>();
-                for (int i = 3; i < content.length; ++i) {
-                    internalStreamInfo.add(content[i]);
+                for (int i = 4; i < content.length; ++i) {
+                    internalStreamInfo.add(content[i].trim());
                 }
-
-                UUID id = UUID.randomUUID();
-                StreamInfo streamInfo = new StreamInfo(id, streamType, accessMode, internalStreamInfo);
-                this.registeredStreams.put(id, streamInfo);
-                answer = id.toString();
+                answer = registerStream(alias, streamType, accessMode, internalStreamInfo);
                 break;
             case STREAM_STATUS:
                 assert content.length == 2;
@@ -180,7 +179,7 @@ public class DistroStreamServer extends Thread {
                 answer = pollFromStream(pollStreamId);
                 break;
             case STOP:
-                // This request is only self-emited (never received through clients)
+                // This request is only self-emitted (never received through clients)
                 assert content.length == 1;
                 LOGGER.info("Received STOP request, stopping...");
                 answer = null;
@@ -188,6 +187,45 @@ public class DistroStreamServer extends Thread {
         }
 
         return answer;
+    }
+
+    private String registerStream(String alias, StreamType streamType, ConsumerMode accessMode,
+            List<String> internalStreamInfo) {
+        if (alias != null && !alias.isEmpty() && !alias.equals("null")) {
+            // Retrieve stream by alias
+            UUID id = this.registeredStreamAlias.get(alias);
+            if (id != null) {
+                // Stream was already registered, return its id
+                if (DEBUG) {
+                    LOGGER.debug("Stream " + alias + " was already registered.");
+                    LOGGER.debug("Retrieving stream from registered streams with id = " + id);
+                }
+                return id.toString();
+            } else {
+                // Register new stream
+                id = addNewStream(alias, streamType, accessMode, internalStreamInfo);
+                this.registeredStreamAlias.put(alias, id);
+                return id.toString();
+            }
+        } else {
+            // Register new stream
+            UUID id = addNewStream(alias, streamType, accessMode, internalStreamInfo);
+            return id.toString();
+        }
+    }
+
+    private UUID addNewStream(String alias, StreamType streamType, ConsumerMode accessMode,
+            List<String> internalStreamInfo) {
+
+        UUID id = UUID.randomUUID();
+
+        if (DEBUG) {
+            LOGGER.debug("Registering new Stream with alias = " + alias + " and id " + id.toString());
+        }
+
+        StreamInfo streamInfo = new StreamInfo(id, alias, streamType, accessMode, internalStreamInfo);
+        this.registeredStreams.put(id, streamInfo);
+        return id;
     }
 
     private String getStreamStatus(UUID streamId) {

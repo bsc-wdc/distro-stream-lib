@@ -24,8 +24,9 @@ public abstract class DistroStream<T> implements Externalizable {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.DISTRO_STREAM);
 
-    protected StreamType streamType;
+    protected String alias;
     protected String id;
+    protected StreamType streamType;
     protected ConsumerMode mode;
 
 
@@ -39,19 +40,21 @@ public abstract class DistroStream<T> implements Externalizable {
     /**
      * Creates a new DistroStream instance.
      * 
+     * @param alias Stream alias.
      * @param streamType DistroStream internal type.
      * @param accessMode DistroStream consumer mode.
      * @param internalStreamInfo Specific information about hte DistroStream implementation to be stored in the server
      * @throws RegistrationException When server cannot register the stream.
      */
-    public DistroStream(StreamType streamType, ConsumerMode accessMode, List<String> internalStreamInfo)
+    public DistroStream(String alias, StreamType streamType, ConsumerMode accessMode, List<String> internalStreamInfo)
             throws RegistrationException {
 
+        this.alias = alias;
         this.streamType = streamType;
 
         // Register stream creation and get stream id
         LOGGER.info("Registering new Stream...");
-        RegisterStreamRequest req = new RegisterStreamRequest(streamType, accessMode, internalStreamInfo);
+        RegisterStreamRequest req = new RegisterStreamRequest(alias, streamType, accessMode, internalStreamInfo);
         DistroStreamClient.request(req);
 
         req.waitProcessed();
@@ -167,15 +170,17 @@ public abstract class DistroStream<T> implements Externalizable {
 
     @Override
     public void readExternal(ObjectInput oi) throws IOException, ClassNotFoundException {
-        this.streamType = (StreamType) oi.readObject();
+        this.alias = (String) oi.readObject();
         this.id = (String) oi.readObject();
+        this.streamType = (StreamType) oi.readObject();
         this.mode = (ConsumerMode) oi.readObject();
     }
 
     @Override
     public void writeExternal(ObjectOutput oo) throws IOException {
-        oo.writeObject(this.streamType);
+        oo.writeObject(this.alias);
         oo.writeObject(this.id);
+        oo.writeObject(this.streamType);
         oo.writeObject(this.mode);
     }
 

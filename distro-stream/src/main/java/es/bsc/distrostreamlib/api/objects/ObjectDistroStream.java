@@ -49,10 +49,31 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
      * @throws RegistrationException When server cannot register stream.
      */
     public ObjectDistroStream(ConsumerMode mode) throws RegistrationException {
-        super(StreamType.OBJECT, mode, new LinkedList<>());
+        super(null, StreamType.OBJECT, mode, new LinkedList<>());
 
         // Build topic name
         this.topicName = ODSTopics.TOPIC_REGULAR_MESSAGES_PREFIX + "-" + this.id;
+
+        // Initialize Kafka handlers
+        this.bootstrapServer = null;
+
+        // Initialize internal Kafka publisher/consumer
+        this.publisher = null;
+        this.consumer = null;
+    }
+
+    /**
+     * Creates a new ObjectDistroStream instance.
+     * 
+     * @param alias Stream alias.
+     * @param mode DistroStream consumer mode.
+     * @throws RegistrationException When server cannot register stream.
+     */
+    public ObjectDistroStream(String alias, ConsumerMode mode) throws RegistrationException {
+        super(alias, StreamType.OBJECT, mode, new LinkedList<>());
+
+        // Build topic name
+        this.topicName = this.alias;
 
         // Initialize Kafka handlers
         this.bootstrapServer = null;

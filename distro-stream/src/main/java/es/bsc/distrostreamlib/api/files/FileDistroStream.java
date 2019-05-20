@@ -47,7 +47,19 @@ public class FileDistroStream extends DistroStream<String> implements Externaliz
      * @throws RegistrationException When server cannot register the stream.
      */
     public FileDistroStream(String baseDir) throws RegistrationException {
-        super(StreamType.FILE, DEFAULT_CONSUMER_MODE, Arrays.asList(baseDir));
+        super(null, StreamType.FILE, DEFAULT_CONSUMER_MODE, Arrays.asList(baseDir));
+        this.baseDir = baseDir;
+    }
+
+    /**
+     * Creates a new FileDistroStream instance.
+     * 
+     * @param alias Stream alias.
+     * @param baseDir Absolute path of the base directory.
+     * @throws RegistrationException When server cannot register the stream.
+     */
+    public FileDistroStream(String alias, String baseDir) throws RegistrationException {
+        super(alias, StreamType.FILE, DEFAULT_CONSUMER_MODE, Arrays.asList(baseDir));
         this.baseDir = baseDir;
     }
 
@@ -59,7 +71,20 @@ public class FileDistroStream extends DistroStream<String> implements Externaliz
      * @throws RegistrationException When server cannot register the stream.
      */
     public FileDistroStream(String baseDir, ConsumerMode mode) throws RegistrationException {
-        super(StreamType.FILE, mode, Arrays.asList(baseDir));
+        super(null, StreamType.FILE, mode, Arrays.asList(baseDir));
+        this.baseDir = baseDir;
+    }
+
+    /**
+     * Creates a new FileDistroStream instance.
+     * 
+     * @param alias Stream alias.
+     * @param baseDir Absolute path of the base directory.
+     * @param mode DistroStream consumer mode.
+     * @throws RegistrationException When server cannot register the stream.
+     */
+    public FileDistroStream(String alias, String baseDir, ConsumerMode mode) throws RegistrationException {
+        super(alias, StreamType.FILE, mode, Arrays.asList(baseDir));
         this.baseDir = baseDir;
     }
 
