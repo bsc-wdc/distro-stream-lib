@@ -116,6 +116,7 @@ public class DistroStreamServer extends Thread {
                     String answer = processMessage(info);
                     // Return answer
                     out.println(answer);
+                    out.flush();
                 }
             }
         }
@@ -191,7 +192,7 @@ public class DistroStreamServer extends Thread {
 
     private String registerStream(String alias, StreamType streamType, ConsumerMode accessMode,
             List<String> internalStreamInfo) {
-        if (alias != null && !alias.isEmpty() && !alias.equals("null")) {
+        if (alias != null && !alias.isEmpty() && !alias.equals("null") && !alias.equals("None")) {
             // Retrieve stream by alias
             UUID id = this.registeredStreamAlias.get(alias);
             if (id != null) {
