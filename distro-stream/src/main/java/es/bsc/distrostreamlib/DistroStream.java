@@ -114,6 +114,14 @@ public abstract class DistroStream<T> implements Externalizable {
      */
     public abstract List<T> poll() throws BackendException;
 
+    /**
+     * Retrieves all the unread messages of the current stream.
+     * 
+     * @param timeout Polling timeout in milliseconds.
+     * @return List of unread messages. Can be an empty list if any message have been published.
+     */
+    public abstract List<T> poll(long timeout) throws BackendException;
+
     /*
      * CONTROL METHODS
      */

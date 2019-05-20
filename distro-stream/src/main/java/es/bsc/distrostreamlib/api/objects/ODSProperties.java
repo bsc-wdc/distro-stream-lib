@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class ODSProperties {
 
-    public static final int TIMEOUT = 200; // ms
+    public static final long TIMEOUT = 200; // ms
 
     // Kafka producer default properties
     public static final Map<String, String> DEFAULT_PRODUCER_PROPERTIES;
@@ -15,7 +15,7 @@ public class ODSProperties {
     public static final Map<String, String> DEFAULT_CONSUMER_PROPERTIES;
 
     // Fill Kafka default properties
-    private static final int COMMIT_INTERVAL = TIMEOUT / 2; // ms
+    private static final long COMMIT_INTERVAL = TIMEOUT / 2; // ms
 
     static {
         DEFAULT_PRODUCER_PROPERTIES = new HashMap<>();

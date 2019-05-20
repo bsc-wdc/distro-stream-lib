@@ -119,6 +119,17 @@ public class FileDistroStream extends DistroStream<String> implements Externaliz
 
     @Override
     public final List<String> poll() throws BackendException {
+        return pollFiles();
+    }
+
+    @Override
+    public final List<String> poll(long timeout) throws BackendException {
+        // TODO: Ignoring timeout for File Distro Streams
+        LOGGER.warn("WARN: Ignoring timeout for FileDistroStreams");
+        return pollFiles();
+    }
+
+    private List<String> pollFiles() throws BackendException {
         LOGGER.info("Polling new stream items...");
         PollRequest req = new PollRequest(this.id);
         DistroStreamClient.request(req);

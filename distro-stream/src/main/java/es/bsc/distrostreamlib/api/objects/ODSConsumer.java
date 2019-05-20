@@ -88,14 +88,14 @@ public class ODSConsumer<T> {
      * 
      * @return A list containing the processed regular messages.
      */
-    public final List<T> pollMessages() {
+    public final List<T> pollMessages(long timeout) {
         LOGGER.debug("Polling Messages from " + this.topicName + " ...");
 
         // Retrieve published messages
         ConsumerRecords<String, T> records;
-        // TODO: Sync to avoid concurrent accesses to kafka consumer copy in the same worker
+        // Sync to avoid concurrent accesses to Kafka consumer copy in the same worker
         synchronized (this.kafkaConsumer) {
-            records = this.kafkaConsumer.poll(Duration.ofMillis(ODSProperties.TIMEOUT));
+            records = this.kafkaConsumer.poll(Duration.ofMillis(timeout));
         }
 
         // Parse messages

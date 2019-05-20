@@ -113,7 +113,14 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
     public final List<T> poll() throws BackendException {
         LOGGER.info("Polling new stream entries...");
         registerConsumer();
-        return this.consumer.pollMessages();
+        return this.consumer.pollMessages(ODSProperties.TIMEOUT);
+    }
+
+    @Override
+    public final List<T> poll(long timeout) throws BackendException {
+        LOGGER.info("Polling new stream entries with timeout ( " + timeout + ")...");
+        registerConsumer();
+        return this.consumer.pollMessages(timeout);
     }
 
     /*
