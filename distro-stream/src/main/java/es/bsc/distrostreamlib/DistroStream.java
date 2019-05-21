@@ -140,7 +140,7 @@ public abstract class DistroStream<T> implements Externalizable {
         if (error != 0) {
             // Only log the error, no need to raise an exception
             StringBuilder sb = new StringBuilder();
-            sb.append("ERROR: Cannot close stream").append("\n");
+            sb.append("ERROR: Cannot retrieve stream status").append("\n");
             sb.append("  - Error Code: ").append(error).append("\n");
             sb.append("  - Nested Error Message: ").append(req.getErrorMessage()).append("\n");
             LOGGER.error(sb.toString());
