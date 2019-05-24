@@ -8,9 +8,15 @@ from __future__ import print_function
 # Imports
 import unittest
 import logging
-from threading import Thread
-import Queue
 import socket
+from threading import Thread
+
+try:
+    # Python 3
+    import queue
+except ImportError:
+    # Python 2
+    import Queue as queue
 
 # Project imports
 from pycompss.streams.types.requests import RequestType
@@ -119,7 +125,7 @@ class DistroStreamClient(Thread):
 
         # Initialize internal structures
         self.running = True
-        self.requests = Queue.Queue()
+        self.requests = queue.Queue()
 
     def run(self):
         """
