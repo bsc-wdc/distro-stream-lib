@@ -1,5 +1,8 @@
 package es.bsc.distrostreamlib.exceptions;
 
+/**
+ * Exception for stream registration errors.
+ */
 public class RegistrationException extends Exception {
 
     /**

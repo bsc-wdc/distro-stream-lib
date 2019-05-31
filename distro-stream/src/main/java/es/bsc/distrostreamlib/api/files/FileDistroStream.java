@@ -21,6 +21,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
+/**
+ * Distributed Stream implementation for Files.
+ */
 public class FileDistroStream extends DistroStream<String> implements Externalizable {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.FILE_DISTRO_STREAM);
@@ -139,8 +142,8 @@ public class FileDistroStream extends DistroStream<String> implements Externaliz
         if (error != 0) {
             StringBuilder sb = new StringBuilder();
             sb.append("ERROR: Cannot poll stream").append("\n");
-            sb.append("  - Error Code: ").append(error).append("\n");
-            sb.append("  - Nested Error Message: ").append(req.getErrorMessage()).append("\n");
+            sb.append(ERR_CODE_PREFIX).append(error).append("\n");
+            sb.append(ERR_MSG_PREFIX).append(req.getErrorMessage()).append("\n");
             throw new BackendException(sb.toString());
         }
         String response = req.getResponseMessage();

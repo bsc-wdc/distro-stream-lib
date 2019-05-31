@@ -20,9 +20,17 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
+/**
+ * Abstract class for Distributed Streams of the given type.
+ * 
+ * @param <T> Internal Stream type.
+ */
 public abstract class DistroStream<T> implements Externalizable {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.DISTRO_STREAM);
+
+    protected static final String ERR_CODE_PREFIX = "  - Error Code: ";
+    protected static final String ERR_MSG_PREFIX = "  - Nested Error Message: ";
 
     protected String alias;
     protected String id;
@@ -62,8 +70,8 @@ public abstract class DistroStream<T> implements Externalizable {
         if (error != 0) {
             StringBuilder sb = new StringBuilder();
             sb.append("ERROR: Cannot register stream").append("\n");
-            sb.append("  - Error Code: ").append(error).append("\n");
-            sb.append("  - Nested Error Message: ").append(req.getErrorMessage()).append("\n");
+            sb.append(ERR_CODE_PREFIX).append(error).append("\n");
+            sb.append(ERR_MSG_PREFIX).append(req.getErrorMessage()).append("\n");
             throw new RegistrationException(sb.toString());
         }
         this.id = req.getResponseMessage();
@@ -141,8 +149,8 @@ public abstract class DistroStream<T> implements Externalizable {
             // Only log the error, no need to raise an exception
             StringBuilder sb = new StringBuilder();
             sb.append("ERROR: Cannot retrieve stream status").append("\n");
-            sb.append("  - Error Code: ").append(error).append("\n");
-            sb.append("  - Nested Error Message: ").append(req.getErrorMessage()).append("\n");
+            sb.append(ERR_CODE_PREFIX).append(error).append("\n");
+            sb.append(ERR_MSG_PREFIX).append(req.getErrorMessage()).append("\n");
             LOGGER.error(sb.toString());
             return false;
         }
@@ -164,8 +172,8 @@ public abstract class DistroStream<T> implements Externalizable {
             // Only log the error, no need to raise an exception
             StringBuilder sb = new StringBuilder();
             sb.append("ERROR: Cannot close stream").append("\n");
-            sb.append("  - Error Code: ").append(error).append("\n");
-            sb.append("  - Nested Error Message: ").append(req.getErrorMessage()).append("\n");
+            sb.append(ERR_CODE_PREFIX).append(error).append("\n");
+            sb.append(ERR_MSG_PREFIX).append(req.getErrorMessage()).append("\n");
             LOGGER.error(sb.toString());
             return;
         }

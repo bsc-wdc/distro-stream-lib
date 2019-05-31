@@ -14,6 +14,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
+/**
+ * Custom deserializer for Kafka objects.
+ */
 public class KafkaObjectDeserializer implements Deserializer<Object> {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.OBJECT_DISTRO_STREAM);
@@ -21,7 +24,7 @@ public class KafkaObjectDeserializer implements Deserializer<Object> {
 
     @Override
     public void configure(Map<String, ?> arg0, boolean arg1) {
-
+        // Nothing to do
     }
 
     @Override
@@ -38,7 +41,7 @@ public class KafkaObjectDeserializer implements Deserializer<Object> {
 
     @Override
     public void close() {
-
+        // Nothing to do
     }
 
 }

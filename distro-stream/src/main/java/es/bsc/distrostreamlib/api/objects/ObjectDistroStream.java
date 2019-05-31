@@ -19,6 +19,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
+/**
+ * Distributed Stream implementation for objects on top of Kafka.
+ *
+ * @param <T> Internal Object Stream type.
+ */
 public class ObjectDistroStream<T> extends DistroStream<T> {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.OBJECT_DISTRO_STREAM);
@@ -161,8 +166,8 @@ public class ObjectDistroStream<T> extends DistroStream<T> {
         if (error != 0) {
             StringBuilder sb = new StringBuilder();
             sb.append("ERROR: Cannot request bootstrap server name and port").append("\n");
-            sb.append("  - Error Code: ").append(error).append("\n");
-            sb.append("  - Nested Error Message: ").append(req.getErrorMessage()).append("\n");
+            sb.append(ERR_CODE_PREFIX).append(error).append("\n");
+            sb.append(ERR_MSG_PREFIX).append(req.getErrorMessage()).append("\n");
             throw new BackendException(sb.toString());
         }
 

@@ -11,6 +11,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
+/**
+ * Kafka publisher wrapper for distributed object streams of the given type.
+ *
+ * @param <T> Internal object distributed stream type.
+ */
 public class ODSPublisher<T> {
 
     // Logger

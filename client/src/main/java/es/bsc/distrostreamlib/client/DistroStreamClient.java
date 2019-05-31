@@ -16,6 +16,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
+/**
+ * Implementation of the Distributed Stream client.
+ */
 public class DistroStreamClient extends Thread {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.DSL_CLIENT);
@@ -112,11 +115,7 @@ public class DistroStreamClient extends Thread {
             LOGGER.debug("Receiving answer from server...");
             int numRetries = 0;
             while (!in.hasNextLine() && numRetries < MAX_READ_RETRIES) {
-                try {
-                    Thread.sleep(TIME_BETWEEN_READ_RETRIES);
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                }
+                Thread.sleep(TIME_BETWEEN_READ_RETRIES);
                 ++numRetries;
             }
 
@@ -134,6 +133,8 @@ public class DistroStreamClient extends Thread {
         } catch (IOException ioe) {
             LOGGER.error("Error sending request", ioe);
             cr.setError(1, ioe.getMessage());
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 

@@ -192,7 +192,7 @@ public class DistroStreamServer extends Thread {
 
     private String registerStream(String alias, StreamType streamType, ConsumerMode accessMode,
             List<String> internalStreamInfo) {
-        if (alias != null && !alias.isEmpty() && !alias.equals("null") && !alias.equals("None")) {
+        if (alias != null && !alias.isEmpty() && !"null".equals(alias) && !"None".equals(alias)) {
             // Retrieve stream by alias
             UUID id = this.registeredStreamAlias.get(alias);
             if (id != null) {

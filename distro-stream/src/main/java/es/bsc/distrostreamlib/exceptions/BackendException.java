@@ -1,5 +1,8 @@
 package es.bsc.distrostreamlib.exceptions;
 
+/**
+ * Exception for Backend errors.
+ */
 public class BackendException extends Exception {
 
     /**

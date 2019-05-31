@@ -4,19 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+/**
+ * Kafka wrapper properties for object distributed streams.
+ */
 public class ODSProperties {
 
-    public static final long TIMEOUT = 200; // ms
-
     // Kafka producer default properties
-    public static final Map<String, String> DEFAULT_PRODUCER_PROPERTIES;
+    protected static final Map<String, String> DEFAULT_PRODUCER_PROPERTIES;
 
     // Kafka consumer default properties
-    public static final Map<String, String> DEFAULT_CONSUMER_PROPERTIES;
+    protected static final Map<String, String> DEFAULT_CONSUMER_PROPERTIES;
+
+    protected static final long TIMEOUT = 200; // ms
+    protected static final long COMMIT_INTERVAL = TIMEOUT / 2; // ms
 
     // Fill Kafka default properties
-    private static final long COMMIT_INTERVAL = TIMEOUT / 2; // ms
-
     static {
         DEFAULT_PRODUCER_PROPERTIES = new HashMap<>();
         DEFAULT_PRODUCER_PROPERTIES.put("acks", "all");

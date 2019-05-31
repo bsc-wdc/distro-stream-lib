@@ -29,6 +29,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
+/**
+ * Kafka consumer wrapper for Object Distro Streams with the given type.
+ *
+ * @param <T> Internal stream type.
+ */
 public class ODSConsumer<T> {
 
     // Logger
@@ -86,6 +91,7 @@ public class ODSConsumer<T> {
     /**
      * Polls the regular messages.
      * 
+     * @param timeout Polling timeout.
      * @return A list containing the processed regular messages.
      */
     public final List<T> pollMessages(long timeout) {

@@ -13,6 +13,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
+/**
+ * Custom serializer for Kafka objects.
+ */
 public class KafkaObjectSerializer implements Serializer<Object> {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.OBJECT_DISTRO_STREAM);
@@ -34,7 +37,7 @@ public class KafkaObjectSerializer implements Serializer<Object> {
             LOGGER.error("ERROR: Exception serializing object " + arg1.hashCode(), ioe);
         }
 
-        return null;
+        return new byte[0];
     }
 
     @Override
