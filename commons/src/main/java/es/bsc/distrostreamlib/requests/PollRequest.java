@@ -3,6 +3,9 @@ package es.bsc.distrostreamlib.requests;
 import es.bsc.distrostreamlib.types.RequestType;
 
 
+/**
+ * Request to poll new items from a given stream.
+ */
 public class PollRequest extends Request {
 
     private final String streamId;

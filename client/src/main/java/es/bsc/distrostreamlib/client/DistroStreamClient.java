@@ -28,7 +28,7 @@ public class DistroStreamClient extends Thread {
     private static final int TIME_BETWEEN_READ_RETRIES = 10; // ms
 
     // Static access to client
-    private static DistroStreamClient CLIENT;
+    private static DistroStreamClient client;
 
     // Client internal structures
     private final LinkedBlockingDeque<Request> requests;
@@ -161,13 +161,13 @@ public class DistroStreamClient extends Thread {
      */
     public static void initAndStart(String masterIP, int masterPort) throws DistroStreamClientInitException {
         try {
-            CLIENT = new DistroStreamClient(masterIP, masterPort);
+            client = new DistroStreamClient(masterIP, masterPort);
         } catch (DistroStreamClientInitException dcie) {
             LOGGER.error("ERROR: Cannot start DistroStream Client", dcie);
             throw dcie;
         }
-        CLIENT.setName("DistroStreamClient");
-        CLIENT.start();
+        client.setName("DistroStreamClient");
+        client.start();
     }
 
     /**
@@ -175,7 +175,7 @@ public class DistroStreamClient extends Thread {
      */
     public static void setStop() {
         StopRequest stopRequest = new StopRequest();
-        CLIENT.addRequest(stopRequest);
+        client.addRequest(stopRequest);
     }
 
     /**
@@ -184,7 +184,7 @@ public class DistroStreamClient extends Thread {
      * @param r Client request.
      */
     public static void request(Request r) {
-        CLIENT.addRequest(r);
+        client.addRequest(r);
     }
 
 }

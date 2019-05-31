@@ -3,6 +3,9 @@ package es.bsc.distrostreamlib.requests;
 import es.bsc.distrostreamlib.types.RequestType;
 
 
+/**
+ * Request to stop the client.
+ */
 public class StopRequest extends Request {
 
     /**

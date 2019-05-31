@@ -44,4 +44,9 @@ public class ODSProperties {
         DEFAULT_CONSUMER_PROPERTIES.put("max.partition.fetch.bytes", "2097152");
     }
 
+
+    private ODSProperties() {
+        // Nothing to do
+    }
+
 }

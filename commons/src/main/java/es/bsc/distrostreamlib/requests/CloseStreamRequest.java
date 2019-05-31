@@ -3,6 +3,9 @@ package es.bsc.distrostreamlib.requests;
 import es.bsc.distrostreamlib.types.RequestType;
 
 
+/**
+ * To request the closure of a given stream.
+ */
 public class CloseStreamRequest extends Request {
 
     private final String streamId;
@@ -10,6 +13,8 @@ public class CloseStreamRequest extends Request {
 
     /**
      * Creates a new instance for CLOSE_STREAM requests.
+     * 
+     * @param streamId Associated stream Id.
      */
     public CloseStreamRequest(String streamId) {
         super(RequestType.CLOSE_STREAM);

@@ -5,6 +5,9 @@ import es.bsc.distrostreamlib.types.RequestType;
 import java.util.concurrent.Semaphore;
 
 
+/**
+ * Abstract request implementation.
+ */
 public abstract class Request {
 
     protected final RequestType rt;

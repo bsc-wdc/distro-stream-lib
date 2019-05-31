@@ -28,6 +28,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
+/**
+ * Distributed Stream Server implementation.
+ */
 public class DistroStreamServer extends Thread {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.DSL_SERVER);
@@ -37,7 +40,7 @@ public class DistroStreamServer extends Thread {
     private static final int DEFAULT_BOOTSTRAP_PORT = 49_001;
 
     // Static access to server
-    private static DistroStreamServer SERVER;
+    private static DistroStreamServer server;
 
     private final String serverName;
     private final int serverPort;
@@ -363,9 +366,9 @@ public class DistroStreamServer extends Thread {
      * @param streamBackend Streaming backend implementation type.
      */
     public static void initAndStart(String serverName, Integer serverPort, StreamBackend streamBackend) {
-        SERVER = new DistroStreamServer(serverName, serverPort, streamBackend);
-        SERVER.setName("DistroStreamServer");
-        SERVER.start();
+        server = new DistroStreamServer(serverName, serverPort, streamBackend);
+        server.setName("DistroStreamServer");
+        server.start();
 
     }
 
@@ -373,8 +376,8 @@ public class DistroStreamServer extends Thread {
      * Marks the server to stop as soon as possible.
      */
     public static void setStop() {
-        SERVER.setStopFlag();
-        SERVER.autoSendStopRequest();
+        server.setStopFlag();
+        server.autoSendStopRequest();
     }
 
 }

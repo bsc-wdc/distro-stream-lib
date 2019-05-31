@@ -3,6 +3,9 @@ package es.bsc.distrostreamlib.requests;
 import es.bsc.distrostreamlib.types.RequestType;
 
 
+/**
+ * Request to register a new client.
+ */
 public class RegisterClientRequest extends Request {
 
     private final String clientIP;

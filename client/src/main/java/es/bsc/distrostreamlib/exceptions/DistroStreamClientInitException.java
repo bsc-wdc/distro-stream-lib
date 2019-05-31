@@ -16,6 +16,9 @@
  */
 package es.bsc.distrostreamlib.exceptions;
 
+/**
+ * Exception when starting the Distributed Stream Client.
+ */
 public class DistroStreamClientInitException extends Exception {
 
     /**

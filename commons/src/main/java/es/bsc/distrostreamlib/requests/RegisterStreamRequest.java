@@ -7,6 +7,9 @@ import es.bsc.distrostreamlib.types.StreamType;
 import java.util.List;
 
 
+/**
+ * Request to register a new stream.
+ */
 public class RegisterStreamRequest extends Request {
 
     private final String alias;

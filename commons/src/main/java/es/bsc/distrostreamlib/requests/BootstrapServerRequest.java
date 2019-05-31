@@ -3,6 +3,9 @@ package es.bsc.distrostreamlib.requests;
 import es.bsc.distrostreamlib.types.RequestType;
 
 
+/**
+ * To request the Bootstrap server information.
+ */
 public class BootstrapServerRequest extends Request {
 
     /**

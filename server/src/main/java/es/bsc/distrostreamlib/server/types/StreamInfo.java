@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.UUID;
 
 
+/**
+ * Class containing the registered streams information.
+ */
 public class StreamInfo {
 
     private final UUID id;
