@@ -9,7 +9,6 @@ from __future__ import print_function
 import unittest
 import logging
 from abc import abstractmethod
-from enum import Enum
 
 # Project imports
 from pycompss.streams.types.requests import RegisterStreamRequest
@@ -24,19 +23,17 @@ from pycompss.streams.components.distro_stream_client import DistroStreamClientH
 
 logger = logging.getLogger("pycompss.streams.distro_stream")
 
-
 #
 # Type Enums
 #
-class StreamType(Enum):
-    FILE = 1
-    OBJECT = 2
-    PSCO = 3
+# class StreamType(Enum):
+FILE = "FILE"
+OBJECT = "OBJECT"
+PSCO = "PSCO"
 
-
-class ConsumerMode(Enum):
-    AT_MOST_ONCE = 1,
-    AT_LEAST_ONCE = 2
+# class ConsumerMode(Enum):
+AT_MOST_ONCE = "AT_MOST_ONCE"
+AT_LEAST_ONCE = "AT_LEAST_ONCE"
 
 
 def str2bool(val):
@@ -62,7 +59,7 @@ class DistroStream(object):
 
     """
 
-    def __init__(self, alias=None, stream_type=None, access_mode=ConsumerMode.AT_MOST_ONCE, internal_stream_info=None):
+    def __init__(self, alias=None, stream_type=None, access_mode=AT_MOST_ONCE, internal_stream_info=None):
         """
         Creates a new DistroStream instance.
 
@@ -192,7 +189,7 @@ class FileDistroStream(DistroStream):
 
     """
 
-    def __init__(self, alias=None, access_mode=ConsumerMode.AT_MOST_ONCE, base_dir=None):
+    def __init__(self, alias=None, access_mode=AT_MOST_ONCE, base_dir=None):
         """
         Creates a new FileDistroStream instance.
 
@@ -205,7 +202,7 @@ class FileDistroStream(DistroStream):
         :raise RegistrationException: When client cannot register the stream into the server.
         """
         super(FileDistroStream, self).__init__(alias=alias,
-                                               stream_type=StreamType.FILE,
+                                               stream_type=FILE,
                                                access_mode=access_mode,
                                                internal_stream_info=[base_dir])
         self.base_dir = base_dir
@@ -251,7 +248,7 @@ class ObjectDistroStream(DistroStream):
     Attributes:
     """
 
-    def __init__(self, alias=None, access_mode=ConsumerMode.AT_MOST_ONCE):
+    def __init__(self, alias=None, access_mode=AT_MOST_ONCE):
         """
         Creates a new ObjectDistroStream instance.
 
@@ -262,7 +259,7 @@ class ObjectDistroStream(DistroStream):
         :raise RegistrationException: When client cannot register the stream into the server.
         """
         super(ObjectDistroStream, self).__init__(alias=alias,
-                                                 stream_type=StreamType.FILE,
+                                                 stream_type=FILE,
                                                  access_mode=access_mode,
                                                  internal_stream_info=[])
         raise Exception("ERROR: ObjectDistroStream is not supported in Python")

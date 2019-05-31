@@ -19,7 +19,7 @@ except ImportError:
     import Queue as queue
 
 # Project imports
-from pycompss.streams.types.requests import RequestType
+from pycompss.streams.types.requests import STOP
 from pycompss.streams.types.requests import StopRequest
 
 #
@@ -142,7 +142,7 @@ class DistroStreamClient(Thread):
             if __debug__:
                 logger.debug("Processing request: " + str(req.get_type()))
 
-            if req.get_type() == RequestType.STOP:
+            if req.get_type() == STOP:
                 logger.info("DS Client asked to stop")
                 self.running = False
                 req.set_response("DONE")
@@ -216,8 +216,8 @@ class TestDistroStreamClient(unittest.TestCase):
         from pycompss.streams.types.requests import RegisterStreamRequest
         from pycompss.streams.types.requests import StreamStatusRequest
         from pycompss.streams.types.requests import CloseStreamRequest
-        from pycompss.streams.distro_stream import StreamType
-        from pycompss.streams.distro_stream import ConsumerMode
+        from pycompss.streams.distro_stream import FILE
+        from pycompss.streams.distro_stream import AT_MOST_ONCE
 
         try:
             # Start
@@ -226,7 +226,7 @@ class TestDistroStreamClient(unittest.TestCase):
 
             # Send request
             print("Send request")
-            req = RegisterStreamRequest(None, StreamType.FILE, ConsumerMode.AT_MOST_ONCE, ["/tmp/file_stream_python/"])
+            req = RegisterStreamRequest(None, FILE, AT_MOST_ONCE, ["/tmp/file_stream_python/"])
             DistroStreamClientHandler.request(req)
 
             # Wait response

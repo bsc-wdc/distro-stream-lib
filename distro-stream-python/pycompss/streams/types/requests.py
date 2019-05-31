@@ -8,7 +8,6 @@ from __future__ import print_function
 # Imports
 import logging
 from abc import abstractmethod
-from enum import Enum
 from threading import Semaphore
 
 #
@@ -17,19 +16,18 @@ from threading import Semaphore
 
 logger = logging.getLogger("pycompss.streams.distro_stream")
 
-
 #
 # Type Enums
 #
-class RequestType(Enum):
-    REGISTER_CLIENT = 1
-    UNREGISTER_CLIENT = 2
-    BOOTSTRAP_SERVER = 3
-    REGISTER_STREAM = 4
-    STREAM_STATUS = 5
-    CLOSE_STREAM = 6
-    POLL = 7
-    STOP = 8
+# class RequestType(Enum):
+REGISTER_CLIENT = "REGISTER_CLIENT"
+UNREGISTER_CLIENT = "UNREGISTER_CLIENT"
+BOOTSTRAP_SERVER = "BOOTSTRAP_SERVER"
+REGISTER_STREAM = "REGISTER_STREAM"
+STREAM_STATUS = "STREAM_STATUS"
+CLOSE_STREAM = "CLOSE_STREAM"
+POLL = "POLL"
+STOP = "STOP"
 
 
 #
@@ -200,16 +198,16 @@ class RegisterStreamRequest(Request):
         :param internal_stream_info: Associated information about the internal stream implementation.
             + type: List<string>
         """
-        super(RegisterStreamRequest, self).__init__(rt=RequestType.REGISTER_STREAM)
+        super(RegisterStreamRequest, self).__init__(rt=REGISTER_STREAM)
         self.alias = alias
         self.stream_type = stream_type
         self.access_mode = access_mode
         self.internal_stream_info = internal_stream_info
 
     def get_request_msg(self):
-        s = str(self.rt.name)
-        s = s + " " + str(self.stream_type.name)
-        s = s + " " + str(self.access_mode.name)
+        s = str(self.rt)
+        s = s + " " + str(self.stream_type)
+        s = s + " " + str(self.access_mode)
         s = s + " " + str(self.alias)
         if self.internal_stream_info is not None:
             for info in self.internal_stream_info:
@@ -228,10 +226,10 @@ class StopRequest(Request):
         """
         Creates a new StopRequest instance.
         """
-        super(StopRequest, self).__init__(rt=RequestType.STOP)
+        super(StopRequest, self).__init__(rt=STOP)
 
     def get_request_msg(self):
-        s = str(self.rt.name)
+        s = str(self.rt)
         return s
 
 
@@ -250,11 +248,11 @@ class StreamStatusRequest(Request):
 
         :param stream_id: Stream Id.
         """
-        super(StreamStatusRequest, self).__init__(rt=RequestType.STREAM_STATUS)
+        super(StreamStatusRequest, self).__init__(rt=STREAM_STATUS)
         self.stream_id = stream_id
 
     def get_request_msg(self):
-        s = str(self.rt.name)
+        s = str(self.rt)
         s = s + " " + str(self.stream_id)
         return s
 
@@ -274,11 +272,11 @@ class CloseStreamRequest(Request):
 
         :param stream_id: Stream Id.
         """
-        super(CloseStreamRequest, self).__init__(rt=RequestType.CLOSE_STREAM)
+        super(CloseStreamRequest, self).__init__(rt=CLOSE_STREAM)
         self.stream_id = stream_id
 
     def get_request_msg(self):
-        s = str(self.rt.name)
+        s = str(self.rt)
         s = s + " " + str(self.stream_id)
         return s
 
@@ -298,10 +296,10 @@ class PollRequest(Request):
 
         :param stream_id: Stream Id.
         """
-        super(PollRequest, self).__init__(rt=RequestType.POLL)
+        super(PollRequest, self).__init__(rt=POLL)
         self.stream_id = stream_id
 
     def get_request_msg(self):
-        s = str(self.rt.name)
+        s = str(self.rt)
         s = s + " " + str(self.stream_id)
         return s
