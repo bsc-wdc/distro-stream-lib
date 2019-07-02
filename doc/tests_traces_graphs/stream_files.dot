@@ -1,0 +1,96 @@
+digraph {
+  rankdir=TB;
+  labeljust="l";
+  subgraph dependence_graph {
+    ranksep=0.20;
+    node[height=0.75];
+
+1[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+2[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+1 -> 2[style=dashed, label="d1v1"];
+Synchro1[label="sync", shape=octagon, style=filled fillcolor="#ff0000" fontcolor="#FFFFFF"];
+2 -> Synchro1[label="d2v3"];
+3[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+4[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+3 -> 4[style=dashed, label="d3v1"];
+Synchro2[label="sync", shape=octagon, style=filled fillcolor="#ff0000" fontcolor="#FFFFFF"];
+Synchro1 -> Synchro2;
+4 -> Synchro2[label="d4v3"];
+5[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+6[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+7[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+5 -> 7[style=dashed, label="d5v1"];
+6 -> 7[style=dashed, label="d5v1"];
+Synchro3[label="sync", shape=octagon, style=filled fillcolor="#ff0000" fontcolor="#FFFFFF"];
+Synchro2 -> Synchro3;
+7 -> Synchro3[label="d6v3"];
+8[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+9[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+8 -> 9[style=dashed, label="d7v1"];
+10[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+8 -> 10[style=dashed, label="d7v1"];
+Synchro4[label="sync", shape=octagon, style=filled fillcolor="#ff0000" fontcolor="#FFFFFF"];
+Synchro3 -> Synchro4;
+9 -> Synchro4[label="d8v3"];
+10 -> Synchro4[label="d9v3"];
+11[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+12[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+13[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+11 -> 13[style=dashed, label="d10v1"];
+12 -> 13[style=dashed, label="d10v1"];
+14[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+11 -> 14[style=dashed, label="d10v1"];
+12 -> 14[style=dashed, label="d10v1"];
+Synchro5[label="sync", shape=octagon, style=filled fillcolor="#ff0000" fontcolor="#FFFFFF"];
+Synchro4 -> Synchro5;
+13 -> Synchro5[label="d11v3"];
+14 -> Synchro5[label="d12v3"];
+15[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+Synchro6[label="sync", shape=octagon, style=filled fillcolor="#ff0000" fontcolor="#FFFFFF"];
+Synchro5 -> Synchro6;
+15 -> Synchro6[label="d13v1"];
+16[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+17[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+18[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+19[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+20[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+21[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+22[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+23[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+24[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+25[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+Synchro7[label="sync", shape=octagon, style=filled fillcolor="#ff0000" fontcolor="#FFFFFF"];
+Synchro6 -> Synchro7;
+16 -> Synchro7[label="d15v3"];
+17 -> Synchro7[label="d17v3"];
+18 -> Synchro7[label="d19v3"];
+19 -> Synchro7[label="d21v3"];
+20 -> Synchro7[label="d23v3"];
+21 -> Synchro7[label="d25v3"];
+22 -> Synchro7[label="d27v3"];
+23 -> Synchro7[label="d29v3"];
+24 -> Synchro7[label="d31v3"];
+25 -> Synchro7[label="d33v3"];  }
+  subgraph legend {
+    rank=sink;
+    node [shape=plaintext, height=0.75];
+    ranksep=0.20;
+    label = "Legend";
+    key [label=<
+      <table border="0" cellpadding="2" cellspacing="0" cellborder="1">
+<tr>
+<td align="right">writeFiles</td>
+<td bgcolor="#ff0000">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">readFiles</td>
+<td bgcolor="#ffffff">&nbsp;</td>
+</tr>
+<tr>
+<td align="right">processFile</td>
+<td bgcolor="#0000ff">&nbsp;</td>
+</tr>
+      </table>
+    >]
+  }
+}
