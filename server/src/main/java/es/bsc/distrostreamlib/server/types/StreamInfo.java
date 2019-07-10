@@ -4,7 +4,6 @@ import es.bsc.distrostreamlib.types.ConsumerMode;
 import es.bsc.distrostreamlib.types.StreamType;
 
 import java.util.List;
-import java.util.UUID;
 
 
 /**
@@ -12,12 +11,13 @@ import java.util.UUID;
  */
 public class StreamInfo {
 
-    private final UUID id;
+    private final String id;
     private final String alias;
     private final StreamType streamType;
     private final ConsumerMode accessMode;
     private final List<String> internalStreamInfo;
     private long pollTimestamp;
+    private int numWriters;
     private boolean isClosed;
 
 
@@ -30,7 +30,7 @@ public class StreamInfo {
      * @param accessMode Stream consumer access mode.
      * @param internalStreamInfo Internal stream information.
      */
-    public StreamInfo(UUID id, String alias, StreamType streamType, ConsumerMode accessMode,
+    public StreamInfo(String id, String alias, StreamType streamType, ConsumerMode accessMode,
             List<String> internalStreamInfo) {
 
         this.id = id;
@@ -39,6 +39,7 @@ public class StreamInfo {
         this.accessMode = accessMode;
         this.internalStreamInfo = internalStreamInfo;
         this.pollTimestamp = -1;
+        this.numWriters = 0;
         this.isClosed = false;
     }
 
@@ -47,7 +48,7 @@ public class StreamInfo {
      * 
      * @return The associated stream Id.
      */
-    public UUID getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -110,6 +111,29 @@ public class StreamInfo {
      */
     public void setPollTimestamp(long timestamp) {
         this.pollTimestamp = timestamp;
+    }
+
+    /**
+     * Adds a new writer to the stream.
+     */
+    public void addWriter() {
+        this.numWriters++;
+    }
+
+    /**
+     * Removes a writer of the stream.
+     */
+    public void removeWriter() {
+        this.numWriters--;
+    }
+
+    /**
+     * Returns whether the stream has active writers or not.
+     * 
+     * @return {@literal true} if the stream has active writers, {@literal false} otherwise.
+     */
+    public boolean hasWriters() {
+        return this.numWriters > 0;
     }
 
     /**

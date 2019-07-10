@@ -49,8 +49,8 @@ public class DistroStreamServer extends Thread {
 
     private boolean keepRunning;
     private List<String> registeredClients;
-    private Map<UUID, StreamInfo> registeredStreams;
-    private Map<String, UUID> registeredStreamAlias;
+    private Map<String, StreamInfo> registeredStreams;
+    private Map<String, String> registeredStreamAlias;
 
 
     /**
@@ -169,17 +169,22 @@ public class DistroStreamServer extends Thread {
                 break;
             case STREAM_STATUS:
                 assert content.length == 2;
-                UUID statusStreamId = UUID.fromString(content[1].trim());
+                String statusStreamId = content[1].trim();
                 answer = getStreamStatus(statusStreamId);
+                break;
+            case ADD_STREAM_WRITER:
+                assert content.length == 2;
+                String streamWrittenId = content[1].trim();
+                answer = addStreamWriter(streamWrittenId);
                 break;
             case CLOSE_STREAM:
                 assert content.length == 2;
-                UUID closeStreamId = UUID.fromString(content[1].trim());
+                String closeStreamId = content[1].trim();
                 answer = closeStream(closeStreamId);
                 break;
             case POLL:
                 assert content.length == 2;
-                UUID pollStreamId = UUID.fromString(content[1].trim());
+                String pollStreamId = content[1].trim();
                 answer = pollFromStream(pollStreamId);
                 break;
             case STOP:
@@ -197,34 +202,34 @@ public class DistroStreamServer extends Thread {
             List<String> internalStreamInfo) {
         if (alias != null && !alias.isEmpty() && !"null".equals(alias) && !"None".equals(alias)) {
             // Retrieve stream by alias
-            UUID id = this.registeredStreamAlias.get(alias);
+            String id = this.registeredStreamAlias.get(alias);
             if (id != null) {
                 // Stream was already registered, return its id
                 if (DEBUG) {
                     LOGGER.debug("Stream " + alias + " was already registered.");
                     LOGGER.debug("Retrieving stream from registered streams with id = " + id);
                 }
-                return id.toString();
+                return id;
             } else {
                 // Register new stream
                 id = addNewStream(alias, streamType, accessMode, internalStreamInfo);
                 this.registeredStreamAlias.put(alias, id);
-                return id.toString();
+                return id;
             }
         } else {
             // Register new stream
-            UUID id = addNewStream(alias, streamType, accessMode, internalStreamInfo);
-            return id.toString();
+            String id = addNewStream(alias, streamType, accessMode, internalStreamInfo);
+            return id;
         }
     }
 
-    private UUID addNewStream(String alias, StreamType streamType, ConsumerMode accessMode,
+    private String addNewStream(String alias, StreamType streamType, ConsumerMode accessMode,
             List<String> internalStreamInfo) {
 
-        UUID id = UUID.randomUUID();
+        String id = UUID.randomUUID().toString();
 
         if (DEBUG) {
-            LOGGER.debug("Registering new Stream with alias = " + alias + " and id " + id.toString());
+            LOGGER.debug("Registering new Stream with alias = " + alias + " and id " + id);
         }
 
         StreamInfo streamInfo = new StreamInfo(id, alias, streamType, accessMode, internalStreamInfo);
@@ -232,12 +237,12 @@ public class DistroStreamServer extends Thread {
         return id;
     }
 
-    private String getStreamStatus(UUID streamId) {
+    private String getStreamStatus(String streamId) {
         StreamInfo streamInfo = this.registeredStreams.get(streamId);
 
         // Check if stream is registered
         if (streamInfo == null) {
-            LOGGER.warn("Skipping status on unregistered stream with ID = " + streamId.toString());
+            LOGGER.warn("Skipping status on unregistered stream with ID = " + streamId);
             return "";
         }
 
@@ -245,28 +250,43 @@ public class DistroStreamServer extends Thread {
         return String.valueOf(streamInfo.isStreamClosed());
     }
 
-    private String closeStream(UUID streamId) {
-        StreamInfo streamInfo = this.registeredStreams.get(streamId);
-
-        // Check if stream is registered
-        if (streamInfo == null) {
-            LOGGER.warn("Skipping close on unregistered stream with ID = " + streamId.toString());
-            return "";
+    private String addStreamWriter(String streamId) {
+        if (DEBUG) {
+            LOGGER.debug("Adding writer to stream with ID = " + streamId);
         }
 
-        // Mark stream as closed
-        streamInfo.markAsClosed();
+        StreamInfo streamInfo = this.registeredStreams.get(streamId);
+        streamInfo.addWriter();
 
         // No answer needed
         return "";
     }
 
-    private String pollFromStream(UUID streamId) {
+    private String closeStream(String streamId) {
         StreamInfo streamInfo = this.registeredStreams.get(streamId);
 
         // Check if stream is registered
         if (streamInfo == null) {
-            LOGGER.warn("Skipping poll on unregistered stream with ID = " + streamId.toString());
+            LOGGER.warn("Skipping close on unregistered stream with ID = " + streamId);
+            return "";
+        }
+
+        // Mark stream as closed
+        streamInfo.removeWriter();
+        if (!streamInfo.hasWriters()) {
+            streamInfo.markAsClosed();
+        }
+
+        // No answer needed
+        return "";
+    }
+
+    private String pollFromStream(String streamId) {
+        StreamInfo streamInfo = this.registeredStreams.get(streamId);
+
+        // Check if stream is registered
+        if (streamInfo == null) {
+            LOGGER.warn("Skipping poll on unregistered stream with ID = " + streamId);
             return "";
         }
 
@@ -275,10 +295,10 @@ public class DistroStreamServer extends Thread {
             case FILE:
                 return pollFileStream(streamInfo);
             case OBJECT:
-                LOGGER.warn("Skipping poll on OBJECT stream with ID = " + streamId.toString());
+                LOGGER.warn("Skipping poll on OBJECT stream with ID = " + streamId);
                 return "";
             case PSCO:
-                LOGGER.warn("Skipping poll on PSCO stream with ID = " + streamId.toString());
+                LOGGER.warn("Skipping poll on PSCO stream with ID = " + streamId);
                 return "";
         }
 
