@@ -91,6 +91,24 @@ public abstract class DistroStream<T> implements Externalizable {
         return this.streamType;
     }
 
+    /**
+     * Returns the stream alias.
+     * 
+     * @return The stream alias.
+     */
+    public final String getAlias() {
+        return this.alias;
+    }
+
+    /**
+     * Returns the stream Id.
+     * 
+     * @return The stream Id.
+     */
+    public final String getId() {
+        return this.id;
+    }
+
     /*
      * PUBLISH METHODS
      */
