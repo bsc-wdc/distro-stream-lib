@@ -12,3 +12,6 @@ pom.xml.versionsBackup
 
 # IntelliJ ignores
 .idea/
+
+# Python ignores
+*.pyc
