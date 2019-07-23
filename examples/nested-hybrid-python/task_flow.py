@@ -71,12 +71,15 @@ class Arguments(object):
     Store command line arguments in a single object.
     """
 
-    def __init__(self, file_elements, tf_depth, tf_base_sleep_time, tf_sleep_random_range):
+    def __init__(self, tf_depth, tf_base_sleep_time, tf_sleep_random_range, file_elements):
         """
         Initializes the command line arguments instance with the given values.
         """
         from pycompss.util.serializer import deserialize_from_file
-        self.elements = deserialize_from_file(file_elements)
+        self.elements = []
+        for fe in file_elements:
+            elem = deserialize_from_file(fe)
+            self.elements.append(elem)
 
         self.tf_depth = int(tf_depth)
         self.tf_base_sleep_time = int(tf_base_sleep_time)
@@ -92,14 +95,14 @@ def parse_arguments():
     """
     import sys
 
-    if len(sys.argv) != 5:
+    if len(sys.argv) <= 4:
         print("ERROR: Not enough input arguments.")
         raise Exception("Invalid arguments")
 
-    a = Arguments(sys.argv[1],  # elements (serialized)
-                  sys.argv[2],  # tf_depth
-                  sys.argv[3],  # tf_base_sleep_time
-                  sys.argv[4],  # tf_sleep_random_range
+    a = Arguments(sys.argv[1],  # tf_depth
+                  sys.argv[2],  # tf_base_sleep_time
+                  sys.argv[3],  # tf_sleep_random_range
+                  sys.argv[4:],  # elements (serialized)
                   )
     return a
 

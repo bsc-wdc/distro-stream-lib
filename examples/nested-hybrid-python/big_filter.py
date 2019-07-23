@@ -130,7 +130,7 @@ def process_files(input_fds, output_fds, files_to_process, app_args, forced):
         files_to_process = files_to_process[app_args.batch_size:]
 
     if forced:
-        # Even if we not use the ful batch, force the task spawn
+        # Even if we not use the full batch, force the task spawn
         if __debug__:
             print("[DEBUG] Launch forced filter task")
         filter_files(files_to_process,
@@ -155,7 +155,7 @@ def main():
     print("[INFO] Parsing application arguments")
     app_args = parse_arguments()
 
-    # Process input stream elements
+    # Initialize streams
     print("[INFO] Initializing streams")
     fds_sensor = FileDistroStream(alias="sensor", base_dir=app_args.sensor_stream_dir)
     fds_filtered = FileDistroStream(alias="filtered", base_dir=app_args.filtered_stream_dir)
@@ -170,7 +170,7 @@ def main():
         # Sleep between polls
         time.sleep(TIME_BETWEEN_POLLS)
 
-    # Poll one last time (and force the task to execute
+    # Poll one last time (and force the task to execute)
     process_files(fds_sensor, fds_filtered, files_to_process, app_args, True)
 
     # Synchronize

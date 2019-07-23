@@ -7,14 +7,13 @@
   export TASK_FLOW_PY="${SCRIPT_DIR}/../task_flow.py"
   export BIG_FILTER_PY="${SCRIPT_DIR}/../big_filter.py"
 
+  export NUM_FILES=50
+
   export CORES_SENSOR=8
+  export NESTED_COMPUTING_NODES=1
   export CORES_BIG_FILTER=4
-  #export CORES_FILTER=1
   export CORES_EXTRACT=1
   export CORES_TF=8
-  #export CORES_TF_TASK=1
-  #export CORES_TF_MERGE=1
-  export NUM_FILES=50
 
   # Define application arguments
   app_exec="${SCRIPT_DIR}/../hybrid_dftf_streams.py"
