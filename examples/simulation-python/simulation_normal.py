@@ -26,6 +26,7 @@ CORES_SIMULATION = os.getenv("CORES_SIMULATION")
 CORES_PROCESS = os.getenv("CORES_PROCESS")
 CORES_MERGE = os.getenv("CORES_MERGE")
 TIME_BETWEEN_POLLS = 5
+TIME_DELAY = 10
 
 
 #
@@ -52,9 +53,22 @@ def simulation(num_files, base_sleep_time, sleep_random_range, *args):
         sleep_time = sleep_time / 1000  # from ms to s
         time.sleep(sleep_time)
 
+    # Add delay
+    time.sleep(TIME_DELAY)
+
 
 @constraint(computing_units=CORES_PROCESS)
 @task(input_file=FILE_IN, output_image=FILE_OUT)
+def process_sim_file1(input_file, output_image, base_sleep_time, sleep_random_range):
+    process_sim_file(input_file, output_image, base_sleep_time, sleep_random_range)
+
+
+@constraint(computing_units=CORES_PROCESS)
+@task(input_file=FILE_IN, output_image=FILE_OUT)
+def process_sim_file2(input_file, output_image, base_sleep_time, sleep_random_range):
+    process_sim_file(input_file, output_image, base_sleep_time, sleep_random_range)
+
+
 def process_sim_file(input_file, output_image, base_sleep_time, sleep_random_range):
     if __debug__:
         print("[DEBUG] Processing file " + input_file)
@@ -216,10 +230,16 @@ def main():
         if __debug__:
             print("[DEBUG] Launching process for " + str(i))
         for j in range(app_args.num_files):
-            process_sim_file(sim_files[i][j],
-                             output_images[i][j],
-                             app_args.process_sleep_time,
-                             app_args.process_sleep_random_range)
+            if i % 2 == 0:
+                process_sim_file1(sim_files[i][j],
+                                  output_images[i][j],
+                                  app_args.process_sleep_time,
+                                  app_args.process_sleep_random_range)
+            else:
+                process_sim_file2(sim_files[i][j],
+                                  output_images[i][j],
+                                  app_args.process_sleep_time,
+                                  app_args.process_sleep_random_range)
 
     # Launch merge phase on remaining streams if any
     for i in range(app_args.num_simulations):

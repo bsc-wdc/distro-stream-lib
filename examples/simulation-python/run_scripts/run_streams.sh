@@ -12,7 +12,7 @@
   app_exec="${SCRIPT_DIR}/../simulation_streams.py"
   stream_base_dir="${SCRIPT_DIR}/exec/"  
   num_simulations=2
-  num_files=50
+  num_files=5
   simulation_sleep_time=1000
   simulation_sleep_random_range=200
   process_sleep_time=2000
