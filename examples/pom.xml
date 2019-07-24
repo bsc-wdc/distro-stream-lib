@@ -178,5 +178,6 @@
     <!-- SUB-MODULES -->
     <modules>
         <module>nested-hybrid-java</module>
+        <module>nested-multisim-java</module>
     </modules>
 </project>
