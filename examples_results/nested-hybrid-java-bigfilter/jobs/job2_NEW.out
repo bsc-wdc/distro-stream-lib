@@ -1,0 +1,34 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: METHOD
+  * Method definition: [DECLARING CLASS=filters.BigFilterTasks, METHOD NAME=filterObjects]
+  * Parameter types: java.util.LinkedList es.bsc.distrostreamlib.api.objects.ObjectDistroStream int int
+  * Parameter values: [MyElement[IF=[object10,],P=false], MyElement[IF=[object11,],P=false], MyElement[IF=[object12,],P=false], MyElement[IF=[object13,],P=false], MyElement[IF=[object14,],P=false], MyElement[IF=[object15,],P=false], MyElement[IF=[object16,],P=false], MyElement[IF=[object17,],P=false], MyElement[IF=[object18,],P=false], MyElement[IF=[object19,],P=false]] es.bsc.distrostreamlib.api.objects.ObjectDistroStream@7192310d 2000 200
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker02
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 1
+[DEBUG] Processing object MyElement[IF=[object10,],P=false]
+Generating filtered object
+[DEBUG] Processing object MyElement[IF=[object11,],P=false]
+Generating filtered object
+[DEBUG] Processing object MyElement[IF=[object12,],P=false]
+Generating filtered object
+[DEBUG] Processing object MyElement[IF=[object13,],P=false]
+Generating filtered object
+[DEBUG] Processing object MyElement[IF=[object14,],P=false]
+Generating filtered object
+[DEBUG] Processing object MyElement[IF=[object15,],P=false]
+Generating filtered object
+[DEBUG] Processing object MyElement[IF=[object16,],P=false]
+Generating filtered object
+[DEBUG] Processing object MyElement[IF=[object17,],P=false]
+Generating filtered object
+[DEBUG] Processing object MyElement[IF=[object18,],P=false]
+Generating filtered object
+[DEBUG] Processing object MyElement[IF=[object19,],P=false]
+Generating filtered object
+[EXECUTOR] executeTask - End task execution

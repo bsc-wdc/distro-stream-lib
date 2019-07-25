@@ -1,0 +1,1409 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: COMPSs
+  * Method definition: [RUNCOMPSS=runcompss, FLAGS=-d -g --summary, APP_NAME=/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../task_flow.py, WORKER_IN_MASTER=true, WORKING_DIR=/home/cramonco/.COMPSs/tf.py/]
+  * Parameter types: int int int java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String
+  * Parameter values: 2 1000 50 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-3 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-4 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-5 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-6 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-7 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-8 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-9 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-10 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-11 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-12
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null null null null null null null null null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 8
+
+[COMPSs INVOKER] Begin COMPSs call to /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../task_flow.py
+[COMPSs INVOKER] On WorkingDir : /home/cramonco/.COMPSs/tf.py
+[COMPSs INVOKER] Slave hostname COMPSsWorker01 with 8 cus
+[COMPSs INVOKER] Generate project.xml at: project_bbe2ce4b-7304-48fc-ba8b-afa9cc82325e.xml
+[COMPSs INVOKER] Generate resources.xml at: resources_bbe2ce4b-7304-48fc-ba8b-afa9cc82325e.xml
+[COMPSs INVOKER] Creating nested log dir in: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog
+[COMPSs INVOKER] COMPSs CMD: runcompss --project=project_bbe2ce4b-7304-48fc-ba8b-afa9cc82325e.xml --resources=resources_bbe2ce4b-7304-48fc-ba8b-afa9cc82325e.xml --specific_log_dir=/home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog --classpath=/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts:/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/*.jar::/opt/COMPSs/Runtime/compss-engine.jar -d -g --summary /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../task_flow.py 2 1000 50 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-3 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-4 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-5 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-6 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-7 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-8 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-9 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-10 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-11 /home/cramonco/.COMPSs/tf.py/compss-serialized-obj_19c0477a-ae16-11e9-8029-a44cc871a000-12 
+[COMPSs INVOKER] COMPSs STDIN: null
+[COMPSs INVOKER] COMPSs STDOUT: null
+[COMPSs INVOKER] COMPSs STDERR: null
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] Executing binary command
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] CMD OUTPUT:
+[  INFO] Using default execution type: compss
+[  INFO] Inferred PYTHON language
+[  INFO] Relative Classpath resolved: /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts:/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/*.jar:/opt/COMPSs/Runtime/compss-engine.jar:
+
+----------------- Executing task_flow.py --------------------------
+
+Binding debug is activated
+[BINDING-COMMONS]  -  @GS_On  -  Creating the JVM
+[BINDING_COMMONS]  -  @create_vm  -  reading file in JVM_OPTIONS_FILE
+[BINDING_COMMONS]  -  @create_vm  -  Launching JVM
+[BINDING_COMMONS]  -  @create_vm  -  JVM Ready
+[BINDING-COMMONS]  -  @GS_On  -  Creating runtime object
+[(469)    API]  -  Deploying COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[BINDING-COMMONS]  -  @GS_On  -  Calling runtime start
+[(470)    API]  -  Starting COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[(470)    API]  -  Initializing components
+[(828)    API]  -  Ready to process tasks
+[BINDING-COMMONS]  -  @Init JNI Methods
+[BINDING_COMMONS]  -  @Init JNI Direction Types
+[BINDING_COMMONS]  -  @Init JNI Stream Types
+[BINDING-COMMONS]  -  @Init JNI Types
+[BINDING_COMMONS]  -  @Init DONE
+[BINDING_COMMONS]  -  @Master JNI Init DONE
+[BINDING-COMMONS]  -  @GS_Get_AppDir - Getting application directory.
+[BINDING-COMMONS]  -  @GS_Get_AppDir  -  directory name: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/
+[INFO] Starting application
+[INFO] Parsing application arguments
+[INFO] Launching task flow computation
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(841)    API]  -  Registering CoreElement task_flow.tf_task
+[(841)    API]  -  	 - Implementation: task_flow.tf_task
+[(841)    API]  -  	 - Constraints   : computing_units:1;
+[(841)    API]  -  	 - Type          : METHOD
+[(841)    API]  -  	 - ImplTypeArgs  : 
+[(841)    API]  -  		 Arg: task_flow
+[(841)    API]  -  		 Arg: tf_task
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: task_flow.tf_task
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-1
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(851)    API]  -  Creating task from method task_flow.tf_task
+[(851)    API]  -  There are 4 parameters
+[(851)    API]  -    Parameter 0 has type FILE_T
+[(856)    API]  -    Parameter 1 has type INT_T
+[(856)    API]  -    Parameter 2 has type INT_T
+[(856)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-3
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(864)    API]  -  Creating task from method task_flow.tf_task
+[(864)    API]  -  There are 4 parameters
+[(864)    API]  -    Parameter 0 has type FILE_T
+[(864)    API]  -    Parameter 1 has type INT_T
+[(865)    API]  -    Parameter 2 has type INT_T
+[(865)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-5
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-4
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(872)    API]  -  Creating task from method task_flow.tf_task
+[(872)    API]  -  There are 4 parameters
+[(872)    API]  -    Parameter 0 has type FILE_T
+[(872)    API]  -    Parameter 1 has type INT_T
+[(872)    API]  -    Parameter 2 has type INT_T
+[(872)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-5
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-6
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(880)    API]  -  Creating task from method task_flow.tf_task
+[(880)    API]  -  There are 4 parameters
+[(880)    API]  -    Parameter 0 has type FILE_T
+[(881)    API]  -    Parameter 1 has type INT_T
+[(881)    API]  -    Parameter 2 has type INT_T
+[(881)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-8
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-7
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(888)    API]  -  Creating task from method task_flow.tf_task
+[(889)    API]  -  There are 4 parameters
+[(889)    API]  -    Parameter 0 has type FILE_T
+[(889)    API]  -    Parameter 1 has type INT_T
+[(889)    API]  -    Parameter 2 has type INT_T
+[(889)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-8
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-9
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(897)    API]  -  Creating task from method task_flow.tf_task
+[(897)    API]  -  There are 4 parameters
+[(897)    API]  -    Parameter 0 has type FILE_T
+[(898)    API]  -    Parameter 1 has type INT_T
+[(898)    API]  -    Parameter 2 has type INT_T
+[(898)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-11
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-10
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(905)    API]  -  Creating task from method task_flow.tf_task
+[(905)    API]  -  There are 4 parameters
+[(905)    API]  -    Parameter 0 has type FILE_T
+[(906)    API]  -    Parameter 1 has type INT_T
+[(906)    API]  -    Parameter 2 has type INT_T
+[(906)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-11
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-12
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(913)    API]  -  Creating task from method task_flow.tf_task
+[(913)    API]  -  There are 4 parameters
+[(913)    API]  -    Parameter 0 has type FILE_T
+[(913)    API]  -    Parameter 1 has type INT_T
+[(913)    API]  -    Parameter 2 has type INT_T
+[(913)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-14
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-13
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(920)    API]  -  Creating task from method task_flow.tf_task
+[(921)    API]  -  There are 4 parameters
+[(921)    API]  -    Parameter 0 has type FILE_T
+[(921)    API]  -    Parameter 1 has type INT_T
+[(921)    API]  -    Parameter 2 has type INT_T
+[(921)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-14
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-15
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(928)    API]  -  Creating task from method task_flow.tf_task
+[(928)    API]  -  There are 4 parameters
+[(928)    API]  -    Parameter 0 has type FILE_T
+[(929)    API]  -    Parameter 1 has type INT_T
+[(929)    API]  -    Parameter 2 has type INT_T
+[(929)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-17
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-16
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(936)    API]  -  Creating task from method task_flow.tf_task
+[(936)    API]  -  There are 4 parameters
+[(936)    API]  -    Parameter 0 has type FILE_T
+[(937)    API]  -    Parameter 1 has type INT_T
+[(937)    API]  -    Parameter 2 has type INT_T
+[(937)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-17
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-18
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(944)    API]  -  Creating task from method task_flow.tf_task
+[(944)    API]  -  There are 4 parameters
+[(944)    API]  -    Parameter 0 has type FILE_T
+[(944)    API]  -    Parameter 1 has type INT_T
+[(944)    API]  -    Parameter 2 has type INT_T
+[(944)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-20
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-19
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(952)    API]  -  Creating task from method task_flow.tf_task
+[(952)    API]  -  There are 4 parameters
+[(952)    API]  -    Parameter 0 has type FILE_T
+[(952)    API]  -    Parameter 1 has type INT_T
+[(952)    API]  -    Parameter 2 has type INT_T
+[(953)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-20
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-21
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(960)    API]  -  Creating task from method task_flow.tf_task
+[(961)    API]  -  There are 4 parameters
+[(961)    API]  -    Parameter 0 has type FILE_T
+[(961)    API]  -    Parameter 1 has type INT_T
+[(961)    API]  -    Parameter 2 has type INT_T
+[(961)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-23
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-22
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(968)    API]  -  Creating task from method task_flow.tf_task
+[(968)    API]  -  There are 4 parameters
+[(968)    API]  -    Parameter 0 has type FILE_T
+[(969)    API]  -    Parameter 1 has type INT_T
+[(969)    API]  -    Parameter 2 has type INT_T
+[(969)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-23
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-24
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(976)    API]  -  Creating task from method task_flow.tf_task
+[(976)    API]  -  There are 4 parameters
+[(976)    API]  -    Parameter 0 has type FILE_T
+[(976)    API]  -    Parameter 1 has type INT_T
+[(976)    API]  -    Parameter 2 has type INT_T
+[(976)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-26
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-25
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(985)    API]  -  Creating task from method task_flow.tf_task
+[(985)    API]  -  There are 4 parameters
+[(985)    API]  -    Parameter 0 has type FILE_T
+[(985)    API]  -    Parameter 1 has type INT_T
+[(985)    API]  -    Parameter 2 has type INT_T
+[(985)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-26
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-27
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(993)    API]  -  Creating task from method task_flow.tf_task
+[(993)    API]  -  There are 4 parameters
+[(993)    API]  -    Parameter 0 has type FILE_T
+[(993)    API]  -    Parameter 1 has type INT_T
+[(993)    API]  -    Parameter 2 has type INT_T
+[(993)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-29
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-28
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1004)    API]  -  Creating task from method task_flow.tf_task
+[(1004)    API]  -  There are 4 parameters
+[(1004)    API]  -    Parameter 0 has type FILE_T
+[(1005)    API]  -    Parameter 1 has type INT_T
+[(1005)    API]  -    Parameter 2 has type INT_T
+[(1005)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-29
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: e
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-30
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1013)    API]  -  Creating task from method task_flow.tf_task
+[(1013)    API]  -  There are 4 parameters
+[(1013)    API]  -    Parameter 0 has type FILE_T
+[(1013)    API]  -    Parameter 1 has type INT_T
+[(1014)    API]  -    Parameter 2 has type INT_T
+[(1014)    API]  -    Parameter 3 has type FILE_T
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(1020)    API]  -  Registering CoreElement task_flow.tf_merge
+[(1020)    API]  -  	 - Implementation: task_flow.tf_merge
+[(1020)    API]  -  	 - Constraints   : computing_units:1;
+[(1020)    API]  -  	 - Type          : METHOD
+[(1020)    API]  -  	 - ImplTypeArgs  : 
+[(1020)    API]  -  		 Arg: task_flow
+[(1020)    API]  -  		 Arg: tf_merge
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: task_flow.tf_merge
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-3
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-6
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-31
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1034)    API]  -  Creating task from method task_flow.tf_merge
+[(1034)    API]  -  There are 5 parameters
+[(1034)    API]  -    Parameter 0 has type FILE_T
+[(1034)    API]  -    Parameter 1 has type FILE_T
+[(1035)    API]  -    Parameter 2 has type INT_T
+[(1035)    API]  -    Parameter 3 has type INT_T
+[(1035)    API]  -    Parameter 4 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-9
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-12
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-32
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1043)    API]  -  Creating task from method task_flow.tf_merge
+[(1043)    API]  -  There are 5 parameters
+[(1043)    API]  -    Parameter 0 has type FILE_T
+[(1044)    API]  -    Parameter 1 has type FILE_T
+[(1044)    API]  -    Parameter 2 has type INT_T
+[(1044)    API]  -    Parameter 3 has type INT_T
+[(1044)    API]  -    Parameter 4 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-15
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-18
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-33
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1049)    API]  -  Creating task from method task_flow.tf_merge
+[(1049)    API]  -  There are 5 parameters
+[(1049)    API]  -    Parameter 0 has type FILE_T
+[(1049)    API]  -    Parameter 1 has type FILE_T
+[(1050)    API]  -    Parameter 2 has type INT_T
+[(1050)    API]  -    Parameter 3 has type INT_T
+[(1050)    API]  -    Parameter 4 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-21
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-24
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-34
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1055)    API]  -  Creating task from method task_flow.tf_merge
+[(1055)    API]  -  There are 5 parameters
+[(1055)    API]  -    Parameter 0 has type FILE_T
+[(1056)    API]  -    Parameter 1 has type FILE_T
+[(1056)    API]  -    Parameter 2 has type INT_T
+[(1056)    API]  -    Parameter 3 has type INT_T
+[(1056)    API]  -    Parameter 4 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-27
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-30
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-35
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1063)    API]  -  Creating task from method task_flow.tf_merge
+[(1063)    API]  -  There are 5 parameters
+[(1063)    API]  -    Parameter 0 has type FILE_T
+[(1064)    API]  -    Parameter 1 has type FILE_T
+[(1064)    API]  -    Parameter 2 has type INT_T
+[(1064)    API]  -    Parameter 3 has type INT_T
+[(1064)    API]  -    Parameter 4 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-31
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-32
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-36
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1073)    API]  -  Creating task from method task_flow.tf_merge
+[(1074)    API]  -  There are 5 parameters
+[(1074)    API]  -    Parameter 0 has type FILE_T
+[(1074)    API]  -    Parameter 1 has type FILE_T
+[(1074)    API]  -    Parameter 2 has type INT_T
+[(1074)    API]  -    Parameter 3 has type INT_T
+[(1074)    API]  -    Parameter 4 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-33
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-34
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-37
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1082)    API]  -  Creating task from method task_flow.tf_merge
+[(1082)    API]  -  There are 5 parameters
+[(1082)    API]  -    Parameter 0 has type FILE_T
+[(1082)    API]  -    Parameter 1 has type FILE_T
+[(1082)    API]  -    Parameter 2 has type INT_T
+[(1082)    API]  -    Parameter 3 has type INT_T
+[(1082)    API]  -    Parameter 4 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-35
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-36
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-38
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1088)    API]  -  Creating task from method task_flow.tf_merge
+[(1088)    API]  -  There are 5 parameters
+[(1088)    API]  -    Parameter 0 has type FILE_T
+[(1088)    API]  -    Parameter 1 has type FILE_T
+[(1088)    API]  -    Parameter 2 has type INT_T
+[(1088)    API]  -    Parameter 3 has type INT_T
+[(1088)    API]  -    Parameter 4 has type FILE_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-37
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-38
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: o2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-39
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(1094)    API]  -  Creating task from method task_flow.tf_merge
+[(1094)    API]  -  There are 5 parameters
+[(1094)    API]  -    Parameter 0 has type FILE_T
+[(1094)    API]  -    Parameter 1 has type FILE_T
+[(1094)    API]  -    Parameter 2 has type INT_T
+[(1094)    API]  -    Parameter 3 has type INT_T
+[(1094)    API]  -    Parameter 4 has type FILE_T
+[INFO] Syncrhonizing final output
+[BINDING-COMMONS]  -  @GS_Open_File  -  Calling runtime OpenFile method  for /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-39 and mode 0 ...
+[(1095)    API]  -  Opening /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-39 in mode IN
+[(12097)    API]  -  File target Location: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/d39v2_1563974617241.IT
+[BINDING-COMMONS]  -  @GS_Open_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/d39v2_1563974617241.IT
+[BINDING-COMMONS]  -  @GS_Close_File  -  Calling runtime closeFile method...
+[(12097)    API]  -  Closing /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-39 in mode IN
+[(12098)    API]  -  Closing file /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-39
+[BINDING-COMMONS]  -  @GS_Close_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-39
+[(12098)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-39
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-39
+Computation result is: <my_element.MyElement object at 0x7ff3b1caba50>
+[INFO] DONE
+[TIME] TOTAL ELAPSED: 11.269158
+[(12105)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-34
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-34
+[(12108)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-35
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-35
+[(12111)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-36
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-36
+[(12115)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-37
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-37
+[(12118)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-30
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-30
+[(12121)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-31
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-31
+[(12124)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-18
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-18
+[(12127)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-19
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-19
+[(12130)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-16
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-16
+[(12134)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-17
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-17
+[(12137)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-14
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-14
+[(12140)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-15
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-15
+[(12146)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-12
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-12
+[(12151)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-13
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-13
+[(12159)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-10
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-10
+[(12165)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-11
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-11
+[(12169)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-32
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-32
+[(12173)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-33
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-33
+[(12175)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-27
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-27
+[(12177)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-26
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-26
+[(12179)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-25
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-25
+[(12180)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-24
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-24
+[(12182)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-23
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-23
+[(12183)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-22
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-22
+[(12185)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-21
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-21
+[(12187)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-20
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-20
+[(12189)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-38
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-38
+[(12190)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-29
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-29
+[(12192)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-28
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-28
+[(12194)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-4
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-4
+[(12195)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-5
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-5
+[(12197)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-6
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-6
+[(12198)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-7
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-7
+[(12199)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-1
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-1
+[(12200)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-2
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-2
+[(12201)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-3
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-3
+[(12204)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-8
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-8
+[(12205)    API]  -  Deleting File /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-9
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/tf.py/nestedCOMPSsLog/tmpFiles/pycompssIoDchf/compss-serialized-obj_3df0c8ae-ae16-11e9-8811-a44cc871a000-9
+[BINDING-COMMONS]  -  @GS_Off
+[BINDING-COMMONS]  -  @Off - Waiting to end tasks
+[(12206)    API]  -  No more tasks for app 0
+[(12208)    API]  -  Getting Result Files 0
+[BINDING-COMMONS]  -  @Off - Stopping runtime
+[(12214)    API]  -  ------- COMPSs Task Execution Summary per Worker ------
+[(12214)    API]  -  --- Summary for COMPSs Worker COMPSsWorker01
+[(12214)    API]  -  9 task_flow.tf_merge tasks have been executed
+[(12214)    API]  -  20 task_flow.tf_task tasks have been executed
+[(12214)    API]  -  --- Total executed tasks in COMPSs Worker COMPSsWorker01: 29
+[(12214)    API]  -  -------------------------------------------------------
+[(12214)    API]  -  
+[(12214)    API]  -  ------------ COMPSs Task Execution Summary ------------
+[(12214)    API]  -  9 task_flow.tf_merge tasks have been executed
+[(12214)    API]  -  20 task_flow.tf_task tasks have been executed
+[(12214)    API]  -  Total executed tasks: 29
+[(12214)    API]  -  -------------------------------------------------------
+[(12215)    API]  -  Stop IT reached
+[(12215)    API]  -  Stopping Graph generation...
+[(12215)    API]  -  Stopping AP...
+[(12215)    API]  -  Stopping TD...
+[(12361)    API]  -  Stopping Comm...
+[(12361)    API]  -  Runtime stopped
+[(12361)    API]  -  Execution Finished
+[BINDING-COMMONS]  -  @Off - Removing JVM
+[BINDING-COMMONS]  -  @Off - End
+
+------------------------------------------------------------
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] CMD EXIT VALUE: 0
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[EXECUTOR] executeTask - End task execution

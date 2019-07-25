@@ -1,0 +1,202 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: COMPSs
+  * Method definition: [RUNCOMPSS=/opt/COMPSs/Runtime/scripts/user/runcompss, FLAGS=-d -g --summary, APP_NAME=taskflows.SyntheticTaskFlow, WORKER_IN_MASTER=true, WORKING_DIR=/home/cramonco/.COMPSs/tf]
+  * Parameter types: java.util.LinkedList int int int
+  * Parameter values: [MyElement[IF=[object30,],P=false], MyElement[IF=[object13,],P=false], MyElement[IF=[object3,],P=false], MyElement[IF=[object21,],P=false], MyElement[IF=[object14,],P=false], MyElement[IF=[object15,],P=false], MyElement[IF=[object33,],P=false]] 2 1000 50
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 8
+
+[COMPSs INVOKER] Begin COMPSs call to taskflows.SyntheticTaskFlow
+[COMPSs INVOKER] On WorkingDir : /home/cramonco/.COMPSs/tf
+[COMPSs INVOKER] Slave hostname COMPSsWorker02 with 8 cus
+[COMPSs INVOKER] Generate project.xml at: project_871a546a-62dd-4432-9bd6-bd689294911a.xml
+[COMPSs INVOKER] Generate resources.xml at: resources_871a546a-62dd-4432-9bd6-bd689294911a.xml
+[COMPSs INVOKER] Creating nested log dir in: /home/cramonco/.COMPSs/tf/nestedCOMPSsLog
+[COMPSs INVOKER] COMPSs CMD: /opt/COMPSs/Runtime/scripts/user/runcompss --project=project_871a546a-62dd-4432-9bd6-bd689294911a.xml --resources=resources_871a546a-62dd-4432-9bd6-bd689294911a.xml --specific_log_dir=/home/cramonco/.COMPSs/tf/nestedCOMPSsLog --classpath=/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-java/run_scripts/../target/nested-hybrid-java.jar:::/opt/COMPSs/Runtime/compss-engine.jar -d -g --summary taskflows.SyntheticTaskFlow MyElement[IF=[object30,],P=false] MyElement[IF=[object13,],P=false] MyElement[IF=[object3,],P=false] MyElement[IF=[object21,],P=false] MyElement[IF=[object14,],P=false] MyElement[IF=[object15,],P=false] MyElement[IF=[object33,],P=false] 2 1000 50 
+[COMPSs INVOKER] COMPSs STDIN: null
+[COMPSs INVOKER] COMPSs STDOUT: null
+[COMPSs INVOKER] COMPSs STDERR: null
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] Executing binary command
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] CMD OUTPUT:
+[  INFO] Using default execution type: compss
+[  INFO] Using default language: java
+[  INFO] Relative Classpath resolved: /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-java/run_scripts/../target/nested-hybrid-java.jar:/opt/COMPSs/Runtime/compss-engine.jar:
+
+----------------- Executing taskflows.SyntheticTaskFlow --------------------------
+
+[(625)    API]  -  Deploying COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[(627)    API]  -  Starting COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[(627)    API]  -  Initializing components
+[(958)    API]  -  Ready to process tasks
+[INFO] Starting application
+[INFO] Parsing application arguments
+[DEBUG] Loaded: MyElement[IF=[object30,],P=false]
+[DEBUG] Loaded: MyElement[IF=[object13,],P=false]
+[DEBUG] Loaded: MyElement[IF=[object3,],P=false]
+[DEBUG] Loaded: MyElement[IF=[object21,],P=false]
+[DEBUG] Loaded: MyElement[IF=[object14,],P=false]
+[DEBUG] Loaded: MyElement[IF=[object15,],P=false]
+[DEBUG] Loaded: MyElement[IF=[object33,],P=false]
+[INFO] Launching task flow computation
+[(960)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(960)    API]  -  There are 4 parameters
+[(960)    API]  -    Parameter 0 has type OBJECT_T
+[(961)    API]  -    Parameter 1 has type INT_T
+[(961)    API]  -    Parameter 2 has type INT_T
+[(961)    API]  -    Parameter 3 has type OBJECT_T
+[(963)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(963)    API]  -  There are 4 parameters
+[(963)    API]  -    Parameter 0 has type OBJECT_T
+[(963)    API]  -    Parameter 1 has type INT_T
+[(963)    API]  -    Parameter 2 has type INT_T
+[(963)    API]  -    Parameter 3 has type OBJECT_T
+[(963)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(963)    API]  -  There are 4 parameters
+[(963)    API]  -    Parameter 0 has type OBJECT_T
+[(963)    API]  -    Parameter 1 has type INT_T
+[(963)    API]  -    Parameter 2 has type INT_T
+[(963)    API]  -    Parameter 3 has type OBJECT_T
+[(963)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(963)    API]  -  There are 4 parameters
+[(963)    API]  -    Parameter 0 has type OBJECT_T
+[(963)    API]  -    Parameter 1 has type INT_T
+[(963)    API]  -    Parameter 2 has type INT_T
+[(963)    API]  -    Parameter 3 has type OBJECT_T
+[(963)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(963)    API]  -  There are 4 parameters
+[(963)    API]  -    Parameter 0 has type OBJECT_T
+[(963)    API]  -    Parameter 1 has type INT_T
+[(963)    API]  -    Parameter 2 has type INT_T
+[(963)    API]  -    Parameter 3 has type OBJECT_T
+[(964)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(964)    API]  -  There are 4 parameters
+[(964)    API]  -    Parameter 0 has type OBJECT_T
+[(964)    API]  -    Parameter 1 has type INT_T
+[(964)    API]  -    Parameter 2 has type INT_T
+[(964)    API]  -    Parameter 3 has type OBJECT_T
+[(964)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(964)    API]  -  There are 4 parameters
+[(964)    API]  -    Parameter 0 has type OBJECT_T
+[(964)    API]  -    Parameter 1 has type INT_T
+[(964)    API]  -    Parameter 2 has type INT_T
+[(964)    API]  -    Parameter 3 has type OBJECT_T
+[(964)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(964)    API]  -  There are 4 parameters
+[(964)    API]  -    Parameter 0 has type OBJECT_T
+[(964)    API]  -    Parameter 1 has type INT_T
+[(964)    API]  -    Parameter 2 has type INT_T
+[(964)    API]  -    Parameter 3 has type OBJECT_T
+[(964)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(964)    API]  -  There are 4 parameters
+[(964)    API]  -    Parameter 0 has type OBJECT_T
+[(964)    API]  -    Parameter 1 has type INT_T
+[(964)    API]  -    Parameter 2 has type INT_T
+[(964)    API]  -    Parameter 3 has type OBJECT_T
+[(964)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(964)    API]  -  There are 4 parameters
+[(965)    API]  -    Parameter 0 has type OBJECT_T
+[(965)    API]  -    Parameter 1 has type INT_T
+[(965)    API]  -    Parameter 2 has type INT_T
+[(965)    API]  -    Parameter 3 has type OBJECT_T
+[(965)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(965)    API]  -  There are 4 parameters
+[(965)    API]  -    Parameter 0 has type OBJECT_T
+[(965)    API]  -    Parameter 1 has type INT_T
+[(965)    API]  -    Parameter 2 has type INT_T
+[(965)    API]  -    Parameter 3 has type OBJECT_T
+[(965)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(965)    API]  -  There are 4 parameters
+[(965)    API]  -    Parameter 0 has type OBJECT_T
+[(965)    API]  -    Parameter 1 has type INT_T
+[(965)    API]  -    Parameter 2 has type INT_T
+[(966)    API]  -    Parameter 3 has type OBJECT_T
+[(966)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(966)    API]  -  There are 4 parameters
+[(966)    API]  -    Parameter 0 has type OBJECT_T
+[(966)    API]  -    Parameter 1 has type INT_T
+[(966)    API]  -    Parameter 2 has type INT_T
+[(966)    API]  -    Parameter 3 has type OBJECT_T
+[(966)    API]  -  Creating task from method mapTask in taskflows.SyntheticTaskFlowTasks
+[(966)    API]  -  There are 4 parameters
+[(966)    API]  -    Parameter 0 has type OBJECT_T
+[(966)    API]  -    Parameter 1 has type INT_T
+[(966)    API]  -    Parameter 2 has type INT_T
+[(966)    API]  -    Parameter 3 has type OBJECT_T
+[(968)    API]  -  Creating task from method mergeTask in taskflows.SyntheticTaskFlowTasks
+[(968)    API]  -  There are 4 parameters
+[(968)    API]  -    Parameter 0 has type OBJECT_T
+[(968)    API]  -    Parameter 1 has type OBJECT_T
+[(968)    API]  -    Parameter 2 has type INT_T
+[(968)    API]  -    Parameter 3 has type INT_T
+[(969)    API]  -  Creating task from method mergeTask in taskflows.SyntheticTaskFlowTasks
+[(969)    API]  -  There are 4 parameters
+[(969)    API]  -    Parameter 0 has type OBJECT_T
+[(969)    API]  -    Parameter 1 has type OBJECT_T
+[(969)    API]  -    Parameter 2 has type INT_T
+[(969)    API]  -    Parameter 3 has type INT_T
+[(969)    API]  -  Creating task from method mergeTask in taskflows.SyntheticTaskFlowTasks
+[(969)    API]  -  There are 4 parameters
+[(969)    API]  -    Parameter 0 has type OBJECT_T
+[(969)    API]  -    Parameter 1 has type OBJECT_T
+[(969)    API]  -    Parameter 2 has type INT_T
+[(969)    API]  -    Parameter 3 has type INT_T
+[(970)    API]  -  Creating task from method mergeTask in taskflows.SyntheticTaskFlowTasks
+[(970)    API]  -  There are 4 parameters
+[(970)    API]  -    Parameter 0 has type OBJECT_T
+[(970)    API]  -    Parameter 1 has type OBJECT_T
+[(970)    API]  -    Parameter 2 has type INT_T
+[(970)    API]  -    Parameter 3 has type INT_T
+[(970)    API]  -  Creating task from method mergeTask in taskflows.SyntheticTaskFlowTasks
+[(970)    API]  -  There are 4 parameters
+[(970)    API]  -    Parameter 0 has type OBJECT_T
+[(970)    API]  -    Parameter 1 has type OBJECT_T
+[(970)    API]  -    Parameter 2 has type INT_T
+[(970)    API]  -    Parameter 3 has type INT_T
+[(970)    API]  -  Creating task from method mergeTask in taskflows.SyntheticTaskFlowTasks
+[(971)    API]  -  There are 4 parameters
+[(971)    API]  -    Parameter 0 has type OBJECT_T
+[(971)    API]  -    Parameter 1 has type OBJECT_T
+[(971)    API]  -    Parameter 2 has type INT_T
+[(971)    API]  -    Parameter 3 has type INT_T
+[INFO] Syncrhonizing final output
+[(971)    API]  -  Getting object with hash code 648936749
+[(9622)    API]  -  Object obtained 1620823990
+Computation result is: MyElement[IF=[object33,object30,object13,object3,object21,object14,object15,],P=true]
+DONE
+[TIME] TOTAL ELAPSED: 8664
+[(9624)    API]  -  No more tasks for app 1
+[(9631)    API]  -  Getting Result Files 1
+[(9637)    API]  -  ------- COMPSs Task Execution Summary per Worker ------
+[(9637)    API]  -  --- Summary for COMPSs Worker COMPSsWorker02
+[(9637)    API]  -  6 mergeTask(OBJECT_T,OBJECT_T,INT_T,INT_T)taskflows.SyntheticTaskFlowTasks tasks have been executed
+[(9637)    API]  -  14 mapTask(OBJECT_T,INT_T,INT_T)taskflows.SyntheticTaskFlowTasks tasks have been executed
+[(9637)    API]  -  --- Total executed tasks in COMPSs Worker COMPSsWorker02: 20
+[(9637)    API]  -  -------------------------------------------------------
+[(9637)    API]  -  
+[(9637)    API]  -  ------------ COMPSs Task Execution Summary ------------
+[(9637)    API]  -  6 mergeTask(OBJECT_T,OBJECT_T,INT_T,INT_T)taskflows.SyntheticTaskFlowTasks tasks have been executed
+[(9637)    API]  -  14 mapTask(OBJECT_T,INT_T,INT_T)taskflows.SyntheticTaskFlowTasks tasks have been executed
+[(9637)    API]  -  Total executed tasks: 20
+[(9637)    API]  -  -------------------------------------------------------
+[(9637)    API]  -  Stop IT reached
+[(9637)    API]  -  Stopping Graph generation...
+[(9638)    API]  -  Stopping AP...
+[(9639)    API]  -  Stopping TD...
+[(9726)    API]  -  Stopping Comm...
+[(9726)    API]  -  Runtime stopped
+[(9726)    API]  -  Execution Finished
+
+------------------------------------------------------------
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] CMD EXIT VALUE: 0
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[EXECUTOR] executeTask - End task execution

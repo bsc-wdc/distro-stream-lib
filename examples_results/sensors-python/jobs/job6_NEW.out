@@ -1,0 +1,528 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: METHOD
+  * Method definition: [DECLARING CLASS=sensors_streams, METHOD NAME=extract_info]
+  * Parameter types: java.lang.String int int
+  * Parameter values: /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/d2v1_1563974683515.IT 500 100
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker01
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 1
+[EXECUTOR] executeTask - End task execution
+utor - Received task in process: Process-3
+pycompss.worker.piper.piper_worker pipe_executor -  - TASK CMD: ['EXECUTE_TASK', '6', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/jobs/job6_NEW.out', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/jobs/job6_NEW.err', '1', '6', 'true', 'null', 'METHOD', 'sensors_streams', 'extract_info', '0', '1', 'COMPSsWorker01', '1', 'false', '9', '10', '13', '28', '3', 'null', 'fds_filtered', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/d2v1_1563974683515.IT', 'R', '4', '3', 'null', 'base_sleep_time', '500', '4', '3', 'null', 'sleep_random_range', '100', '9', '3', '#', '$return_0', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3:d3v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3', '9', '3', '#', '$return_1', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4:d4v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4', '9', '3', '#', '$return_2', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5:d5v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5', '9', '3', '#', '$return_3', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6:d6v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6', '9', '3', '#', '$return_4', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7:d7v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7', '9', '3', '#', '$return_5', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8:d8v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8', '9', '3', '#', '$return_6', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9:d9v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9', '9', '3', '#', '$return_7', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10:d10v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10', '9', '3', '#', '$return_8', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11:d11v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11', '9', '3', '#', '$return_9', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12:d12v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12']
+pycompss.worker.piper.piper_worker pipe_executor - Process environment:
+pycompss.worker.piper.piper_worker pipe_executor - 	 - Number of nodes: 1
+pycompss.worker.piper.piper_worker pipe_executor - 	 - Hostnames: COMPSsWorker01
+pycompss.worker.piper.piper_worker pipe_executor - 	 - Number of threads: 1
+pycompss.worker.piper.piper_worker worker_commons - Begin task execution in Process-3
+pycompss.worker.piper.piper_worker worker_commons - Storage conf: null
+pycompss.worker.piper.piper_worker worker_commons - Params: ['sensors_streams', 'extract_info', '0', '1', 'COMPSsWorker01', '1', 'false', '9', '10', '13', '28', '3', 'null', 'fds_filtered', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/d2v1_1563974683515.IT', 'R', '4', '3', 'null', 'base_sleep_time', '500', '4', '3', 'null', 'sleep_random_range', '100', '9', '3', '#', '$return_0', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3:d3v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3', '9', '3', '#', '$return_1', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4:d4v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4', '9', '3', '#', '$return_2', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5:d5v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5', '9', '3', '#', '$return_3', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6:d6v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6', '9', '3', '#', '$return_4', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7:d7v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7', '9', '3', '#', '$return_5', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8:d8v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8', '9', '3', '#', '$return_6', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9:d9v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9', '9', '3', '#', '$return_7', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10:d10v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10', '9', '3', '#', '$return_8', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11:d11v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11', '9', '3', '#', '$return_9', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12:d12v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12']
+pycompss.worker.piper.piper_worker worker_commons - Path: sensors_streams
+pycompss.worker.piper.piper_worker worker_commons - Method name: extract_info
+pycompss.worker.piper.piper_worker worker_commons - Num slaves: 1
+pycompss.worker.piper.piper_worker worker_commons - Slaves: ['1']
+pycompss.worker.piper.piper_worker worker_commons - Cus: 1
+pycompss.worker.piper.piper_worker worker_commons - Has target: false
+pycompss.worker.piper.piper_worker worker_commons - Num Params: 13
+pycompss.worker.piper.piper_worker worker_commons - Return Length: 10
+pycompss.worker.piper.piper_worker worker_commons - Args: ['28', '3', 'null', 'fds_filtered', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/d2v1_1563974683515.IT', 'R', '4', '3', 'null', 'base_sleep_time', '500', '4', '3', 'null', 'sleep_random_range', '100', '9', '3', '#', '$return_0', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3:d3v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3', '9', '3', '#', '$return_1', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4:d4v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4', '9', '3', '#', '$return_2', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5:d5v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5', '9', '3', '#', '$return_3', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6:d6v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6', '9', '3', '#', '$return_4', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7:d7v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7', '9', '3', '#', '$return_5', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8:d8v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8', '9', '3', '#', '$return_6', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9:d9v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9', '9', '3', '#', '$return_7', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10:d10v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10', '9', '3', '#', '$return_8', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11:d11v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11', '9', '3', '#', '$return_9', '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12:d12v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12']
+pycompss.worker.piper.piper_worker worker_commons - Processing parameters:
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 0
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 28
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : fds_filtered
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/d2v1_1563974683515.IT'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 1
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 4
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : base_sleep_time
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '500'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 2
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 4
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : sleep_random_range
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '100'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : #
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : $return_0
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3:d3v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 4
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : #
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : $return_1
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4:d4v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 5
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : #
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : $return_2
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5:d5v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 6
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : #
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : $return_3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6:d6v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 7
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : #
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : $return_4
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7:d7v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 8
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : #
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : $return_5
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8:d8v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : #
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : $return_6
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9:d9v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 10
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : #
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : $return_7
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10:d10v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 11
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : #
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : $return_8
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11:d11v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 12
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : #
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : $return_9
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12:d12v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12'
+pycompss.worker.piper.piper_worker worker_commons - RUN TASK with arguments:
+pycompss.worker.piper.piper_worker worker_commons - 	- Path: sensors_streams
+pycompss.worker.piper.piper_worker worker_commons - 	- Method/function name: extract_info
+pycompss.worker.piper.piper_worker worker_commons - 	- Has target: false
+pycompss.worker.piper.piper_worker worker_commons - 	- # parameters: 13
+pycompss.worker.piper.piper_worker worker_commons - 	- Values:
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter fds_filtered
+	Type 28
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/d2v1_1563974683515.IT
+	Key None
+	Content None
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter base_sleep_time
+	Type 4
+	File Name None
+	Key None
+	Content 500
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter sleep_random_range
+	Type 4
+	File Name None
+	Key None
+	Content 100
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter $return_0
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3:d3v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter $return_1
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4:d4v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter $return_2
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5:d5v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter $return_3
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6:d6v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter $return_4
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7:d7v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter $return_5
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8:d8v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter $return_6
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9:d9v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter $return_7
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10:d10v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter $return_8
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11:d11v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter $return_9
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12:d12v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 	- COMPSs types:
+pycompss.worker.piper.piper_worker worker_commons - 		 28
+pycompss.worker.piper.piper_worker worker_commons - 		 4
+pycompss.worker.piper.piper_worker worker_commons - 		 4
+pycompss.worker.piper.piper_worker worker_commons - 		 9
+pycompss.worker.piper.piper_worker worker_commons - 		 9
+pycompss.worker.piper.piper_worker worker_commons - 		 9
+pycompss.worker.piper.piper_worker worker_commons - 		 9
+pycompss.worker.piper.piper_worker worker_commons - 		 9
+pycompss.worker.piper.piper_worker worker_commons - 		 9
+pycompss.worker.piper.piper_worker worker_commons - 		 9
+pycompss.worker.piper.piper_worker worker_commons - 		 9
+pycompss.worker.piper.piper_worker worker_commons - 		 9
+pycompss.worker.piper.piper_worker worker_commons - 		 9
+pycompss.worker.piper.piper_worker worker_commons - Trying to import the user module: sensors_streams
+pycompss.worker.piper.piper_worker worker_commons - Module successfully loaded (Python version >= 2.7)
+pycompss.worker.piper.piper_worker worker_commons - Starting task execution
+pycompss.worker.piper.piper_worker worker_commons - module     : <module 'sensors_streams' from '/home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/sensors_streams.pyc'> 
+pycompss.worker.piper.piper_worker worker_commons - method_name: extract_info 
+pycompss.worker.piper.piper_worker worker_commons - time_out   : 0 
+pycompss.worker.piper.piper_worker worker_commons - Types      : [28, 4, 4, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9] 
+pycompss.worker.piper.piper_worker worker_commons - Values     : [
+Parameter fds_filtered
+	Type 28
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/d2v1_1563974683515.IT
+	Key None
+	Content None
+	Stream 3
+	Prefix null
+--------------------
+, 
+Parameter base_sleep_time
+	Type 4
+	File Name None
+	Key None
+	Content 500
+	Stream 3
+	Prefix null
+--------------------
+, 
+Parameter sleep_random_range
+	Type 4
+	File Name None
+	Key None
+	Content 100
+	Stream 3
+	Prefix null
+--------------------
+, 
+Parameter $return_0
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3:d3v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-3
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+, 
+Parameter $return_1
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4:d4v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-4
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+, 
+Parameter $return_2
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5:d5v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-5
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+, 
+Parameter $return_3
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6:d6v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-6
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+, 
+Parameter $return_4
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7:d7v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-7
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+, 
+Parameter $return_5
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8:d8v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-8
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+, 
+Parameter $return_6
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9:d9v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-9
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+, 
+Parameter $return_7
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10:d10v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-10
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+, 
+Parameter $return_8
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11:d11v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-11
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+, 
+Parameter $return_9
+	Type 9
+	File Name /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12:d12v2_1563974683515.IT:false:true:/tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/sandBox/job_6/compss-serialized-obj_6571edf4-ae16-11e9-a205-a44cc871a000-12
+	Key None
+	Content None
+	Stream 3
+	Prefix #
+--------------------
+] 
+pycompss.worker.piper.piper_worker worker_commons - P. storage : False 
+pycompss.worker.piper.piper_worker worker_commons - Storage cfg: null 
+[DEBUG] Starting extract_info
+[DEBUG] Polling new files
+[DEBUG] Polling new files
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file44
+['Output image generated at 2019-07-24 15:25:02.580873\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file44\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file14
+['Output image generated at 2019-07-24 15:25:00.579658\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file14\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file11
+['Output image generated at 2019-07-24 15:25:06.584654\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file11\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file18
+['Output image generated at 2019-07-24 15:25:04.582198\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file18\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file43
+['Output image generated at 2019-07-24 15:25:08.586475\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file43\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file46
+['Output image generated at 2019-07-24 15:25:10.588992\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file46\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file49
+['Output image generated at 2019-07-24 15:25:12.591352\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file49\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file9
+['Output image generated at 2019-07-24 15:25:14.593623\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file9\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file47
+['Output image generated at 2019-07-24 15:25:18.596715\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file47\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file31
+['Output image generated at 2019-07-24 15:25:16.594559\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file31\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file28
+['Output image generated at 2019-07-24 15:25:22.599414\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file28\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file23
+['Output image generated at 2019-07-24 15:25:20.598570\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file23\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file17
+['Output image generated at 2019-07-24 15:25:26.603001\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file17\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file10
+['Output image generated at 2019-07-24 15:25:24.601546\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file10\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file41
+['Output image generated at 2019-07-24 15:25:28.604587\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file41\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file37
+['Output image generated at 2019-07-24 15:25:32.608981\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file37\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file25
+['Output image generated at 2019-07-24 15:25:30.606824\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file25\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file32
+['Output image generated at 2019-07-24 15:25:36.613273\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file32\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file15
+['Output image generated at 2019-07-24 15:25:38.615479\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file15\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file39
+['Output image generated at 2019-07-24 15:25:34.611095\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file39\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file7
+['Output image generated at 2019-07-24 15:25:42.621590\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file7\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file22
+['Output image generated at 2019-07-24 15:25:40.618357\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file22\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file24
+['Output image generated at 2019-07-24 15:25:46.626950\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file24\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file30
+['Output image generated at 2019-07-24 15:25:48.627461\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file30\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file19
+['Output image generated at 2019-07-24 15:25:44.624211\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file19\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file34
+['Output image generated at 2019-07-24 15:25:50.629185\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file34\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file4
+['Output image generated at 2019-07-24 15:25:52.630385\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file4\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file33
+['Output image generated at 2019-07-24 15:25:54.633200\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file33\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file29
+['Output image generated at 2019-07-24 15:25:56.634298\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file29\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file3
+['Output image generated at 2019-07-24 15:25:58.635982\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file3\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file13
+['Output image generated at 2019-07-24 15:26:02.640965\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file13\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file0
+['Output image generated at 2019-07-24 15:26:00.638351\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file0\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file35
+['Output image generated at 2019-07-24 15:26:06.644289\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file35\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file21
+['Output image generated at 2019-07-24 15:26:04.643376\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file21\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file40
+['Output image generated at 2019-07-24 15:26:08.646384\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file40\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file48
+['Output image generated at 2019-07-24 15:26:12.649514\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file48\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file5
+['Output image generated at 2019-07-24 15:26:10.647478\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file5\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file20
+['Output image generated at 2019-07-24 15:26:16.651665\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file20\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file38
+['Output image generated at 2019-07-24 15:26:18.653568\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file38\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file45
+['Output image generated at 2019-07-24 15:26:14.650780\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file45\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file12
+['Output image generated at 2019-07-24 15:26:22.654687\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file12\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file1
+['Output image generated at 2019-07-24 15:26:20.654291\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file1\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file27
+['Output image generated at 2019-07-24 15:26:26.658284\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file27\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file2
+['Output image generated at 2019-07-24 15:26:24.657196\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file2\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file26
+['Output image generated at 2019-07-24 15:26:28.660195\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file26\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file36
+['Output image generated at 2019-07-24 15:26:30.662415\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file36\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file6
+['Output image generated at 2019-07-24 15:26:32.665517\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lipycompss.worker.piper.piper_worker worker_commons - Exit code : 0 
+pycompss.worker.piper.piper_worker worker_commons - Return Types : [28, 4, 4, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9] 
+pycompss.worker.piper.piper_worker worker_commons - Return Values: ['null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null'] 
+pycompss.worker.piper.piper_worker worker_commons - Return target_direction: Parameter(type=None, direction=2, stream=3, prefix=null
+          object=None
+          file_name=None
+          is_future=False) 
+pycompss.worker.piper.piper_worker worker_commons - Return timed_out: False 
+pycompss.worker.piper.piper_worker worker_commons - Return exception_message:  
+pycompss.worker.piper.piper_worker worker_commons - Finished task execution
+pycompss.worker.piper.piper_worker worker_commons - End task execution. Status: Ok
+b/examples/sensors-python/run_scripts/exec/sensor/file6\n']
+[DEBUG] Polling new files
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file16
+['Output image generated at 2019-07-24 15:26:34.668230\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file16\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file8
+['Output image generated at 2019-07-24 15:26:36.670445\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file8\n']
+[DEBUG] Processing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/filter/filtered_file_file42
+['Output image generated at 2019-07-24 15:26:38.671849\n', 'Output image generated from /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec/sensor/file42\n']
+[DEBUG] Polling new files
+[DEBUG] Detected valid elements: [<my_element.MyElement object at 0x7f327f172d90>, <my_element.MyElement object at 0x7f327f172c50>, <my_element.MyElement object at 0x7f327f172bd0>, <my_element.MyElement object at 0x7f327f172c90>, <my_element.MyElement object at 0x7f327f172d50>, <my_element.MyElement object at 0x7f327f172dd0>, <my_element.MyElement object at 0x7f327f172e10>, <my_element.MyElement object at 0x7f327f172e50>, <my_element.MyElement object at 0x7f327f172e90>, <my_element.MyElement object at 0x7f327f172ed0>]
+pycompss.worker.piper.piper_worker pipe_executor - Process-3 - Pipe /tmp/COMPSsWorker01/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker01/pipe_-62428917_compute3.inbound END TASK MESSAGE: END_TASK 6 0 13 28 null 4 null 4 null 9 null 9 null 9 null 9 null 9 null 9 null 9 null 9 null 9 null 9 null 
+
+pycompss.worker.piper.piper_worker pipe_executor - Cleaning environment.
+pycompss.worker.piper.piper_worker pipe_executor - Restoring loggers.

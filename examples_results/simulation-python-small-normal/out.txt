@@ -1,0 +1,899 @@
+[  INFO] Using default execution type: compss
+[  INFO] Inferred PYTHON language
+
+----------------- Executing simulation_normal.py --------------------------
+
+Welcome to Extrae 3.5.3
+Extrae: Parsing the configuration file (/opt/COMPSs//Runtime/configuration/xml/tracing/extrae_basic.xml) begins
+Extrae: Warning! <trace> tag has no <home> property defined.
+Extrae: Generating intermediate files for Paraver traces.
+Extrae: <cpu> tag at <counters> level will be ignored. This library does not support CPU HW.
+Extrae: Tracing buffer can hold 100000 events
+Extrae: Circular buffer disabled.
+Extrae: Warning! <input-output> tag will be ignored. This library does support instrumenting I/O calls.
+Extrae: Dynamic memory instrumentation is disabled.
+Extrae: Basic I/O memory instrumentation is disabled.
+Extrae: System calls instrumentation is disabled.
+Extrae: Parsing the configuration file (/opt/COMPSs//Runtime/configuration/xml/tracing/extrae_basic.xml) has ended
+Extrae: Intermediate traces will be stored in /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts
+Extrae: Tracing mode is set to: Detail.
+Extrae: Successfully initiated with 1 tasks and 1 threads
+
+Binding debug is activated
+[BINDING-COMMONS]  -  @GS_On  -  Creating the JVM
+[BINDING_COMMONS]  -  @create_vm  -  reading file in JVM_OPTIONS_FILE
+[BINDING_COMMONS]  -  @create_vm  -  Launching JVM
+[BINDING_COMMONS]  -  @create_vm  -  JVM Ready
+[BINDING-COMMONS]  -  @GS_On  -  Creating runtime object
+[(472)    API]  -  Deploying COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[BINDING-COMMONS]  -  @GS_On  -  Calling runtime start
+[(472)    API]  -  Starting COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[(472)    API]  -  Initializing components
+[(830)    API]  -  Ready to process tasks
+[BINDING-COMMONS]  -  @Init JNI Methods
+[BINDING_COMMONS]  -  @Init JNI Direction Types
+[BINDING_COMMONS]  -  @Init JNI Stream Types
+[BINDING-COMMONS]  -  @Init JNI Types
+[BINDING_COMMONS]  -  @Init DONE
+[BINDING_COMMONS]  -  @Master JNI Init DONE
+[BINDING-COMMONS]  -  @GS_Get_AppDir - Getting application directory.
+[BINDING-COMMONS]  -  @GS_Get_AppDir  -  directory name: /home/cramonco/.COMPSs/simulation_normal.py_01/
+[INFO] Starting application
+[INFO] Parsing application arguments
+[INFO] Creating simulation and image file paths
+[INFO] Creating output paths for final gifs
+[INFO] Launching simulations
+[DEBUG] Launching simulation for 0
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(842)    API]  -  Registering CoreElement simulation_normal.simulation
+[(842)    API]  -  	 - Implementation: simulation_normal.simulation
+[(842)    API]  -  	 - Constraints   : computing_units:8;
+[(842)    API]  -  	 - Type          : METHOD
+[(842)    API]  -  	 - ImplTypeArgs  : 
+[(842)    API]  -  		 Arg: simulation_normal
+[(842)    API]  -  		 Arg: simulation
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: simulation_normal.simulation
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 5
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: num_files
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 200
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file0
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_0
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file1
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 5
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 6
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file3
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_3
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 7
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file4
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_4
+[(852)    API]  -  Creating task from method simulation_normal.simulation
+[(852)    API]  -  There are 8 parameters
+[(852)    API]  -    Parameter 0 has type INT_T
+[(853)    API]  -    Parameter 1 has type INT_T
+[(853)    API]  -    Parameter 2 has type INT_T
+[(853)    API]  -    Parameter 3 has type FILE_T
+[(856)    API]  -    Parameter 4 has type FILE_T
+[(856)    API]  -    Parameter 5 has type FILE_T
+[(856)    API]  -    Parameter 6 has type FILE_T
+[(857)    API]  -    Parameter 7 has type FILE_T
+[DEBUG] Launching simulation for 1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 5
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: num_files
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 200
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file0
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_0
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file1
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 5
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 6
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file3
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_3
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 7
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file4
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_4
+[(864)    API]  -  Creating task from method simulation_normal.simulation
+[(864)    API]  -  There are 8 parameters
+[(864)    API]  -    Parameter 0 has type INT_T
+[(864)    API]  -    Parameter 1 has type INT_T
+[(864)    API]  -    Parameter 2 has type INT_T
+[(864)    API]  -    Parameter 3 has type FILE_T
+[(864)    API]  -    Parameter 4 has type FILE_T
+[(865)    API]  -    Parameter 5 has type FILE_T
+[(865)    API]  -    Parameter 6 has type FILE_T
+[(865)    API]  -    Parameter 7 has type FILE_T
+[INFO] Processing generated files
+[DEBUG] Launching process for 0
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(869)    API]  -  Registering CoreElement simulation_normal.process_sim_file1
+[(869)    API]  -  	 - Implementation: simulation_normal.process_sim_file1
+[(869)    API]  -  	 - Constraints   : computing_units:1;
+[(869)    API]  -  	 - Type          : METHOD
+[(869)    API]  -  	 - ImplTypeArgs  : 
+[(869)    API]  -  		 Arg: simulation_normal
+[(869)    API]  -  		 Arg: process_sim_file1
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: simulation_normal.process_sim_file1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file0
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: input_file
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file0.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_image
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(877)    API]  -  Creating task from method simulation_normal.process_sim_file1
+[(877)    API]  -  There are 4 parameters
+[(877)    API]  -    Parameter 0 has type FILE_T
+[(878)    API]  -    Parameter 1 has type FILE_T
+[(878)    API]  -    Parameter 2 has type INT_T
+[(878)    API]  -    Parameter 3 has type INT_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file1
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: input_file
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file1.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_image
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(885)    API]  -  Creating task from method simulation_normal.process_sim_file1
+[(885)    API]  -  There are 4 parameters
+[(885)    API]  -    Parameter 0 has type FILE_T
+[(885)    API]  -    Parameter 1 has type FILE_T
+[(885)    API]  -    Parameter 2 has type INT_T
+[(885)    API]  -    Parameter 3 has type INT_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: input_file
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file2.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_image
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(890)    API]  -  Creating task from method simulation_normal.process_sim_file1
+[(890)    API]  -  There are 4 parameters
+[(890)    API]  -    Parameter 0 has type FILE_T
+[(890)    API]  -    Parameter 1 has type FILE_T
+[(891)    API]  -    Parameter 2 has type INT_T
+[(891)    API]  -    Parameter 3 has type INT_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file3
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: input_file
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file3.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_image
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(896)    API]  -  Creating task from method simulation_normal.process_sim_file1
+[(896)    API]  -  There are 4 parameters
+[(896)    API]  -    Parameter 0 has type FILE_T
+[(896)    API]  -    Parameter 1 has type FILE_T
+[(896)    API]  -    Parameter 2 has type INT_T
+[(896)    API]  -    Parameter 3 has type INT_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file4
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: input_file
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file4.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_image
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(901)    API]  -  Creating task from method simulation_normal.process_sim_file1
+[(901)    API]  -  There are 4 parameters
+[(901)    API]  -    Parameter 0 has type FILE_T
+[(901)    API]  -    Parameter 1 has type FILE_T
+[(901)    API]  -    Parameter 2 has type INT_T
+[(901)    API]  -    Parameter 3 has type INT_T
+[DEBUG] Launching process for 1
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(906)    API]  -  Registering CoreElement simulation_normal.process_sim_file2
+[(906)    API]  -  	 - Implementation: simulation_normal.process_sim_file2
+[(906)    API]  -  	 - Constraints   : computing_units:1;
+[(906)    API]  -  	 - Type          : METHOD
+[(906)    API]  -  	 - ImplTypeArgs  : 
+[(906)    API]  -  		 Arg: simulation_normal
+[(906)    API]  -  		 Arg: process_sim_file2
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: simulation_normal.process_sim_file2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file0
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: input_file
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file0.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_image
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(909)    API]  -  Creating task from method simulation_normal.process_sim_file2
+[(909)    API]  -  There are 4 parameters
+[(909)    API]  -    Parameter 0 has type FILE_T
+[(909)    API]  -    Parameter 1 has type FILE_T
+[(910)    API]  -    Parameter 2 has type INT_T
+[(910)    API]  -    Parameter 3 has type INT_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file1
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: input_file
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file1.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_image
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(915)    API]  -  Creating task from method simulation_normal.process_sim_file2
+[(915)    API]  -  There are 4 parameters
+[(915)    API]  -    Parameter 0 has type FILE_T
+[(915)    API]  -    Parameter 1 has type FILE_T
+[(916)    API]  -    Parameter 2 has type INT_T
+[(916)    API]  -    Parameter 3 has type INT_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: input_file
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file2.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_image
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(920)    API]  -  Creating task from method simulation_normal.process_sim_file2
+[(920)    API]  -  There are 4 parameters
+[(920)    API]  -    Parameter 0 has type FILE_T
+[(920)    API]  -    Parameter 1 has type FILE_T
+[(921)    API]  -    Parameter 2 has type INT_T
+[(921)    API]  -    Parameter 3 has type INT_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file3
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: input_file
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file3.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_image
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(926)    API]  -  Creating task from method simulation_normal.process_sim_file2
+[(926)    API]  -  There are 4 parameters
+[(926)    API]  -    Parameter 0 has type FILE_T
+[(927)    API]  -    Parameter 1 has type FILE_T
+[(927)    API]  -    Parameter 2 has type INT_T
+[(927)    API]  -    Parameter 3 has type INT_T
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file4
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: input_file
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file4.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_image
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(932)    API]  -  Creating task from method simulation_normal.process_sim_file2
+[(932)    API]  -  There are 4 parameters
+[(932)    API]  -    Parameter 0 has type FILE_T
+[(932)    API]  -    Parameter 1 has type FILE_T
+[(933)    API]  -    Parameter 2 has type INT_T
+[(933)    API]  -    Parameter 3 has type INT_T
+[DEBUG] Launching merge_reduce for /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_0
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(938)    API]  -  Registering CoreElement simulation_normal.merge_reduce
+[(938)    API]  -  	 - Implementation: simulation_normal.merge_reduce
+[(938)    API]  -  	 - Constraints   : computing_units:2;
+[(938)    API]  -  	 - Type          : METHOD
+[(938)    API]  -  	 - ImplTypeArgs  : 
+[(938)    API]  -  		 Arg: simulation_normal
+[(938)    API]  -  		 Arg: merge_reduce
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: simulation_normal.merge_reduce
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_0
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_gif
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 10000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file0.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_0
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file1.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 5
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file2.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 6
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file3.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_3
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 7
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0/file4.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_4
+[(944)    API]  -  Creating task from method simulation_normal.merge_reduce
+[(944)    API]  -  There are 8 parameters
+[(944)    API]  -    Parameter 0 has type FILE_T
+[(944)    API]  -    Parameter 1 has type INT_T
+[(944)    API]  -    Parameter 2 has type INT_T
+[(944)    API]  -    Parameter 3 has type FILE_T
+[(944)    API]  -    Parameter 4 has type FILE_T
+[(945)    API]  -    Parameter 5 has type FILE_T
+[(945)    API]  -    Parameter 6 has type FILE_T
+[(945)    API]  -    Parameter 7 has type FILE_T
+[DEBUG] Launching merge_reduce for /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_1
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_gif
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 10000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file0.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_0
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file1.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 5
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file2.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 6
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file3.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_3
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 7
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream1/file4.out
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_4
+[(956)    API]  -  Creating task from method simulation_normal.merge_reduce
+[(956)    API]  -  There are 8 parameters
+[(956)    API]  -    Parameter 0 has type FILE_T
+[(956)    API]  -    Parameter 1 has type INT_T
+[(956)    API]  -    Parameter 2 has type INT_T
+[(956)    API]  -    Parameter 3 has type FILE_T
+[(956)    API]  -    Parameter 4 has type FILE_T
+[(956)    API]  -    Parameter 5 has type FILE_T
+[(957)    API]  -    Parameter 6 has type FILE_T
+[(957)    API]  -    Parameter 7 has type FILE_T
+[INFO] Syncrhonizing final output gifs
+[(958)    API]  -  Getting file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_0
+[(958)    API]  -  Opening /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_0 in mode IN
+[(34348)    API]  -  File target Location: /home/cramonco/.COMPSs/simulation_normal.py_01/tmpFiles/d21v2_1563977429958.IT
+[(34348)    API]  -  Moving file from /home/cramonco/.COMPSs/simulation_normal.py_01/tmpFiles/d21v2_1563977429958.IT to /home/cramonco/.COMPSs/simulation_normal.py_01/tmpFiles/d21v2_1563977429958.IT.tmp
+[(34351)    API]  -  Closing /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_0 in mode IN
+[(34352)    API]  -  Closing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec/output_gif_0
+[(34355)    API]  -  Moving file from /home/cramonco/.COMPSs/simulation_normal.py_01/tmpFiles/d21v2_1563977429958.IT.tmp to /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_0
+[BINDING-COMMONS]  -  @GS_Get_File  -  COMPSs filename: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_0
+Output gif generated at: None
+[(34356)    API]  -  Getting file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_1
+[(34356)    API]  -  Opening /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_1 in mode IN
+[(34369)    API]  -  File target Location: /home/cramonco/.COMPSs/simulation_normal.py_01/tmpFiles/d22v2_1563977429958.IT
+[(34369)    API]  -  Moving file from /home/cramonco/.COMPSs/simulation_normal.py_01/tmpFiles/d22v2_1563977429958.IT to /home/cramonco/.COMPSs/simulation_normal.py_01/tmpFiles/d22v2_1563977429958.IT.tmp
+[(34369)    API]  -  Closing /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_1 in mode IN
+[(34372)    API]  -  Closing file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec/output_gif_1
+[(34374)    API]  -  Moving file from /home/cramonco/.COMPSs/simulation_normal.py_01/tmpFiles/d22v2_1563977429958.IT.tmp to /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_1
+[BINDING-COMMONS]  -  @GS_Get_File  -  COMPSs filename: /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//output_gif_1
+Output gif generated at: None
+[INFO] DONE
+[TIME] TOTAL ELAPSED: 33.536643
+[BINDING-COMMONS]  -  @GS_Off
+[BINDING-COMMONS]  -  @Off - Waiting to end tasks
+[(34375)    API]  -  No more tasks for app 0
+[(34378)    API]  -  Getting Result Files 0
+[BINDING-COMMONS]  -  @Off - Stopping runtime
+[(34527)    API]  -  ------- COMPSs Task Execution Summary per Worker ------
+[(34527)    API]  -  --- Summary for COMPSs Worker COMPSsWorker03
+[(34527)    API]  -  0 simulation_normal.process_sim_file2 tasks have been executed
+[(34527)    API]  -  1 simulation_normal.merge_reduce tasks have been executed
+[(34527)    API]  -  5 simulation_normal.process_sim_file1 tasks have been executed
+[(34527)    API]  -  1 simulation_normal.simulation tasks have been executed
+[(34527)    API]  -  --- Total executed tasks in COMPSs Worker COMPSsWorker03: 7
+[(34527)    API]  -  --- Summary for COMPSs Worker COMPSsWorker01
+[(34527)    API]  -  0 simulation_normal.process_sim_file2 tasks have been executed
+[(34527)    API]  -  0 simulation_normal.merge_reduce tasks have been executed
+[(34527)    API]  -  0 simulation_normal.process_sim_file1 tasks have been executed
+[(34527)    API]  -  0 simulation_normal.simulation tasks have been executed
+[(34527)    API]  -  --- Total executed tasks in COMPSs Worker COMPSsWorker01: 0
+[(34527)    API]  -  --- Summary for COMPSs Worker COMPSsWorker02
+[(34527)    API]  -  5 simulation_normal.process_sim_file2 tasks have been executed
+[(34527)    API]  -  1 simulation_normal.merge_reduce tasks have been executed
+[(34527)    API]  -  0 simulation_normal.process_sim_file1 tasks have been executed
+[(34527)    API]  -  1 simulation_normal.simulation tasks have been executed
+[(34527)    API]  -  --- Total executed tasks in COMPSs Worker COMPSsWorker02: 7
+[(34527)    API]  -  -------------------------------------------------------
+[(34527)    API]  -  
+[(34527)    API]  -  ------------ COMPSs Task Execution Summary ------------
+[(34527)    API]  -  5 simulation_normal.process_sim_file2 tasks have been executed
+[(34527)    API]  -  2 simulation_normal.merge_reduce tasks have been executed
+[(34527)    API]  -  5 simulation_normal.process_sim_file1 tasks have been executed
+[(34527)    API]  -  2 simulation_normal.simulation tasks have been executed
+[(34527)    API]  -  Total executed tasks: 14
+[(34527)    API]  -  -------------------------------------------------------
+[(34527)    API]  -  Stop IT reached
+[(34527)    API]  -  Stopping Graph generation...
+[(34527)    API]  -  Stopping AP...
+Extrae: Intermediate raw trace file created : /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/set-0/TRACE@linux-BSC.0000022152000000000002.mpit
+[(34528)    API]  -  Stopping TD...
+[(65218)    API]  -  Stopping Comm...
+Extrae: Intermediate raw trace file created : /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/set-0/TRACE@linux-BSC.0000022152000000000001.mpit
+Extrae: Intermediate raw trace file created : /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/set-0/TRACE@linux-BSC.0000022152000000000000.mpit
+Extrae: Intermediate raw sym file created : /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/set-0/TRACE@linux-BSC.0000022152000000000000.sym
+Extrae: Deallocating memory.
+Extrae: Application has ended. Tracing has been terminated.
+Package created -rw-r--r-- 1 cramonco users 10256 Jul 24 16:11 master_compss_trace.tar.gz
+merger: Output trace format is: Paraver
+merger: Extrae 3.5.3
+mpi2prv: Assigned nodes < linux-BSC >
+mpi2prv: Assigned size per processor < <1 Mbyte >
+mpi2prv: File set-0/TRACE@linux-BSC.0000022325000002000000.mpit is object 1.3.1 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022325000002000001.mpit is object 1.3.2 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022325000002000002.mpit is object 1.3.3 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022325000002000003.mpit is object 1.3.4 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022325000002000004.mpit is object 1.3.5 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022353000003000000.mpit is object 1.4.1 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022353000003000001.mpit is object 1.4.2 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022353000003000002.mpit is object 1.4.3 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022353000003000003.mpit is object 1.4.4 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022353000003000004.mpit is object 1.4.5 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022353000003000005.mpit is object 1.4.6 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022353000003000006.mpit is object 1.4.7 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022353000003000007.mpit is object 1.4.8 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022353000003000008.mpit is object 1.4.9 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022355000001000000.mpit is object 1.2.1 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022355000001000001.mpit is object 1.2.2 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022355000001000002.mpit is object 1.2.3 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022355000001000003.mpit is object 1.2.4 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022355000001000004.mpit is object 1.2.5 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022355000001000005.mpit is object 1.2.6 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022355000001000006.mpit is object 1.2.7 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022355000001000007.mpit is object 1.2.8 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022355000001000008.mpit is object 1.2.9 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022152000000000000.mpit is object 1.1.1 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022152000000000001.mpit is object 1.1.2 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000022152000000000002.mpit is object 1.1.3 on node linux-BSC assigned to processor 0
+mpi2prv: Checking for target directory existance... exists, ok!
+mpi2prv: Selected output trace format is Paraver
+mpi2prv: Stored trace format is Paraver
+mpi2prv: Searching synchronization points... done
+mpi2prv: Time Synchronization disabled.
+mpi2prv: Circular buffer enabled at tracing time? NO
+mpi2prv: Parsing intermediate files
+mpi2prv: Progress 1 of 2 ... 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% done
+mpi2prv: Processor 0 succeeded to translate its assigned files
+mpi2prv: Elapsed time translating files: 0 hours 0 minutes 0 seconds
+mpi2prv: Elapsed time sorting addresses: 0 hours 0 minutes 0 seconds
+mpi2prv: Generating tracefile (intermediate buffers of 258107 events)
+         This process can take a while. Please, be patient.
+mpi2prv: Progress 2 of 2 ... 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% done
+mpi2prv: Elapsed time merge step: 0 hours 0 minutes 0 seconds
+mpi2prv: Resulting tracefile occupies 32121 bytes
+mpi2prv: Removing temporal files... done
+mpi2prv: Elapsed time removing temporal files: 0 hours 0 minutes 0 seconds
+mpi2prv: Congratulations! ./trace/simulation_normal.py_compss_trace_1563977494.prv has been generated.
+[(65338)    API]  -  Runtime stopped
+[(65338)    API]  -  Execution Finished
+[BINDING-COMMONS]  -  @Off - Removing JVM
+[BINDING-COMMONS]  -  @Off - End
+
+------------------------------------------------------------
