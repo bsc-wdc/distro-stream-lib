@@ -9,8 +9,11 @@ from __future__ import print_function
 from pycompss.api.task import task
 from pycompss.api.compss import compss
 from pycompss.api.constraint import constraint
+
 from pycompss.api.parameter import STREAM_IN
 from pycompss.api.parameter import STREAM_OUT
+from pycompss.api.parameter import IN
+
 from pycompss.api.api import compss_wait_on
 from pycompss.api.api import compss_barrier
 
@@ -31,6 +34,7 @@ from my_element import MyElement
 TASK_FLOW_PY = os.getenv("TASK_FLOW_PY")
 BIG_FILTER_PY = os.getenv("BIG_FILTER_PY")
 
+NESTED_COMPUTING_NODES = os.getenv("NESTED_COMPUTING_NODES", 1)
 CORES_SENSOR = os.getenv("CORES_SENSOR")
 CORES_BIG_FILTER = os.getenv("CORES_BIG_FILTER")
 CORES_EXTRACT = os.getenv("CORES_EXTRACT")
@@ -42,8 +46,6 @@ SENSOR_INITIAL_DELAY = 10  # seconds
 TIME_BETWEEN_POLLS = 5  # seconds
 EXTRACT_ACCEPT_RATE = 5  # int
 NUM_EXTRACT = int(NUM_FILES) / EXTRACT_ACCEPT_RATE if NUM_FILES is not None else None
-
-NESTED_COMPUTING_NODES = 1
 
 
 #
@@ -161,8 +163,8 @@ def get_and_extract(fds_filtered, num_processed_elements, base_sleep_time, sleep
         computing_nodes=NESTED_COMPUTING_NODES,
         flags="-d -g --summary",
         app_name=TASK_FLOW_PY)
-@task(returns=int)
-def task_flow(elements, tf_depth, tf_base_sleep_time, tf_sleep_random_range):
+@task(varargs_type=IN, returns=int)
+def task_flow(tf_depth, tf_base_sleep_time, tf_sleep_random_range, *args):
     pass
 
 
@@ -289,11 +291,11 @@ def main():
 
     # Launch task flow computation
     print("[INFO] Launching task flow computation")
-    elements = compss_wait_on(elements)
-    res = task_flow(elements,
-                    app_args.tf_depth,
+    # elements = compss_wait_on(elements)
+    res = task_flow(app_args.tf_depth,
                     app_args.tf_base_sleep_time,
-                    app_args.tf_sleep_random_range)
+                    app_args.tf_sleep_random_range,
+                    *elements)
 
     # Synchronize
     print("[INFO] Syncrhonizing final output")

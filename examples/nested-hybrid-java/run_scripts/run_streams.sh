@@ -4,20 +4,18 @@
   SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
   # Define customizable application constraints
-  export TASK_FLOW_PY="${SCRIPT_DIR}/../task_flow.py"
-  export BIG_FILTER_PY="${SCRIPT_DIR}/../big_filter.py"
-
   export NUM_FILES=50
 
-  export CORES_SENSOR=8
+  export RUNCOMPSS=$(which runcompss)
+
   export NESTED_COMPUTING_NODES=1
+  export CORES_SENSOR=8
   export CORES_BIG_FILTER=4
   export CORES_EXTRACT=1
   export CORES_TF=8
 
   # Define application arguments
-  app_exec="${SCRIPT_DIR}/../hybrid_dftf_streams.py"
-  stream_base_dir="${SCRIPT_DIR}/exec/"
+  app_exec="mains.NestedHybrid"
 
   sensor_num_files=${NUM_FILES}
   sensor_base_sleep_time=300
@@ -31,23 +29,19 @@
   tf_base_sleep_time=1000
   tf_sleep_random_range=50
 
-  rm -rf "${stream_base_dir}"
-  mkdir -p "${stream_base_dir}"
-
   # Run job
   runcompss \
     --project="${SCRIPT_DIR}/../xmls/project.xml" \
     --resources="${SCRIPT_DIR}/../xmls/resources.xml" \
+    --classpath="${SCRIPT_DIR}/../target/nested-hybrid-java.jar" \
     --jvm_workers_opts="-Dcompss.worker.removeWD=false" \
-    --pythonpath="${SCRIPT_DIR}/../" \
-    --streaming=FILES \
+    --streaming=OBJECTS \
     --streaming_master_port=49049 \
     -d \
     -t \
     -g \
     --summary \
     "${app_exec}" \
-    "${stream_base_dir}" \
     "${sensor_num_files}" "${sensor_base_sleep_time}" "${sensor_sleep_random_range}" \
     "${filter_batch_size}" "${filter_base_sleep_time}" "${filter_sleep_random_range}" \
     "${extract_base_sleep_time}" "${extract_sleep_random_range}" \

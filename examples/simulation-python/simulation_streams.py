@@ -29,6 +29,7 @@ CORES_SIMULATION = os.getenv("CORES_SIMULATION")
 CORES_PROCESS = os.getenv("CORES_PROCESS")
 CORES_MERGE = os.getenv("CORES_MERGE")
 TIME_BETWEEN_POLLS = 5
+TIME_DELAY = 10
 
 
 #
@@ -61,9 +62,22 @@ def simulation(fds, num_files, base_sleep_time, sleep_random_range):
     # Close stream
     fds.close()
 
+    # Add extra delay
+    time.sleep(TIME_DELAY)
+
 
 @constraint(computing_units=CORES_PROCESS)
 @task(input_file=FILE_IN, output_image=FILE_OUT)
+def process_sim_file1(input_file, output_image, base_sleep_time, sleep_random_range):
+    process_sim_file(input_file, output_image, base_sleep_time, sleep_random_range)
+
+
+@constraint(computing_units=CORES_PROCESS)
+@task(input_file=FILE_IN, output_image=FILE_OUT)
+def process_sim_file2(input_file, output_image, base_sleep_time, sleep_random_range):
+    process_sim_file(input_file, output_image, base_sleep_time, sleep_random_range)
+
+
 def process_sim_file(input_file, output_image, base_sleep_time, sleep_random_range):
     if __debug__:
         print("[DEBUG] Processing file " + input_file)
@@ -236,10 +250,16 @@ def main():
                         print("[DEBUG] Launching task process_sim_file for " + str(input_file))
                     output_image = input_file + ".out"
                     output_images[i].append(output_image)
-                    process_sim_file(input_file,
-                                     output_image,
-                                     app_args.process_sleep_time,
-                                     app_args.process_sleep_random_range)
+                    if i % 2 == 0:
+                        process_sim_file1(input_file,
+                                          output_image,
+                                          app_args.process_sleep_time,
+                                          app_args.process_sleep_random_range)
+                    else:
+                        process_sim_file2(input_file,
+                                          output_image,
+                                          app_args.process_sleep_time,
+                                          app_args.process_sleep_random_range)
             else:
                 # If the stream is closed, we can launch the merge phase
                 if not mr_launch_streams[i]:
