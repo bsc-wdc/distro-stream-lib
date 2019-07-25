@@ -1,0 +1,14 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: METHOD
+  * Method definition: [DECLARING CLASS=taskflows.SyntheticTaskFlowTasks, METHOD NAME=mergeTask]
+  * Parameter types: mains.MyElement mains.MyElement int int
+  * Parameter values: MyElement[IF=[object33,],P=true] MyElement[IF=[object30,object13,],P=true] 1000 50
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker02
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 1
+[EXECUTOR] executeTask - End task execution

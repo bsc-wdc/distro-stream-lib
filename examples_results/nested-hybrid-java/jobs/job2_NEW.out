@@ -1,0 +1,107 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: COMPSs
+  * Method definition: [RUNCOMPSS=/opt/COMPSs/Runtime/scripts/user/runcompss, FLAGS=-d -g --summary --streaming=OBJECTS --streaming_master_name=localhost --streaming_master_port=49049, APP_NAME=filters.BigFilter, WORKER_IN_MASTER=true, WORKING_DIR=/home/cramonco/.COMPSs/filter]
+  * Parameter types: es.bsc.distrostreamlib.api.objects.ObjectDistroStream es.bsc.distrostreamlib.api.objects.ObjectDistroStream int int int
+  * Parameter values: es.bsc.distrostreamlib.api.objects.ObjectDistroStream@5871d110 es.bsc.distrostreamlib.api.objects.ObjectDistroStream@2eeb6f49 10 2000 200
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 4
+
+[COMPSs INVOKER] Begin COMPSs call to filters.BigFilter
+[COMPSs INVOKER] On WorkingDir : /home/cramonco/.COMPSs/filter
+[COMPSs INVOKER] Slave hostname COMPSsWorker02 with 4 cus
+[COMPSs INVOKER] Generate project.xml at: project_7a5b5991-7240-423b-a077-fa95f75361d3.xml
+[COMPSs INVOKER] Generate resources.xml at: resources_7a5b5991-7240-423b-a077-fa95f75361d3.xml
+[COMPSs INVOKER] Creating nested log dir in: /home/cramonco/.COMPSs/filter/nestedCOMPSsLog
+[COMPSs INVOKER] COMPSs CMD: /opt/COMPSs/Runtime/scripts/user/runcompss --project=project_7a5b5991-7240-423b-a077-fa95f75361d3.xml --resources=resources_7a5b5991-7240-423b-a077-fa95f75361d3.xml --specific_log_dir=/home/cramonco/.COMPSs/filter/nestedCOMPSsLog --classpath=/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-java/run_scripts/../target/nested-hybrid-java.jar:::/opt/COMPSs/Runtime/compss-engine.jar -d -g --summary --streaming=OBJECTS --streaming_master_name=localhost --streaming_master_port=49049 filters.BigFilter sensor filtered 10 2000 200 
+[COMPSs INVOKER] COMPSs STDIN: null
+[COMPSs INVOKER] COMPSs STDOUT: null
+[COMPSs INVOKER] COMPSs STDERR: null
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] Executing binary command
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] CMD OUTPUT:
+[  INFO] Using default execution type: compss
+[  INFO] Using default language: java
+[  INFO] Relative Classpath resolved: /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-java/run_scripts/../target/nested-hybrid-java.jar:/opt/COMPSs/Runtime/compss-engine.jar:
+
+[  INFO] Starting Streaming Backend
+[  INFO] Streaming Backend ready
+
+----------------- Executing filters.BigFilter --------------------------
+
+[(936)    API]  -  Deploying COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[(937)    API]  -  Starting COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[(937)    API]  -  Initializing components
+[(1295)    API]  -  Ready to process tasks
+[INFO] Starting application
+[INFO] Parsing application arguments
+[INFO] Initializing streams
+[INFO] Processing input stream elements
+[DEBUG] Launch filter task with 10 elements
+[(16835)    API]  -  Creating task from method filterObjects in filters.BigFilterTasks
+[(16835)    API]  -  There are 4 parameters
+[(16836)    API]  -    Parameter 0 has type OBJECT_T
+[(16837)    API]  -    Parameter 1 has type STREAM_T
+[(16838)    API]  -    Parameter 2 has type INT_T
+[(16838)    API]  -    Parameter 3 has type INT_T
+[DEBUG] Launch filter task with 10 elements
+[(16842)    API]  -  Creating task from method filterObjects in filters.BigFilterTasks
+[(16842)    API]  -  There are 4 parameters
+[(16842)    API]  -    Parameter 0 has type OBJECT_T
+[(16842)    API]  -    Parameter 1 has type STREAM_T
+[(16842)    API]  -    Parameter 2 has type INT_T
+[(16842)    API]  -    Parameter 3 has type INT_T
+[DEBUG] Launch filter task with 10 elements
+[(21888)    API]  -  Creating task from method filterObjects in filters.BigFilterTasks
+[(21888)    API]  -  There are 4 parameters
+[(21888)    API]  -    Parameter 0 has type OBJECT_T
+[(21888)    API]  -    Parameter 1 has type STREAM_T
+[(21888)    API]  -    Parameter 2 has type INT_T
+[(21888)    API]  -    Parameter 3 has type INT_T
+[DEBUG] Launch filter task with 7 elements
+[(21889)    API]  -  Creating task from method filterObjects in filters.BigFilterTasks
+[(21890)    API]  -  There are 4 parameters
+[(21890)    API]  -    Parameter 0 has type OBJECT_T
+[(21890)    API]  -    Parameter 1 has type STREAM_T
+[(21890)    API]  -    Parameter 2 has type INT_T
+[(21890)    API]  -    Parameter 3 has type INT_T
+[(21890)    API]  -  Getting object with hash code 1344969704
+[(21911)    API]  -  Object obtained 955818166
+[INFO] Waiting for all batch tasks to finish
+[(21911)    API]  -  Barrier for app 1 with noMoreTasks = false
+[(42958)    API]  -  Getting object with hash code 1398241764
+[(42960)    API]  -  Object obtained 1398241764
+DONE
+[TIME] TOTAL ELAPSED: 41670
+[(42968)    API]  -  No more tasks for app 1
+[(42972)    API]  -  Getting Result Files 1
+[(42975)    API]  -  ------- COMPSs Task Execution Summary per Worker ------
+[(42975)    API]  -  --- Summary for COMPSs Worker COMPSsWorker02
+[(42975)    API]  -  4 filterObjects(OBJECT_T,STREAM_T,INT_T,INT_T)filters.BigFilterTasks tasks have been executed
+[(42975)    API]  -  --- Total executed tasks in COMPSs Worker COMPSsWorker02: 4
+[(42975)    API]  -  -------------------------------------------------------
+[(42975)    API]  -  
+[(42975)    API]  -  ------------ COMPSs Task Execution Summary ------------
+[(42975)    API]  -  4 filterObjects(OBJECT_T,STREAM_T,INT_T,INT_T)filters.BigFilterTasks tasks have been executed
+[(42975)    API]  -  Total executed tasks: 4
+[(42975)    API]  -  -------------------------------------------------------
+[(42975)    API]  -  Stop IT reached
+[(42975)    API]  -  Stopping Graph generation...
+[(42975)    API]  -  Stopping AP...
+[(42976)    API]  -  Stopping TD...
+[(43134)    API]  -  Stopping Comm...
+[(43136)    API]  -  Runtime stopped
+[(43136)    API]  -  Execution Finished
+
+------------------------------------------------------------
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] CMD EXIT VALUE: 0
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[EXECUTOR] executeTask - End task execution

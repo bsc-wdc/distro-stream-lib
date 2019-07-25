@@ -1,0 +1,39 @@
+digraph {
+  rankdir=TB;
+  labeljust="l";
+  compound= true;
+  subgraph dependence_graph {
+    ranksep=0.20;
+    node[height=0.75];
+
+Synchro0[label="main", shape=octagon, style=filled fillcolor="#8B0000" fontcolor="#FFFFFF"];
+1[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+Synchro0 -> 1 [style=dashed, label="d1v1"];
+Synchro0 -> 1;
+2[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+1 -> 2 [style=dashed, label="d2v1"];
+Synchro0 -> 2;
+3[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+1 -> 3 [style=dashed, label="d3v1"];
+2 -> 3 [style=dashed, label="d3v1"];
+Synchro0 -> 3;
+Synchro1[label="sync", shape=octagon, style=filled fillcolor="#ff0000" fontcolor="#FFFFFF"];
+Synchro0 -> Synchro1;
+1 -> Synchro1 [label="d4v3"];
+2 -> Synchro1 [label="d5v3"];
+3 -> Synchro1 [label="d6v3"];  }
+  subgraph legend {
+    rank=sink;
+    node [shape=plaintext, height=0.75];
+    ranksep=0.20;
+    label = "Legend";
+    key [label=<
+      <table border="0" cellpadding="2" cellspacing="0" cellborder="1">
+<tr>
+<td align="right">simulation</td>
+<td bgcolor="#0000ff">&nbsp;</td>
+</tr>
+      </table>
+    >]
+  }
+}

@@ -1,0 +1,67 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: METHOD
+  * Method definition: [DECLARING CLASS=mains.NestedHybridTasks, METHOD NAME=sensor]
+  * Parameter types: es.bsc.distrostreamlib.api.objects.ObjectDistroStream int int int
+  * Parameter values: es.bsc.distrostreamlib.api.objects.ObjectDistroStream@4afdd96f 50 300 50
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 8
+[DEBUG] Starting sensor
+[DEBUG] Publishing object MyElement[IF=[object0,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object1,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object2,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object3,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object4,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object5,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object6,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object7,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object8,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object9,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object10,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object11,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object12,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object13,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object14,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object15,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object16,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object17,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object18,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object19,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object20,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object21,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object22,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object23,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object24,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object25,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object26,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object27,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object28,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object29,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object30,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object31,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object32,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object33,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object34,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object35,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object36,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object37,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object38,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object39,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object40,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object41,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object42,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object43,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object44,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object45,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object46,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object47,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object48,],P=false]
+[DEBUG] Publishing object MyElement[IF=[object49,],P=false]
+[DEBUG] Notifying stream closure
+[DEBUG] Stopping sensor
+[EXECUTOR] executeTask - End task execution

@@ -1,0 +1,222 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: METHOD
+  * Method definition: [DECLARING CLASS=sensors_streams, METHOD NAME=sensor]
+  * Parameter types: java.lang.String int int int
+  * Parameter values: /tmp/COMPSsWorker02/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker02/d1v1_1563974683515.IT 50 300 50
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 8
+[EXECUTOR] executeTask - End task execution
+utor - Received task in process: Process-0
+pycompss.worker.piper.piper_worker pipe_executor -  - TASK CMD: ['EXECUTE_TASK', '1', '/tmp/COMPSsWorker02/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker02/jobs/job1_NEW.out', '/tmp/COMPSsWorker02/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker02/jobs/job1_NEW.err', '1', '1', 'true', 'null', 'METHOD', 'sensors_streams', 'sensor', '0', '1', 'COMPSsWorker02', '8', 'false', 'null', '0', '4', '28', '3', 'null', 'fds', '/tmp/COMPSsWorker02/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker02/d1v1_1563974683515.IT', 'W', '4', '3', 'null', 'num_files', '50', '4', '3', 'null', 'base_sleep_time', '300', '4', '3', 'null', 'sleep_random_range', '50']
+pycompss.worker.piper.piper_worker pipe_executor - Process environment:
+pycompss.worker.piper.piper_worker pipe_executor - 	 - Number of nodes: 1
+pycompss.worker.piper.piper_worker pipe_executor - 	 - Hostnames: COMPSsWorker02
+pycompss.worker.piper.piper_worker pipe_executor - 	 - Number of threads: 8
+pycompss.worker.piper.piper_worker worker_commons - Begin task execution in Process-0
+pycompss.worker.piper.piper_worker worker_commons - Storage conf: null
+pycompss.worker.piper.piper_worker worker_commons - Params: ['sensors_streams', 'sensor', '0', '1', 'COMPSsWorker02', '8', 'false', 'null', '0', '4', '28', '3', 'null', 'fds', '/tmp/COMPSsWorker02/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker02/d1v1_1563974683515.IT', 'W', '4', '3', 'null', 'num_files', '50', '4', '3', 'null', 'base_sleep_time', '300', '4', '3', 'null', 'sleep_random_range', '50']
+pycompss.worker.piper.piper_worker worker_commons - Path: sensors_streams
+pycompss.worker.piper.piper_worker worker_commons - Method name: sensor
+pycompss.worker.piper.piper_worker worker_commons - Num slaves: 1
+pycompss.worker.piper.piper_worker worker_commons - Slaves: ['1']
+pycompss.worker.piper.piper_worker worker_commons - Cus: 8
+pycompss.worker.piper.piper_worker worker_commons - Has target: false
+pycompss.worker.piper.piper_worker worker_commons - Num Params: 4
+pycompss.worker.piper.piper_worker worker_commons - Return Length: 0
+pycompss.worker.piper.piper_worker worker_commons - Args: ['28', '3', 'null', 'fds', '/tmp/COMPSsWorker02/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker02/d1v1_1563974683515.IT', 'W', '4', '3', 'null', 'num_files', '50', '4', '3', 'null', 'base_sleep_time', '300', '4', '3', 'null', 'sleep_random_range', '50']
+pycompss.worker.piper.piper_worker worker_commons - Processing parameters:
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 0
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 28
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : fds
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker02/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker02/d1v1_1563974683515.IT'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 1
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 4
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : num_files
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '50'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 2
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 4
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : base_sleep_time
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '300'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 4
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : sleep_random_range
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '50'
+pycompss.worker.piper.piper_worker worker_commons - RUN TASK with arguments:
+pycompss.worker.piper.piper_worker worker_commons - 	- Path: sensors_streams
+pycompss.worker.piper.piper_worker worker_commons - 	- Method/function name: sensor
+pycompss.worker.piper.piper_worker worker_commons - 	- Has target: false
+pycompss.worker.piper.piper_worker worker_commons - 	- # parameters: 4
+pycompss.worker.piper.piper_worker worker_commons - 	- Values:
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter fds
+	Type 28
+	File Name /tmp/COMPSsWorker02/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker02/d1v1_1563974683515.IT
+	Key None
+	Content None
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter num_files
+	Type 4
+	File Name None
+	Key None
+	Content 50
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter base_sleep_time
+	Type 4
+	File Name None
+	Key None
+	Content 300
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter sleep_random_range
+	Type 4
+	File Name None
+	Key None
+	Content 50
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 	- COMPSs types:
+pycompss.worker.piper.piper_worker worker_commons - 		 28
+pycompss.worker.piper.piper_worker worker_commons - 		 4
+pycompss.worker.piper.piper_worker worker_commons - 		 4
+pycompss.worker.piper.piper_worker worker_commons - 		 4
+pycompss.worker.piper.piper_worker worker_commons - Trying to import the user module: sensors_streams
+pycompss.worker.piper.piper_worker worker_commons - Module successfully loaded (Python version >= 2.7)
+pycompss.worker.piper.piper_worker worker_commons - Starting task execution
+pycompss.worker.piper.piper_worker worker_commons - module     : <module 'sensors_streams' from '/home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/sensors_streams.pyc'> 
+pycompss.worker.piper.piper_worker worker_commons - method_name: sensor 
+pycompss.worker.piper.piper_worker worker_commons - time_out   : 0 
+pycompss.worker.piper.piper_worker worker_commons - Types      : [28, 4, 4, 4] 
+pycompss.worker.piper.piper_worker worker_commons - Values     : [
+Parameter fds
+	Type 28
+	File Name /tmp/COMPSsWorker02/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker02/d1v1_1563974683515.IT
+	Key None
+	Content None
+	Stream 3
+	Prefix null
+--------------------
+, 
+Parameter num_files
+	Type 4
+	File Name None
+	Key None
+	Content 50
+	Stream 3
+	Prefix null
+--------------------
+, 
+Parameter base_sleep_time
+	Type 4
+	File Name None
+	Key None
+	Content 300
+	Stream 3
+	Prefix null
+--------------------
+, 
+Parameter sleep_random_range
+	Type 4
+	File Name None
+	Key None
+	Content 50
+	Stream 3
+	Prefix null
+--------------------
+] 
+pycompss.worker.piper.piper_worker worker_commons - P. storage : False 
+pycompss.worker.piper.piper_worker worker_commons - Storage cfg: null 
+[DEBUG] Starting sensor
+[DEBUG] (2019-07-24 15:24:58.213016) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file0
+[DEBUG] (2019-07-24 15:24:58.213785) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file1
+[DEBUG] (2019-07-24 15:24:58.214097) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file2
+[DEBUG] (2019-07-24 15:24:58.214418) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file3
+[DEBUG] (2019-07-24 15:24:58.214659) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file4
+[DEBUG] (2019-07-24 15:24:58.214835) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file5
+[DEBUG] (2019-07-24 15:24:58.215009) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file6
+[DEBUG] (2019-07-24 15:24:58.215178) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file7
+[DEBUG] (2019-07-24 15:24:58.215345) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file8
+[DEBUG] (2019-07-24 15:24:58.215517) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file9
+[DEBUG] (2019-07-24 15:24:58.215778) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file10
+[DEBUG] (2019-07-24 15:24:58.215970) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file11
+[DEBUG] (2019-07-24 15:24:58.216161) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file12
+[DEBUG] (2019-07-24 15:24:58.216331) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file13
+[DEBUG] (2019-07-24 15:24:58.216513) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file14
+[DEBUG] (2019-07-24 15:24:58.216687) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file15
+[DEBUG] (2019-07-24 15:24:58.216882) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file16
+[DEBUG] (2019-07-24 15:24:58.217124) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file17
+[DEBUG] (2019-07-24 15:24:58.217306) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file18
+[DEBUG] (2019-07-24 15:24:58.217473) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file19
+[DEBUG] (2019-07-24 15:24:58.217639) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file20
+[DEBUG] (2019-07-24 15:24:58.217811) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file21
+[DEBUG] (2019-07-24 15:24:58.217979) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file22
+[DEBUG] (2019-07-24 15:24:58.218200) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file23
+[DEBUG] (2019-07-24 15:24:58.218461) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file24
+[DEBUG] (2019-07-24 15:24:58.218639) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examppycompss.worker.piper.piper_worker worker_commons - Exit code : 0 
+pycompss.worker.piper.piper_worker worker_commons - Return Types : [28, 4, 4, 4] 
+pycompss.worker.piper.piper_worker worker_commons - Return Values: ['null', 'null', 'null', 'null'] 
+pycompss.worker.piper.piper_worker worker_commons - Return target_direction: Parameter(type=None, direction=2, stream=3, prefix=null
+          object=None
+          file_name=None
+          is_future=False) 
+pycompss.worker.piper.piper_worker worker_commons - Return timed_out: False 
+pycompss.worker.piper.piper_worker worker_commons - Return exception_message:  
+pycompss.worker.piper.piper_worker worker_commons - Finished task execution
+pycompss.worker.piper.piper_worker worker_commons - End task execution. Status: Ok
+les/sensors-python/run_scripts/exec//sensor//file25
+[DEBUG] (2019-07-24 15:24:58.218862) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file26
+[DEBUG] (2019-07-24 15:24:58.219037) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file27
+[DEBUG] (2019-07-24 15:24:58.219209) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file28
+[DEBUG] (2019-07-24 15:24:58.219406) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file29
+[DEBUG] (2019-07-24 15:24:58.219661) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file30
+[DEBUG] (2019-07-24 15:24:58.219840) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file31
+[DEBUG] (2019-07-24 15:24:58.220009) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file32
+[DEBUG] (2019-07-24 15:24:58.220182) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file33
+[DEBUG] (2019-07-24 15:24:58.220350) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file34
+[DEBUG] (2019-07-24 15:24:58.220517) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file35
+[DEBUG] (2019-07-24 15:24:58.220744) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file36
+[DEBUG] (2019-07-24 15:24:58.220964) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file37
+[DEBUG] (2019-07-24 15:24:58.221135) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file38
+[DEBUG] (2019-07-24 15:24:58.221315) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file39
+[DEBUG] (2019-07-24 15:24:58.221483) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file40
+[DEBUG] (2019-07-24 15:24:58.221651) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file41
+[DEBUG] (2019-07-24 15:24:58.221825) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file42
+[DEBUG] (2019-07-24 15:24:58.222088) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file43
+[DEBUG] (2019-07-24 15:24:58.222314) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file44
+[DEBUG] (2019-07-24 15:24:58.222506) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file45
+[DEBUG] (2019-07-24 15:24:58.222675) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file46
+[DEBUG] (2019-07-24 15:24:58.222843) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file47
+[DEBUG] (2019-07-24 15:24:58.223017) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file48
+[DEBUG] (2019-07-24 15:24:58.223233) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/sensors-python/run_scripts/exec//sensor//file49
+[DEBUG] Notifying stream closure
+[DEBUG] Stopping sensor
+pycompss.worker.piper.piper_worker pipe_executor - Process-0 - Pipe /tmp/COMPSsWorker02/7e0d3247-25bd-4ed2-9f4d-f4cc77f54621/COMPSsWorker02/pipe_-1542474217_compute0.inbound END TASK MESSAGE: END_TASK 1 0 4 28 null 4 null 4 null 4 null 
+
+pycompss.worker.piper.piper_worker pipe_executor - Cleaning environment.
+pycompss.worker.piper.piper_worker pipe_executor - Restoring loggers.

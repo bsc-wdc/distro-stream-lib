@@ -1,0 +1,220 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: METHOD
+  * Method definition: [DECLARING CLASS=simulation_streams, METHOD NAME=simulation]
+  * Parameter types: java.lang.String int int int
+  * Parameter values: /tmp/COMPSsWorker02/b6523274-e7a5-4eec-aaba-9c4155122aa3/COMPSsWorker02/d1v1_1563975778589.IT 50 1000 200
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 8
+[EXECUTOR] executeTask - End task execution
+utor - Received task in process: Process-0
+pycompss.worker.piper.piper_worker pipe_executor -  - TASK CMD: ['EXECUTE_TASK', '1', '/tmp/COMPSsWorker02/b6523274-e7a5-4eec-aaba-9c4155122aa3/COMPSsWorker02/jobs/job1_NEW.out', '/tmp/COMPSsWorker02/b6523274-e7a5-4eec-aaba-9c4155122aa3/COMPSsWorker02/jobs/job1_NEW.err', '1', '1', 'true', 'null', 'METHOD', 'simulation_streams', 'simulation', '0', '1', 'COMPSsWorker02', '8', 'false', 'null', '0', '4', '28', '3', 'null', 'fds', '/tmp/COMPSsWorker02/b6523274-e7a5-4eec-aaba-9c4155122aa3/COMPSsWorker02/d1v1_1563975778589.IT', 'W', '4', '3', 'null', 'num_files', '50', '4', '3', 'null', 'base_sleep_time', '1000', '4', '3', 'null', 'sleep_random_range', '200']
+pycompss.worker.piper.piper_worker pipe_executor - Process environment:
+pycompss.worker.piper.piper_worker pipe_executor - 	 - Number of nodes: 1
+pycompss.worker.piper.piper_worker pipe_executor - 	 - Hostnames: COMPSsWorker02
+pycompss.worker.piper.piper_worker pipe_executor - 	 - Number of threads: 8
+pycompss.worker.piper.piper_worker worker_commons - Begin task execution in Process-0
+pycompss.worker.piper.piper_worker worker_commons - Storage conf: null
+pycompss.worker.piper.piper_worker worker_commons - Params: ['simulation_streams', 'simulation', '0', '1', 'COMPSsWorker02', '8', 'false', 'null', '0', '4', '28', '3', 'null', 'fds', '/tmp/COMPSsWorker02/b6523274-e7a5-4eec-aaba-9c4155122aa3/COMPSsWorker02/d1v1_1563975778589.IT', 'W', '4', '3', 'null', 'num_files', '50', '4', '3', 'null', 'base_sleep_time', '1000', '4', '3', 'null', 'sleep_random_range', '200']
+pycompss.worker.piper.piper_worker worker_commons - Path: simulation_streams
+pycompss.worker.piper.piper_worker worker_commons - Method name: simulation
+pycompss.worker.piper.piper_worker worker_commons - Num slaves: 1
+pycompss.worker.piper.piper_worker worker_commons - Slaves: ['1']
+pycompss.worker.piper.piper_worker worker_commons - Cus: 8
+pycompss.worker.piper.piper_worker worker_commons - Has target: false
+pycompss.worker.piper.piper_worker worker_commons - Num Params: 4
+pycompss.worker.piper.piper_worker worker_commons - Return Length: 0
+pycompss.worker.piper.piper_worker worker_commons - Args: ['28', '3', 'null', 'fds', '/tmp/COMPSsWorker02/b6523274-e7a5-4eec-aaba-9c4155122aa3/COMPSsWorker02/d1v1_1563975778589.IT', 'W', '4', '3', 'null', 'num_files', '50', '4', '3', 'null', 'base_sleep_time', '1000', '4', '3', 'null', 'sleep_random_range', '200']
+pycompss.worker.piper.piper_worker worker_commons - Processing parameters:
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 0
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 28
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : fds
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '/tmp/COMPSsWorker02/b6523274-e7a5-4eec-aaba-9c4155122aa3/COMPSsWorker02/d1v1_1563975778589.IT'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 1
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 4
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : num_files
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '50'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 2
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 4
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : base_sleep_time
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '1000'
+pycompss.worker.piper.piper_worker worker_commons - Parameter : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Type : 4
+pycompss.worker.piper.piper_worker worker_commons - 	 * Std IO Stream : 3
+pycompss.worker.piper.piper_worker worker_commons - 	 * Prefix : null
+pycompss.worker.piper.piper_worker worker_commons - 	 * Name : sleep_random_range
+pycompss.worker.piper.piper_worker worker_commons - 	 * Value: '200'
+pycompss.worker.piper.piper_worker worker_commons - RUN TASK with arguments:
+pycompss.worker.piper.piper_worker worker_commons - 	- Path: simulation_streams
+pycompss.worker.piper.piper_worker worker_commons - 	- Method/function name: simulation
+pycompss.worker.piper.piper_worker worker_commons - 	- Has target: false
+pycompss.worker.piper.piper_worker worker_commons - 	- # parameters: 4
+pycompss.worker.piper.piper_worker worker_commons - 	- Values:
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter fds
+	Type 28
+	File Name /tmp/COMPSsWorker02/b6523274-e7a5-4eec-aaba-9c4155122aa3/COMPSsWorker02/d1v1_1563975778589.IT
+	Key None
+	Content None
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter num_files
+	Type 4
+	File Name None
+	Key None
+	Content 50
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter base_sleep_time
+	Type 4
+	File Name None
+	Key None
+	Content 1000
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 		 
+Parameter sleep_random_range
+	Type 4
+	File Name None
+	Key None
+	Content 200
+	Stream 3
+	Prefix null
+--------------------
+
+pycompss.worker.piper.piper_worker worker_commons - 	- COMPSs types:
+pycompss.worker.piper.piper_worker worker_commons - 		 28
+pycompss.worker.piper.piper_worker worker_commons - 		 4
+pycompss.worker.piper.piper_worker worker_commons - 		 4
+pycompss.worker.piper.piper_worker worker_commons - 		 4
+pycompss.worker.piper.piper_worker worker_commons - Trying to import the user module: simulation_streams
+pycompss.worker.piper.piper_worker worker_commons - Module successfully loaded (Python version >= 2.7)
+pycompss.worker.piper.piper_worker worker_commons - Starting task execution
+pycompss.worker.piper.piper_worker worker_commons - module     : <module 'simulation_streams' from '/home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/simulation_streams.pyc'> 
+pycompss.worker.piper.piper_worker worker_commons - method_name: simulation 
+pycompss.worker.piper.piper_worker worker_commons - time_out   : 0 
+pycompss.worker.piper.piper_worker worker_commons - Types      : [28, 4, 4, 4] 
+pycompss.worker.piper.piper_worker worker_commons - Values     : [
+Parameter fds
+	Type 28
+	File Name /tmp/COMPSsWorker02/b6523274-e7a5-4eec-aaba-9c4155122aa3/COMPSsWorker02/d1v1_1563975778589.IT
+	Key None
+	Content None
+	Stream 3
+	Prefix null
+--------------------
+, 
+Parameter num_files
+	Type 4
+	File Name None
+	Key None
+	Content 50
+	Stream 3
+	Prefix null
+--------------------
+, 
+Parameter base_sleep_time
+	Type 4
+	File Name None
+	Key None
+	Content 1000
+	Stream 3
+	Prefix null
+--------------------
+, 
+Parameter sleep_random_range
+	Type 4
+	File Name None
+	Key None
+	Content 200
+	Stream 3
+	Prefix null
+--------------------
+] 
+pycompss.worker.piper.piper_worker worker_commons - P. storage : False 
+pycompss.worker.piper.piper_worker worker_commons - Storage cfg: null 
+[DEBUG] Starting simulation
+[DEBUG] (2019-07-24 15:43:02.534402) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file0
+[DEBUG] (2019-07-24 15:43:03.535485) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file1
+[DEBUG] (2019-07-24 15:43:04.537189) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file2
+[DEBUG] (2019-07-24 15:43:05.538444) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file3
+[DEBUG] (2019-07-24 15:43:06.539900) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file4
+[DEBUG] (2019-07-24 15:43:07.541333) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file5
+[DEBUG] (2019-07-24 15:43:08.542536) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file6
+[DEBUG] (2019-07-24 15:43:09.543742) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file7
+[DEBUG] (2019-07-24 15:43:10.545188) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file8
+[DEBUG] (2019-07-24 15:43:11.546025) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file9
+[DEBUG] (2019-07-24 15:43:12.547226) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file10
+[DEBUG] (2019-07-24 15:43:13.548364) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file11
+[DEBUG] (2019-07-24 15:43:14.549391) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file12
+[DEBUG] (2019-07-24 15:43:15.550915) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file13
+[DEBUG] (2019-07-24 15:43:16.552751) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file14
+[DEBUG] (2019-07-24 15:43:17.554310) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file15
+[DEBUG] (2019-07-24 15:43:18.555522) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file16
+[DEBUG] (2019-07-24 15:43:19.556808) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file17
+[DEBUG] (2019-07-24 15:43:20.558406) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file18
+[DEBUG] (2019-07-24 15:43:21.559734) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file19
+[DEBUG] (2019-07-24 15:43:22.560729) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file20
+[DEBUG] (2019-07-24 15:43:23.562365) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file21
+[DEBUG] (2019-07-24 15:43:24.563181) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file22
+[DEBUG] (2019-07-24 15:43:25.565009) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file23
+[DEBUG] (2019-07-24 15:43:26.566524) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file24
+[DEpycompss.worker.piper.piper_worker worker_commons - Exit code : 0 
+pycompss.worker.piper.piper_worker worker_commons - Return Types : [28, 4, 4, 4] 
+pycompss.worker.piper.piper_worker worker_commons - Return Values: ['null', 'null', 'null', 'null'] 
+pycompss.worker.piper.piper_worker worker_commons - Return target_direction: Parameter(type=None, direction=2, stream=3, prefix=null
+          object=None
+          file_name=None
+          is_future=False) 
+pycompss.worker.piper.piper_worker worker_commons - Return timed_out: False 
+pycompss.worker.piper.piper_worker worker_commons - Return exception_message:  
+pycompss.worker.piper.piper_worker worker_commons - Finished task execution
+pycompss.worker.piper.piper_worker worker_commons - End task execution. Status: Ok
+BUG] (2019-07-24 15:43:27.567686) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file25
+[DEBUG] (2019-07-24 15:43:28.568577) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file26
+[DEBUG] (2019-07-24 15:43:29.570177) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file27
+[DEBUG] (2019-07-24 15:43:30.571583) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file28
+[DEBUG] (2019-07-24 15:43:31.572599) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file29
+[DEBUG] (2019-07-24 15:43:32.573728) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file30
+[DEBUG] (2019-07-24 15:43:33.574273) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file31
+[DEBUG] (2019-07-24 15:43:34.575558) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file32
+[DEBUG] (2019-07-24 15:43:35.576562) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file33
+[DEBUG] (2019-07-24 15:43:36.578256) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file34
+[DEBUG] (2019-07-24 15:43:37.579166) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file35
+[DEBUG] (2019-07-24 15:43:38.580762) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file36
+[DEBUG] (2019-07-24 15:43:39.581464) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file37
+[DEBUG] (2019-07-24 15:43:40.582424) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file38
+[DEBUG] (2019-07-24 15:43:41.583850) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file39
+[DEBUG] (2019-07-24 15:43:42.584345) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file40
+[DEBUG] (2019-07-24 15:43:43.584971) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file41
+[DEBUG] (2019-07-24 15:43:44.585864) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file42
+[DEBUG] (2019-07-24 15:43:45.587530) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file43
+[DEBUG] (2019-07-24 15:43:46.588720) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file44
+[DEBUG] (2019-07-24 15:43:47.590109) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file45
+[DEBUG] (2019-07-24 15:43:48.591088) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file46
+[DEBUG] (2019-07-24 15:43:49.592294) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file47
+[DEBUG] (2019-07-24 15:43:50.593486) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file48
+[DEBUG] (2019-07-24 15:43:51.595210) Generating file /home/cramonco/gitlab/projects/distro-stream-lib/examples/simulation-python/run_scripts/exec//stream0//file49
+pycompss.worker.piper.piper_worker pipe_executor - Process-0 - Pipe /tmp/COMPSsWorker02/b6523274-e7a5-4eec-aaba-9c4155122aa3/COMPSsWorker02/pipe_1414082202_compute0.inbound END TASK MESSAGE: END_TASK 1 0 4 28 null 4 null 4 null 4 null 
+
+pycompss.worker.piper.piper_worker pipe_executor - Cleaning environment.
+pycompss.worker.piper.piper_worker pipe_executor - Restoring loggers.

@@ -1,0 +1,578 @@
+[  INFO] Using default execution type: compss
+[  INFO] Inferred PYTHON language
+
+----------------- Executing hybrid_dftf_streams.py --------------------------
+
+Welcome to Extrae 3.5.3
+Extrae: Parsing the configuration file (/opt/COMPSs//Runtime/configuration/xml/tracing/extrae_basic.xml) begins
+Extrae: Warning! <trace> tag has no <home> property defined.
+Extrae: Generating intermediate files for Paraver traces.
+Extrae: <cpu> tag at <counters> level will be ignored. This library does not support CPU HW.
+Extrae: Tracing buffer can hold 100000 events
+Extrae: Circular buffer disabled.
+Extrae: Warning! <input-output> tag will be ignored. This library does support instrumenting I/O calls.
+Extrae: Dynamic memory instrumentation is disabled.
+Extrae: Basic I/O memory instrumentation is disabled.
+Extrae: System calls instrumentation is disabled.
+Extrae: Parsing the configuration file (/opt/COMPSs//Runtime/configuration/xml/tracing/extrae_basic.xml) has ended
+Extrae: Intermediate traces will be stored in /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts
+Extrae: Tracing mode is set to: Detail.
+Extrae: Successfully initiated with 1 tasks and 1 threads
+
+Binding debug is activated
+[BINDING-COMMONS]  -  @GS_On  -  Creating the JVM
+[BINDING_COMMONS]  -  @create_vm  -  reading file in JVM_OPTIONS_FILE
+[BINDING_COMMONS]  -  @create_vm  -  Launching JVM
+[BINDING_COMMONS]  -  @create_vm  -  JVM Ready
+[BINDING-COMMONS]  -  @GS_On  -  Creating runtime object
+[(481)    API]  -  Deploying COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[BINDING-COMMONS]  -  @GS_On  -  Calling runtime start
+[(482)    API]  -  Starting COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[(482)    API]  -  Initializing components
+[(834)    API]  -  Ready to process tasks
+[BINDING-COMMONS]  -  @Init JNI Methods
+[BINDING_COMMONS]  -  @Init JNI Direction Types
+[BINDING_COMMONS]  -  @Init JNI Stream Types
+[BINDING-COMMONS]  -  @Init JNI Types
+[BINDING_COMMONS]  -  @Init DONE
+[BINDING_COMMONS]  -  @Master JNI Init DONE
+[BINDING-COMMONS]  -  @GS_Get_AppDir - Getting application directory.
+[BINDING-COMMONS]  -  @GS_Get_AppDir  -  directory name: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/
+2019-07-24 15:54:16,575 INFO pycompss.streams.distro_stream_client distro_stream_client - Initializing DS Client on localhost:49049
+2019-07-24 15:54:16,575 INFO pycompss.streams.distro_stream_client distro_stream_client - DS Client started
+[INFO] Starting application
+[INFO] Parsing application arguments
+[INFO] Creating streams
+2019-07-24 15:54:16,580 DEBUG pycompss.streams.distro_stream distro_stream - Registering new stream...
+2019-07-24 15:54:16,580 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: REGISTER_STREAM
+2019-07-24 15:54:16,580 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: REGISTER_STREAM
+2019-07-24 15:54:16,581 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: REGISTER_STREAM FILE AT_MOST_ONCE sensor /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec//sensor/
+2019-07-24 15:54:16,591 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: e3a9277f-065d-4059-8538-1f4992f75fbb
+2019-07-24 15:54:16,591 DEBUG pycompss.streams.distro_stream distro_stream - Registering new stream...
+2019-07-24 15:54:16,591 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: REGISTER_STREAM
+2019-07-24 15:54:16,591 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: REGISTER_STREAM
+2019-07-24 15:54:16,592 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: REGISTER_STREAM FILE AT_MOST_ONCE filtered /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec//filter/
+2019-07-24 15:54:16,592 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: b3053570-08b8-4a7b-abf3-6fb256f96bdc
+[INFO] Launching sensor
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(863)    API]  -  Registering CoreElement hybrid_dftf_streams.sensor
+[(863)    API]  -  	 - Implementation: hybrid_dftf_streams.sensor
+[(863)    API]  -  	 - Constraints   : computing_units:8;
+[(863)    API]  -  	 - Type          : METHOD
+[(863)    API]  -  	 - ImplTypeArgs  : 
+[(863)    API]  -  		 Arg: hybrid_dftf_streams
+[(863)    API]  -  		 Arg: sensor
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: hybrid_dftf_streams.sensor
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 28
+[BINDING-COMMONS]  -  @process_param  -  External Stream: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-1
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: fds
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: num_files
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 300
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(871)    API]  -  Creating task from method hybrid_dftf_streams.sensor
+[(871)    API]  -  There are 4 parameters
+[(871)    API]  -    Parameter 0 has type EXTERNAL_STREAM_T
+[(874)    API]  -    Parameter 1 has type INT_T
+[(874)    API]  -    Parameter 2 has type INT_T
+[(874)    API]  -    Parameter 3 has type INT_T
+[INFO] Launching filter nested
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(878)    API]  -  Registering CoreElement hybrid_dftf_streams.big_filter
+[(878)    API]  -  	 - Implementation: COMPSs./home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../big_filter.py
+[(878)    API]  -  	 - Constraints   : computing_units:4;
+[(878)    API]  -  	 - Type          : COMPSs
+[(878)    API]  -  	 - ImplTypeArgs  : 
+[(878)    API]  -  		 Arg: runcompss
+[(878)    API]  -  		 Arg: -d -t -g --summary --streaming=FILES --streaming_master_name=localhost --streaming_master_port=49049
+[(879)    API]  -  		 Arg: /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../big_filter.py
+[(879)    API]  -  		 Arg: true
+[(879)    API]  -  		 Arg: /home/cramonco/.COMPSs/filter.py/
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: hybrid_dftf_streams.big_filter
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 28
+[BINDING-COMMONS]  -  @process_param  -  External Stream: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-1
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: fds_sensor
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 28
+[BINDING-COMMONS]  -  @process_param  -  External Stream: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: fds_filtered
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 10
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: batch_size
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: filter_base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 200
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: filter_sleep_random_range
+[(884)    API]  -  Creating task from method hybrid_dftf_streams.big_filter
+[(884)    API]  -  There are 5 parameters
+[(884)    API]  -    Parameter 0 has type EXTERNAL_STREAM_T
+[(884)    API]  -    Parameter 1 has type EXTERNAL_STREAM_T
+[(884)    API]  -    Parameter 2 has type INT_T
+[(884)    API]  -    Parameter 3 has type INT_T
+[(884)    API]  -    Parameter 4 has type INT_T
+[INFO] Launching extract
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(889)    API]  -  Registering CoreElement hybrid_dftf_streams.extract_info
+[(889)    API]  -  	 - Implementation: hybrid_dftf_streams.extract_info
+[(889)    API]  -  	 - Constraints   : computing_units:1;
+[(889)    API]  -  	 - Type          : METHOD
+[(889)    API]  -  	 - ImplTypeArgs  : 
+[(889)    API]  -  		 Arg: hybrid_dftf_streams
+[(889)    API]  -  		 Arg: extract_info
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: hybrid_dftf_streams.extract_info
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 28
+[BINDING-COMMONS]  -  @process_param  -  External Stream: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: fds_filtered
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 500
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 100
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-3
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-4
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 5
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-5
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 6
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-6
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_3
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 7
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-7
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_4
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 8
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-8
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_5
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 9
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-9
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_6
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 10
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-10
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_7
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 11
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-11
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_8
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 12
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-12
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_9
+[(895)    API]  -  Creating task from method hybrid_dftf_streams.extract_info
+[(895)    API]  -  There are 13 parameters
+[(895)    API]  -    Parameter 0 has type EXTERNAL_STREAM_T
+[(895)    API]  -    Parameter 1 has type INT_T
+[(895)    API]  -    Parameter 2 has type INT_T
+[(895)    API]  -    Parameter 3 has type FILE_T
+[(896)    API]  -    Parameter 4 has type FILE_T
+[(896)    API]  -    Parameter 5 has type FILE_T
+[(896)    API]  -    Parameter 6 has type FILE_T
+[(896)    API]  -    Parameter 7 has type FILE_T
+[(897)    API]  -    Parameter 8 has type FILE_T
+[(897)    API]  -    Parameter 9 has type FILE_T
+[(897)    API]  -    Parameter 10 has type FILE_T
+[(897)    API]  -    Parameter 11 has type FILE_T
+[(897)    API]  -    Parameter 12 has type FILE_T
+[INFO] Launching task flow computation
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(903)    API]  -  Registering CoreElement hybrid_dftf_streams.task_flow
+[(903)    API]  -  	 - Implementation: COMPSs./home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../task_flow.py
+[(903)    API]  -  	 - Constraints   : computing_units:8;
+[(903)    API]  -  	 - Type          : COMPSs
+[(903)    API]  -  	 - ImplTypeArgs  : 
+[(903)    API]  -  		 Arg: runcompss
+[(903)    API]  -  		 Arg: -d -t -g --summary
+[(903)    API]  -  		 Arg: /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../task_flow.py
+[(903)    API]  -  		 Arg: true
+[(903)    API]  -  		 Arg: /home/cramonco/.COMPSs/tf.py/
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: hybrid_dftf_streams.task_flow
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: tf_depth
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 1000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: tf_base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 50
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: tf_sleep_random_range
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-3
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_0
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 4
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-4
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_1
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 5
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-5
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_2
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 6
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-6
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_3
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 7
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-7
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_4
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 8
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-8
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_5
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 9
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-9
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_6
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 10
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-10
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_7
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 11
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-11
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_8
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 12
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-12
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: *args*_9
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 13
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-13
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: #
+[BINDING-COMMONS]  -  @process_param  -  NAME: $return_0
+[(909)    API]  -  Creating task from method hybrid_dftf_streams.task_flow
+[(909)    API]  -  There are 14 parameters
+[(909)    API]  -    Parameter 0 has type INT_T
+[(909)    API]  -    Parameter 1 has type INT_T
+[(909)    API]  -    Parameter 2 has type INT_T
+[(909)    API]  -    Parameter 3 has type FILE_T
+[(909)    API]  -    Parameter 4 has type FILE_T
+[(909)    API]  -    Parameter 5 has type FILE_T
+[(909)    API]  -    Parameter 6 has type FILE_T
+[(910)    API]  -    Parameter 7 has type FILE_T
+[(910)    API]  -    Parameter 8 has type FILE_T
+[(910)    API]  -    Parameter 9 has type FILE_T
+[(910)    API]  -    Parameter 10 has type FILE_T
+[(910)    API]  -    Parameter 11 has type FILE_T
+[(910)    API]  -    Parameter 12 has type FILE_T
+[(912)    API]  -    Parameter 13 has type FILE_T
+[INFO] Syncrhonizing final output
+[BINDING-COMMONS]  -  @GS_Open_File  -  Calling runtime OpenFile method  for /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-13 and mode 0 ...
+[(912)    API]  -  Opening /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-13 in mode IN
+[(114685)    API]  -  File target Location: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/d13v2_1563976456613.IT
+[BINDING-COMMONS]  -  @GS_Open_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/d13v2_1563976456613.IT
+[BINDING-COMMONS]  -  @GS_Close_File  -  Calling runtime closeFile method...
+[(114685)    API]  -  Closing /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-13 in mode IN
+[(114687)    API]  -  Closing file /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-13
+[BINDING-COMMONS]  -  @GS_Close_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-13
+[(114687)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-13
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-13
+[INFO] TF ended with status: 1
+[   BINDING]  -  @GS_Barrier  -  Waiting tasks for APP id: 94496876810280
+[   BINDING]  -  @GS_Barrier  -  noMoreTasks: false
+[(114691)    API]  -  Barrier for app 0 with noMoreTasks = false
+[BINDING-COMMONS]  -  @GS_Barrier  -  APP id: 94496876810280
+[INFO] DONE
+[TIME] TOTAL ELAPSED: 113.848288
+2019-07-24 15:56:10,429 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: STOP
+2019-07-24 15:56:10,429 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: STOP
+2019-07-24 15:56:10,431 INFO pycompss.streams.distro_stream_client distro_stream_client - DS Client asked to stop
+2019-07-24 15:56:10,431 INFO pycompss.streams.distro_stream_client distro_stream_client - DS Client stopped
+[(114698)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-8
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-8
+[(114699)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-9
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-9
+[(114701)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-4
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-4
+[(114702)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-5
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-5
+[(114704)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-6
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-6
+[(114706)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-7
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-7
+[(114707)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-1
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-1
+[(114709)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-2
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-2
+[(114710)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-3
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-3
+[(114711)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-12
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-12
+[(114713)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-10
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-10
+[(114714)    API]  -  Deleting File /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-11
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/hybrid_dftf_streams.py_01/tmpFiles/pycompssn5smu1/compss-serialized-obj_8647b97e-ae1a-11e9-aec4-a44cc871a000-11
+[BINDING-COMMONS]  -  @GS_Off
+[BINDING-COMMONS]  -  @Off - Waiting to end tasks
+[(114716)    API]  -  No more tasks for app 0
+[(114718)    API]  -  Getting Result Files 0
+[BINDING-COMMONS]  -  @Off - Stopping runtime
+[(114721)    API]  -  ------- COMPSs Task Execution Summary per Worker ------
+[(114721)    API]  -  --- Summary for COMPSs Worker COMPSsWorker01
+[(114721)    API]  -  0 COMPSs./home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../big_filter.py tasks have been executed
+[(114721)    API]  -  1 hybrid_dftf_streams.task_flow tasks have been executed
+[(114721)    API]  -  0 hybrid_dftf_streams.big_filter tasks have been executed
+[(114721)    API]  -  1 hybrid_dftf_streams.sensor tasks have been executed
+[(114721)    API]  -  1 COMPSs./home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../task_flow.py tasks have been executed
+[(114721)    API]  -  0 hybrid_dftf_streams.extract_info tasks have been executed
+[(114721)    API]  -  --- Total executed tasks in COMPSs Worker COMPSsWorker01: 3
+[(114721)    API]  -  --- Summary for COMPSs Worker COMPSsWorker02
+[(114721)    API]  -  1 COMPSs./home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../big_filter.py tasks have been executed
+[(114721)    API]  -  0 hybrid_dftf_streams.task_flow tasks have been executed
+[(114721)    API]  -  1 hybrid_dftf_streams.big_filter tasks have been executed
+[(114721)    API]  -  0 hybrid_dftf_streams.sensor tasks have been executed
+[(114721)    API]  -  0 COMPSs./home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../task_flow.py tasks have been executed
+[(114721)    API]  -  1 hybrid_dftf_streams.extract_info tasks have been executed
+[(114721)    API]  -  --- Total executed tasks in COMPSs Worker COMPSsWorker02: 3
+[(114721)    API]  -  -------------------------------------------------------
+[(114721)    API]  -  
+[(114721)    API]  -  ------------ COMPSs Task Execution Summary ------------
+[(114721)    API]  -  1 COMPSs./home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../big_filter.py tasks have been executed
+[(114721)    API]  -  1 hybrid_dftf_streams.task_flow tasks have been executed
+[(114721)    API]  -  1 hybrid_dftf_streams.big_filter tasks have been executed
+[(114721)    API]  -  1 hybrid_dftf_streams.sensor tasks have been executed
+[(114721)    API]  -  1 COMPSs./home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../task_flow.py tasks have been executed
+[(114721)    API]  -  1 hybrid_dftf_streams.extract_info tasks have been executed
+[(114721)    API]  -  Total executed tasks: 6
+[(114721)    API]  -  -------------------------------------------------------
+[(114722)    API]  -  Stop IT reached
+[(114722)    API]  -  Stopping Graph generation...
+[(114722)    API]  -  Stopping AP...
+[(114722)    API]  -  Stopping TD...
+Extrae: Intermediate raw trace file created : /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/set-0/TRACE@linux-BSC.0000017908000000000002.mpit
+[(135102)    API]  -  Stopping Comm...
+Extrae: Intermediate raw trace file created : /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/set-0/TRACE@linux-BSC.0000017908000000000001.mpit
+Extrae: Intermediate raw trace file created : /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/set-0/TRACE@linux-BSC.0000017908000000000000.mpit
+Extrae: Intermediate raw sym file created : /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/set-0/TRACE@linux-BSC.0000017908000000000000.sym
+Extrae: Deallocating memory.
+Extrae: Application has ended. Tracing has been terminated.
+Package created -rw-r--r-- 1 cramonco users 7370 Jul 24 15:56 master_compss_trace.tar.gz
+merger: Output trace format is: Paraver
+merger: Extrae 3.5.3
+mpi2prv: Assigned nodes < linux-BSC >
+mpi2prv: Assigned size per processor < <1 Mbyte >
+mpi2prv: File set-0/TRACE@linux-BSC.0000018028000001000000.mpit is object 1.2.1 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018028000001000001.mpit is object 1.2.2 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018028000001000002.mpit is object 1.2.3 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018028000001000003.mpit is object 1.2.4 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018028000001000004.mpit is object 1.2.5 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018028000001000005.mpit is object 1.2.6 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018028000001000006.mpit is object 1.2.7 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018028000001000007.mpit is object 1.2.8 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018028000001000008.mpit is object 1.2.9 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018066000002000000.mpit is object 1.3.1 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018066000002000001.mpit is object 1.3.2 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018066000002000002.mpit is object 1.3.3 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018066000002000003.mpit is object 1.3.4 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018066000002000004.mpit is object 1.3.5 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018066000002000005.mpit is object 1.3.6 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018066000002000006.mpit is object 1.3.7 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018066000002000007.mpit is object 1.3.8 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000018066000002000008.mpit is object 1.3.9 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000017908000000000000.mpit is object 1.1.1 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000017908000000000001.mpit is object 1.1.2 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000017908000000000002.mpit is object 1.1.3 on node linux-BSC assigned to processor 0
+mpi2prv: Checking for target directory existance... exists, ok!
+mpi2prv: Selected output trace format is Paraver
+mpi2prv: Stored trace format is Paraver
+mpi2prv: Searching synchronization points... done
+mpi2prv: Time Synchronization disabled.
+mpi2prv: Circular buffer enabled at tracing time? NO
+mpi2prv: Parsing intermediate files
+mpi2prv: Progress 1 of 2 ... 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% done
+mpi2prv: Processor 0 succeeded to translate its assigned files
+mpi2prv: Elapsed time translating files: 0 hours 0 minutes 0 seconds
+mpi2prv: Elapsed time sorting addresses: 0 hours 0 minutes 0 seconds
+mpi2prv: Generating tracefile (intermediate buffers of 319561 events)
+         This process can take a while. Please, be patient.
+mpi2prv: Progress 2 of 2 ... 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% done
+mpi2prv: Elapsed time merge step: 0 hours 0 minutes 0 seconds
+mpi2prv: Resulting tracefile occupies 21186 bytes
+mpi2prv: Removing temporal files... done
+mpi2prv: Elapsed time removing temporal files: 0 hours 0 minutes 0 seconds
+mpi2prv: Congratulations! ./trace/hybrid_dftf_streams.py_compss_trace_1563976590.prv has been generated.
+[(135201)    API]  -  Runtime stopped
+[(135201)    API]  -  Execution Finished
+[BINDING-COMMONS]  -  @Off - Removing JVM
+[BINDING-COMMONS]  -  @Off - End
+
+------------------------------------------------------------

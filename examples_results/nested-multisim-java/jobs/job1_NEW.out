@@ -1,0 +1,264 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: COMPSs
+  * Method definition: [RUNCOMPSS=/opt/COMPSs/Runtime/scripts/user/runcompss, FLAGS=-d -g -t --summary --streaming=OBJECTS --streaming_master_name=localhost --streaming_master_port=49049, APP_NAME=simulations.Simulation, WORKER_IN_MASTER=true, WORKING_DIR=[unassigned]]
+  * Parameter types: es.bsc.distrostreamlib.api.objects.ObjectDistroStream es.bsc.distrostreamlib.api.objects.ObjectDistroStream es.bsc.distrostreamlib.api.objects.ObjectDistroStream int int int
+  * Parameter values: es.bsc.distrostreamlib.api.objects.ObjectDistroStream@5c3529db es.bsc.distrostreamlib.api.objects.ObjectDistroStream@23d30d85 es.bsc.distrostreamlib.api.objects.ObjectDistroStream@4a9101c6 5 10000 5000
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker02,COMPSsWorker02,COMPSsWorker02,COMPSsWorker02
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 4
+
+[COMPSs INVOKER] Begin COMPSs call to simulations.Simulation
+[COMPSs INVOKER] On WorkingDir : /tmp/COMPSsWorker02/456b6107-8688-43f0-ace3-1bcbe8d09917/COMPSsWorker02/sandBox/job_1
+[COMPSs INVOKER] Slave hostname COMPSsWorker02 with 4 cus
+[COMPSs INVOKER] Generate project.xml at: project_19fca690-6814-4632-bfdf-1804d3ac6122.xml
+[COMPSs INVOKER] Generate resources.xml at: resources_19fca690-6814-4632-bfdf-1804d3ac6122.xml
+[COMPSs INVOKER] Creating nested log dir in: /tmp/COMPSsWorker02/456b6107-8688-43f0-ace3-1bcbe8d09917/COMPSsWorker02/sandBox/job_1/nestedCOMPSsLog
+[COMPSs INVOKER] COMPSs CMD: /opt/COMPSs/Runtime/scripts/user/runcompss --project=project_19fca690-6814-4632-bfdf-1804d3ac6122.xml --resources=resources_19fca690-6814-4632-bfdf-1804d3ac6122.xml --specific_log_dir=/tmp/COMPSsWorker02/456b6107-8688-43f0-ace3-1bcbe8d09917/COMPSsWorker02/sandBox/job_1/nestedCOMPSsLog --classpath=/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-multisim-java/run_scripts/../target/nested-multisim-java.jar:::/opt/COMPSs/Runtime/compss-engine.jar -d -g -t --summary --streaming=OBJECTS --streaming_master_name=localhost --streaming_master_port=49049 simulations.Simulation Simulation0 Simulation1 Simulation2 5 10000 5000 
+[COMPSs INVOKER] COMPSs STDIN: null
+[COMPSs INVOKER] COMPSs STDOUT: null
+[COMPSs INVOKER] COMPSs STDERR: null
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] Executing binary command
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] CMD OUTPUT:
+[  INFO] Using default execution type: compss
+[  INFO] Using default language: java
+[  INFO] Relative Classpath resolved: /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-multisim-java/run_scripts/../target/nested-multisim-java.jar:/opt/COMPSs/Runtime/compss-engine.jar:
+
+[  INFO] Starting Streaming Backend
+[  INFO] Streaming Backend ready
+
+----------------- Executing simulations.Simulation --------------------------
+
+Welcome to Extrae 3.5.3
+Extrae: Parsing the configuration file (/opt/COMPSs/Runtime/scripts/system/adaptors/nio/../../../../..//Runtime/configuration/xml/tracing/extrae_basic.xml) begins
+Extrae: Warning! <trace> tag has no <home> property defined.
+Extrae: Generating intermediate files for Paraver traces.
+Extrae: <cpu> tag at <counters> level will be ignored. This library does not support CPU HW.
+Extrae: Tracing buffer can hold 100000 events
+Extrae: Circular buffer disabled.
+Extrae: Warning! <input-output> tag will be ignored. This library does support instrumenting I/O calls.
+Extrae: Dynamic memory instrumentation is disabled.
+Extrae: Basic I/O memory instrumentation is disabled.
+Extrae: System calls instrumentation is disabled.
+Extrae: Parsing the configuration file (/opt/COMPSs/Runtime/scripts/system/adaptors/nio/../../../../..//Runtime/configuration/xml/tracing/extrae_basic.xml) has ended
+Extrae: Intermediate traces will be stored in /tmp/COMPSsWorker02/456b6107-8688-43f0-ace3-1bcbe8d09917/COMPSsWorker02/sandBox/job_1
+Extrae: Tracing mode is set to: Detail.
+Extrae: Successfully initiated with 1 tasks and 1 threads
+
+[(3145)    API]  -  Deploying COMPSs Runtime v2.5.rc1907 (build 20190725-1133.rc4b506aea456016ff21297734e6b311a7be79e38)
+[(3153)    API]  -  Starting COMPSs Runtime v2.5.rc1907 (build 20190725-1133.rc4b506aea456016ff21297734e6b311a7be79e38)
+[(3157)    API]  -  Initializing components
+[(5501)    API]  -  Ready to process tasks
+[INFO] Starting application
+[INFO] Parsing application arguments
+[INFO] Launching simulation
+[INFO] Creating read stream
+[INFO] Creating write streams
+[INFO] Performing simulation iterations
+[DEBUG] Begin iteration 0
+[DEBUG] Performing local simulation
+[(5566)    API]  -  Creating task from method accumulateLocal in mains.State
+[(5566)    API]  -  There are 3 parameters
+[(5566)    API]  -    Parameter 0 has type INT_T
+[(5567)    API]  -    Parameter 1 has type INT_T
+[(5567)    API]  -    Parameter 2 has type OBJECT_T
+[(5579)    API]  -  Barrier for app 1 with noMoreTasks = false
+[DEBUG] Communicating TO other simulations
+[(21049)    API]  -  Getting object with hash code 1309335839
+[(21087)    API]  -  Object obtained 749282235
+[(22152)    API]  -  Getting object with hash code 1309335839
+[(22154)    API]  -  Object obtained null
+[DEBUG] Communicating FROM other simulations
+[DEBUG] Begin iteration 1
+[DEBUG] Performing local simulation
+[(22627)    API]  -  Creating task from method accumulateLocal in mains.State
+[(22627)    API]  -  There are 3 parameters
+[(22627)    API]  -    Parameter 0 has type INT_T
+[(22628)    API]  -    Parameter 1 has type INT_T
+[(22628)    API]  -    Parameter 2 has type OBJECT_T
+[(22628)    API]  -  Barrier for app 1 with noMoreTasks = false
+[DEBUG] Communicating TO other simulations
+[(33737)    API]  -  Getting object with hash code 1309335839
+[(33775)    API]  -  Object obtained 941836856
+[(33785)    API]  -  Getting object with hash code 1309335839
+[(33796)    API]  -  Object obtained null
+[DEBUG] Communicating FROM other simulations
+[DEBUG] Received element: State[Local=1,Foreign=0]
+[(34052)    API]  -  Creating task from method accumulateForeign in mains.State
+[(34052)    API]  -  There are 3 parameters
+[(34052)    API]  -    Parameter 0 has type INT_T
+[(34052)    API]  -    Parameter 1 has type INT_T
+[(34052)    API]  -    Parameter 2 has type OBJECT_T
+[DEBUG] Received element: State[Local=1,Foreign=0]
+[(34053)    API]  -  Creating task from method accumulateForeign in mains.State
+[(34053)    API]  -  There are 3 parameters
+[(34053)    API]  -    Parameter 0 has type INT_T
+[(34053)    API]  -    Parameter 1 has type INT_T
+[(34053)    API]  -    Parameter 2 has type OBJECT_T
+[DEBUG] Begin iteration 2
+[DEBUG] Performing local simulation
+[(34053)    API]  -  Creating task from method accumulateLocal in mains.State
+[(34053)    API]  -  There are 3 parameters
+[(34053)    API]  -    Parameter 0 has type INT_T
+[(34053)    API]  -    Parameter 1 has type INT_T
+[(34053)    API]  -    Parameter 2 has type OBJECT_T
+[(34053)    API]  -  Barrier for app 1 with noMoreTasks = false
+[DEBUG] Communicating TO other simulations
+[(73038)    API]  -  Getting object with hash code 1309335839
+[(73064)    API]  -  Object obtained 452842611
+[(73066)    API]  -  Getting object with hash code 1309335839
+[(73068)    API]  -  Object obtained null
+[DEBUG] Communicating FROM other simulations
+[DEBUG] Received element: State[Local=2,Foreign=0]
+[(73106)    API]  -  Creating task from method accumulateForeign in mains.State
+[(73106)    API]  -  There are 3 parameters
+[(73106)    API]  -    Parameter 0 has type INT_T
+[(73106)    API]  -    Parameter 1 has type INT_T
+[(73106)    API]  -    Parameter 2 has type OBJECT_T
+[DEBUG] Received element: State[Local=2,Foreign=0]
+[(73107)    API]  -  Creating task from method accumulateForeign in mains.State
+[(73107)    API]  -  There are 3 parameters
+[(73107)    API]  -    Parameter 0 has type INT_T
+[(73107)    API]  -    Parameter 1 has type INT_T
+[(73107)    API]  -    Parameter 2 has type OBJECT_T
+[DEBUG] Begin iteration 3
+[DEBUG] Performing local simulation
+[(73109)    API]  -  Creating task from method accumulateLocal in mains.State
+[(73109)    API]  -  There are 3 parameters
+[(73109)    API]  -    Parameter 0 has type INT_T
+[(73109)    API]  -    Parameter 1 has type INT_T
+[(73109)    API]  -    Parameter 2 has type OBJECT_T
+[(73109)    API]  -  Barrier for app 1 with noMoreTasks = false
+[DEBUG] Communicating TO other simulations
+[(106932)    API]  -  Getting object with hash code 1309335839
+[(106957)    API]  -  Object obtained 2059461664
+[(106962)    API]  -  Getting object with hash code 1309335839
+[(106964)    API]  -  Object obtained null
+[DEBUG] Communicating FROM other simulations
+[DEBUG] Received element: State[Local=3,Foreign=3]
+[(106994)    API]  -  Creating task from method accumulateForeign in mains.State
+[(106994)    API]  -  There are 3 parameters
+[(106994)    API]  -    Parameter 0 has type INT_T
+[(106994)    API]  -    Parameter 1 has type INT_T
+[(106994)    API]  -    Parameter 2 has type OBJECT_T
+[DEBUG] Received element: State[Local=3,Foreign=4]
+[(106995)    API]  -  Creating task from method accumulateForeign in mains.State
+[(106995)    API]  -  There are 3 parameters
+[(106995)    API]  -    Parameter 0 has type INT_T
+[(106995)    API]  -    Parameter 1 has type INT_T
+[(106995)    API]  -    Parameter 2 has type OBJECT_T
+[DEBUG] Begin iteration 4
+[DEBUG] Performing local simulation
+[(106995)    API]  -  Creating task from method accumulateLocal in mains.State
+[(106995)    API]  -  There are 3 parameters
+[(106995)    API]  -    Parameter 0 has type INT_T
+[(106995)    API]  -    Parameter 1 has type INT_T
+[(106995)    API]  -    Parameter 2 has type OBJECT_T
+[(106995)    API]  -  Barrier for app 1 with noMoreTasks = false
+[DEBUG] Communicating TO other simulations
+[(143414)    API]  -  Getting object with hash code 1309335839
+[(143446)    API]  -  Object obtained 1908571880
+[(143451)    API]  -  Getting object with hash code 1309335839
+[(143453)    API]  -  Object obtained null
+[DEBUG] Communicating FROM other simulations
+[DEBUG] Received element: State[Local=4,Foreign=4]
+[(143508)    API]  -  Creating task from method accumulateForeign in mains.State
+[(143508)    API]  -  There are 3 parameters
+[(143508)    API]  -    Parameter 0 has type INT_T
+[(143508)    API]  -    Parameter 1 has type INT_T
+[(143508)    API]  -    Parameter 2 has type OBJECT_T
+[INFO] Simulation finished
+[INFO] Waiting for simulation to end
+[(143517)    API]  -  Getting object with hash code 1309335839
+[(154073)    API]  -  Object obtained 1327871893
+Computation result is: State[Local=5,Foreign=7]
+DONE
+[TIME] TOTAL ELAPSED: 148570
+[(154073)    API]  -  No more tasks for app 1
+[(154079)    API]  -  Getting Result Files 1
+[(154082)    API]  -  ------- COMPSs Task Execution Summary per Worker ------
+[(154082)    API]  -  --- Summary for COMPSs Worker COMPSsWorker02
+[(154082)    API]  -  5 accumulateLocal(INT_T,INT_T)mains.State tasks have been executed
+[(154082)    API]  -  7 accumulateForeign(INT_T,INT_T)mains.State tasks have been executed
+[(154082)    API]  -  --- Total executed tasks in COMPSs Worker COMPSsWorker02: 12
+[(154082)    API]  -  -------------------------------------------------------
+[(154082)    API]  -  
+[(154082)    API]  -  ------------ COMPSs Task Execution Summary ------------
+[(154082)    API]  -  5 accumulateLocal(INT_T,INT_T)mains.State tasks have been executed
+[(154082)    API]  -  7 accumulateForeign(INT_T,INT_T)mains.State tasks have been executed
+[(154082)    API]  -  Total executed tasks: 12
+[(154082)    API]  -  -------------------------------------------------------
+[(154082)    API]  -  Stop IT reached
+[(154083)    API]  -  Stopping Graph generation...
+[(154083)    API]  -  Stopping AP...
+[(154085)    API]  -  Stopping TD...
+[(164361)    API]  -  Stopping Comm...
+Package created -rw-r--r-- 1 cramonco users 9776 Jul 25 11:52 master_compss_trace.tar.gz
+merger: Output trace format is: Paraver
+merger: Extrae 3.5.3
+mpi2prv: Assigned nodes < linux-BSC >
+mpi2prv: Assigned size per processor < <1 Mbyte >
+mpi2prv: File set-0/TRACE@linux-BSC.0000021204000001000000.mpit is object 1.2.1 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000021204000001000001.mpit is object 1.2.2 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000021204000001000002.mpit is object 1.2.3 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000021204000001000003.mpit is object 1.2.4 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000021204000001000004.mpit is object 1.2.5 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000021037000000000000.mpit is object 1.1.1 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000021037000000000001.mpit is object 1.1.2 on node linux-BSC assigned to processor 0
+mpi2prv: File set-0/TRACE@linux-BSC.0000021037000000000002.mpit is object 1.1.3 on node linux-BSC assigned to processor 0
+mpi2prv: Checking for target directory existance... exists, ok!
+mpi2prv: Selected output trace format is Paraver
+mpi2prv: Stored trace format is Paraver
+mpi2prv: Searching synchronization points... done
+mpi2prv: Time Synchronization disabled.
+mpi2prv: Circular buffer enabled at tracing time? NO
+mpi2prv: Parsing intermediate files
+mpi2prv: Progress 1 of 2 ... 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% done
+mpi2prv: Processor 0 succeeded to translate its assigned files
+mpi2prv: Elapsed time translating files: 0 hours 0 minutes 0 seconds
+mpi2prv: Elapsed time sorting addresses: 0 hours 0 minutes 0 seconds
+mpi2prv: Generating tracefile (intermediate buffers of 838848 events)
+         This process can take a while. Please, be patient.
+mpi2prv: Progress 2 of 2 ... 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% done
+mpi2prv: Elapsed time merge step: 0 hours 0 minutes 0 seconds
+mpi2prv: Resulting tracefile occupies 21170 bytes
+mpi2prv: Removing temporal files... done
+mpi2prv: Elapsed time removing temporal files: 0 hours 0 minutes 0 seconds
+mpi2prv: Congratulations! ./trace/simulations.Simulation_compss_trace_1564048340.prv has been generated.
+[(164515)    API]  -  Runtime stopped
+[(164515)    API]  -  Execution Finished
+Welcome to Extrae 3.5.3
+Extrae: Parsing the configuration file (/opt/COMPSs/Runtime/scripts/system/adaptors/nio/../../../../..//Runtime/configuration/xml/tracing/extrae_basic.xml) begins
+Extrae: Warning! <trace> tag has no <home> property defined.
+Extrae: Generating intermediate files for Paraver traces.
+Extrae: <cpu> tag at <counters> level will be ignored. This library does not support CPU HW.
+Extrae: Tracing buffer can hold 100000 events
+Extrae: Circular buffer disabled.
+Extrae: Warning! <input-output> tag will be ignored. This library does support instrumenting I/O calls.
+Extrae: Dynamic memory instrumentation is disabled.
+Extrae: Basic I/O memory instrumentation is disabled.
+Extrae: System calls instrumentation is disabled.
+Extrae: Parsing the configuration file (/opt/COMPSs/Runtime/scripts/system/adaptors/nio/../../../../..//Runtime/configuration/xml/tracing/extrae_basic.xml) has ended
+Extrae: Intermediate traces will be stored in /tmp/COMPSsWorker02/456b6107-8688-43f0-ace3-1bcbe8d09917/COMPSsWorker02/sandBox/job_1
+Extrae: Tracing mode is set to: Detail.
+Extrae: Successfully initiated with 1 tasks and 1 threads
+
+Extrae: Intermediate raw trace file created : /tmp/COMPSsWorker02/456b6107-8688-43f0-ace3-1bcbe8d09917/COMPSsWorker02/sandBox/job_1/set-0/TRACE@linux-BSC.0000021037000000000002.mpit
+Extrae: Intermediate raw trace file created : /tmp/COMPSsWorker02/456b6107-8688-43f0-ace3-1bcbe8d09917/COMPSsWorker02/sandBox/job_1/set-0/TRACE@linux-BSC.0000021037000000000001.mpit
+Extrae: Intermediate raw trace file created : /tmp/COMPSsWorker02/456b6107-8688-43f0-ace3-1bcbe8d09917/COMPSsWorker02/sandBox/job_1/set-0/TRACE@linux-BSC.0000021037000000000000.mpit
+Extrae: Intermediate raw sym file created : /tmp/COMPSsWorker02/456b6107-8688-43f0-ace3-1bcbe8d09917/COMPSsWorker02/sandBox/job_1/set-0/TRACE@linux-BSC.0000021037000000000000.sym
+Extrae: Deallocating memory.
+Extrae: Application has ended. Tracing has been terminated.
+
+------------------------------------------------------------
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] CMD EXIT VALUE: 0
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[EXECUTOR] executeTask - End task execution

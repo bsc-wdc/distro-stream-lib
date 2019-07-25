@@ -1,0 +1,371 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: COMPSs
+  * Method definition: [RUNCOMPSS=runcompss, FLAGS=-d -g --summary --streaming=FILES --streaming_master_name=localhost --streaming_master_port=49049, APP_NAME=/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../big_filter.py, WORKER_IN_MASTER=true, WORKING_DIR=/home/cramonco/.COMPSs/filter.py/]
+  * Parameter types: java.lang.String java.lang.String int int int
+  * Parameter values: /tmp/COMPSsWorker01/0e9848aa-c9f5-4e77-b8b5-4fff3135b8b1/COMPSsWorker01/d1v1_1563974556510.IT /tmp/COMPSsWorker01/0e9848aa-c9f5-4e77-b8b5-4fff3135b8b1/COMPSsWorker01/d2v1_1563974556510.IT 10 2000 200
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker01,COMPSsWorker01,COMPSsWorker01,COMPSsWorker01
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 4
+
+[COMPSs INVOKER] Begin COMPSs call to /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../big_filter.py
+[COMPSs INVOKER] On WorkingDir : /home/cramonco/.COMPSs/filter.py
+[COMPSs INVOKER] Slave hostname COMPSsWorker01 with 4 cus
+[COMPSs INVOKER] Generate project.xml at: project_646e1809-0c95-412f-b1cf-5d749b788513.xml
+[COMPSs INVOKER] Generate resources.xml at: resources_646e1809-0c95-412f-b1cf-5d749b788513.xml
+[COMPSs INVOKER] Creating nested log dir in: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog
+[COMPSs INVOKER] COMPSs CMD: runcompss --project=project_646e1809-0c95-412f-b1cf-5d749b788513.xml --resources=resources_646e1809-0c95-412f-b1cf-5d749b788513.xml --specific_log_dir=/home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog --classpath=/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts:/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/*.jar::/opt/COMPSs/Runtime/compss-engine.jar -d -g --summary --streaming=FILES --streaming_master_name=localhost --streaming_master_port=49049 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/../big_filter.py /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec//sensor/ /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec//filter/ 10 2000 200 
+[COMPSs INVOKER] COMPSs STDIN: null
+[COMPSs INVOKER] COMPSs STDOUT: null
+[COMPSs INVOKER] COMPSs STDERR: null
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] Executing binary command
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] CMD OUTPUT:
+[  INFO] Using default execution type: compss
+[  INFO] Inferred PYTHON language
+[  INFO] Relative Classpath resolved: /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts:/home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/*.jar:/opt/COMPSs/Runtime/compss-engine.jar:
+
+----------------- Executing big_filter.py --------------------------
+
+Binding debug is activated
+[BINDING-COMMONS]  -  @GS_On  -  Creating the JVM
+[BINDING_COMMONS]  -  @create_vm  -  reading file in JVM_OPTIONS_FILE
+[BINDING_COMMONS]  -  @create_vm  -  Launching JVM
+[BINDING_COMMONS]  -  @create_vm  -  JVM Ready
+[BINDING-COMMONS]  -  @GS_On  -  Creating runtime object
+[(688)    API]  -  Deploying COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[BINDING-COMMONS]  -  @GS_On  -  Calling runtime start
+[(692)    API]  -  Starting COMPSs Runtime v2.5.rc1907 (build 20190724-1253.rdcbe000009dd778d2021790858b1cccebebb00f8)
+[(692)    API]  -  Initializing components
+[(1032)    API]  -  Ready to process tasks
+[BINDING-COMMONS]  -  @Init JNI Methods
+[BINDING_COMMONS]  -  @Init JNI Direction Types
+[BINDING_COMMONS]  -  @Init JNI Stream Types
+[BINDING-COMMONS]  -  @Init JNI Types
+[BINDING_COMMONS]  -  @Init DONE
+[BINDING_COMMONS]  -  @Master JNI Init DONE
+[BINDING-COMMONS]  -  @GS_Get_AppDir - Getting application directory.
+[BINDING-COMMONS]  -  @GS_Get_AppDir  -  directory name: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/
+2019-07-24 15:22:41,060 INFO pycompss.streams.distro_stream_client distro_stream_client - Initializing DS Client on localhost:49049
+2019-07-24 15:22:41,060 INFO pycompss.streams.distro_stream_client distro_stream_client - DS Client started
+[INFO] Starting application
+[INFO] Parsing application arguments
+[INFO] Initializing streams
+2019-07-24 15:22:41,062 DEBUG pycompss.streams.distro_stream distro_stream - Registering new stream...
+2019-07-24 15:22:41,062 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: REGISTER_STREAM
+2019-07-24 15:22:41,062 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: REGISTER_STREAM
+2019-07-24 15:22:41,062 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: REGISTER_STREAM FILE AT_MOST_ONCE sensor /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec//sensor/
+2019-07-24 15:22:41,063 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: 90faa14d-29e6-4871-95af-65ee5a2fb3d4
+2019-07-24 15:22:41,063 DEBUG pycompss.streams.distro_stream distro_stream - Registering new stream...
+2019-07-24 15:22:41,063 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: REGISTER_STREAM
+2019-07-24 15:22:41,064 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: REGISTER_STREAM
+2019-07-24 15:22:41,064 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: REGISTER_STREAM FILE AT_MOST_ONCE filtered /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec//filter/
+2019-07-24 15:22:41,064 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: 15acc075-63f2-43b9-a96a-3c44dc52205e
+[INFO] Processing input stream elements
+2019-07-24 15:22:41,066 DEBUG pycompss.streams.distro_stream distro_stream - Checking if stream 90faa14d-29e6-4871-95af-65ee5a2fb3d4 is closed
+2019-07-24 15:22:41,066 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: STREAM_STATUS
+2019-07-24 15:22:41,066 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: STREAM_STATUS
+2019-07-24 15:22:41,066 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: STREAM_STATUS 90faa14d-29e6-4871-95af-65ee5a2fb3d4
+2019-07-24 15:22:41,067 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: false
+2019-07-24 15:22:41,067 INFO pycompss.streams.distro_stream distro_stream - Polling new stream items...
+2019-07-24 15:22:41,067 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: POLL
+2019-07-24 15:22:41,068 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: POLL
+2019-07-24 15:22:41,068 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: POLL 90faa14d-29e6-4871-95af-65ee5a2fb3d4
+2019-07-24 15:22:41,086 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: 
+2019-07-24 15:22:41,086 DEBUG pycompss.streams.distro_stream distro_stream - Retrieved stream items: 
+2019-07-24 15:22:46,088 DEBUG pycompss.streams.distro_stream distro_stream - Checking if stream 90faa14d-29e6-4871-95af-65ee5a2fb3d4 is closed
+2019-07-24 15:22:46,089 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: STREAM_STATUS
+2019-07-24 15:22:46,090 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: STREAM_STATUS
+2019-07-24 15:22:46,091 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: STREAM_STATUS 90faa14d-29e6-4871-95af-65ee5a2fb3d4
+2019-07-24 15:22:46,093 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: false
+2019-07-24 15:22:46,095 INFO pycompss.streams.distro_stream distro_stream - Polling new stream items...
+2019-07-24 15:22:46,096 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: POLL
+2019-07-24 15:22:46,097 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: POLL
+2019-07-24 15:22:46,098 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: POLL 90faa14d-29e6-4871-95af-65ee5a2fb3d4
+2019-07-24 15:22:46,101 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: 
+2019-07-24 15:22:46,103 DEBUG pycompss.streams.distro_stream distro_stream - Retrieved stream items: 
+2019-07-24 15:22:51,105 DEBUG pycompss.streams.distro_stream distro_stream - Checking if stream 90faa14d-29e6-4871-95af-65ee5a2fb3d4 is closed
+2019-07-24 15:22:51,106 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: STREAM_STATUS
+2019-07-24 15:22:51,107 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: STREAM_STATUS
+2019-07-24 15:22:51,108 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: STREAM_STATUS 90faa14d-29e6-4871-95af-65ee5a2fb3d4
+2019-07-24 15:22:51,110 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: true
+2019-07-24 15:22:51,111 INFO pycompss.streams.distro_stream distro_stream - Polling new stream items...
+2019-07-24 15:22:51,113 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: POLL
+2019-07-24 15:22:51,114 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: POLL
+2019-07-24 15:22:51,115 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: POLL 90faa14d-29e6-4871-95af-65ee5a2fb3d4
+2019-07-24 15:22:51,128 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received chunk answer from server with size = 4096
+2019-07-24 15:22:51,129 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file14 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file44 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file18 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file11 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file43 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file46 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file49 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file9 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file31 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file47 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file23 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file28 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file10 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file17 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file41 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file25 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file37 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file39 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file32 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file15 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file22 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file7 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file19 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file24 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file30 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file34 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file4 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file33 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file29 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file3 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file0 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file13 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file21 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file35 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file40 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file5 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file48 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file45 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file20 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file38 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file1 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file12 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file2 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file27 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file26 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file36 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file6 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file16 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file8 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file42
+2019-07-24 15:22:51,131 DEBUG pycompss.streams.distro_stream distro_stream - Retrieved stream items: /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file14 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file44 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file18 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file11 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file43 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file46 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file49 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file9 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file31 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file47 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file23 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file28 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file10 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file17 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file41 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file25 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file37 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file39 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file32 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file15 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file22 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file7 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file19 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file24 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file30 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file34 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file4 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file33 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file29 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file3 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file0 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file13 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file21 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file35 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file40 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file5 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file48 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file45 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file20 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file38 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file1 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file12 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file2 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file27 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file26 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file36 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file6 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file16 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file8 /home/cramonco/gitlab/projects/distro-stream-lib/examples/nested-hybrid-python/run_scripts/exec/sensor/file42
+[DEBUG] Launch filter task
+[BINDING-COMMONS]  -  @GS_RegisterCE - Registering Core element.
+[(11136)    API]  -  Registering CoreElement big_filter.filter_files
+[(11136)    API]  -  	 - Implementation: big_filter.filter_files
+[(11136)    API]  -  	 - Constraints   : computing_units:1;
+[(11136)    API]  -  	 - Type          : METHOD
+[(11136)    API]  -  	 - ImplTypeArgs  : 
+[(11136)    API]  -  		 Arg: big_filter
+[(11136)    API]  -  		 Arg: filter_files
+[BINDING-COMMONS]  -  @GS_RegisterCE  -  Task registered: big_filter.filter_files
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-1
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: files_to_process
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 28
+[BINDING-COMMONS]  -  @process_param  -  External Stream: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_fds
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 200
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(11151)    API]  -  Creating task from method big_filter.filter_files
+[(11151)    API]  -  There are 4 parameters
+[(11151)    API]  -    Parameter 0 has type FILE_T
+[(11155)    API]  -    Parameter 1 has type EXTERNAL_STREAM_T
+[(11155)    API]  -    Parameter 2 has type INT_T
+[(11156)    API]  -    Parameter 3 has type INT_T
+[DEBUG] Launch filter task
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-3
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: files_to_process
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 28
+[BINDING-COMMONS]  -  @process_param  -  External Stream: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_fds
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 200
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(11166)    API]  -  Creating task from method big_filter.filter_files
+[(11166)    API]  -  There are 4 parameters
+[(11166)    API]  -    Parameter 0 has type FILE_T
+[(11167)    API]  -    Parameter 1 has type EXTERNAL_STREAM_T
+[(11167)    API]  -    Parameter 2 has type INT_T
+[(11167)    API]  -    Parameter 3 has type INT_T
+[DEBUG] Launch filter task
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-4
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: files_to_process
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 28
+[BINDING-COMMONS]  -  @process_param  -  External Stream: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_fds
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 200
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(11177)    API]  -  Creating task from method big_filter.filter_files
+[(11177)    API]  -  There are 4 parameters
+[(11177)    API]  -    Parameter 0 has type FILE_T
+[(11177)    API]  -    Parameter 1 has type EXTERNAL_STREAM_T
+[(11177)    API]  -    Parameter 2 has type INT_T
+[(11177)    API]  -    Parameter 3 has type INT_T
+[DEBUG] Launch filter task
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-5
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: files_to_process
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 28
+[BINDING-COMMONS]  -  @process_param  -  External Stream: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_fds
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 200
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(11186)    API]  -  Creating task from method big_filter.filter_files
+[(11186)    API]  -  There are 4 parameters
+[(11186)    API]  -    Parameter 0 has type FILE_T
+[(11187)    API]  -    Parameter 1 has type EXTERNAL_STREAM_T
+[(11187)    API]  -    Parameter 2 has type INT_T
+[(11187)    API]  -    Parameter 3 has type INT_T
+[DEBUG] Launch forced filter task
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew - Processing task execution in bindings-common. 
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 0
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 9
+[BINDING-COMMONS]  -  @process_param  -  File: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-6
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: files_to_process
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 1
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 28
+[BINDING-COMMONS]  -  @process_param  -  External Stream: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-2
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 1
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: output_fds
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 2
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 2000
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: base_sleep_time
+[BINDING-COMMONS]  -  @GS_ExecuteTaskNew  -  Processing parameter 3
+[BINDING_COMMONS]  -  @process_param
+[BINDING-COMMONS]  -  @process_param  -  ENUM DATA_TYPE: 4
+[BINDING-COMMONS]  -  @process_param  -  Int: 200
+[BINDING-COMMONS]  -  @process_param  -  ENUM DIRECTION: 0
+[BINDING-COMMONS]  -  @process_param  -  ENUM STD IO STREAM: 3
+[BINDING-COMMONS]  -  @process_param  -  PREFIX: null
+[BINDING-COMMONS]  -  @process_param  -  NAME: sleep_random_range
+[(11196)    API]  -  Creating task from method big_filter.filter_files
+[(11196)    API]  -  There are 4 parameters
+[(11196)    API]  -    Parameter 0 has type FILE_T
+[(11196)    API]  -    Parameter 1 has type EXTERNAL_STREAM_T
+[(11196)    API]  -    Parameter 2 has type INT_T
+[(11196)    API]  -    Parameter 3 has type INT_T
+[INFO] Waiting for all batch tasks to finish
+[   BINDING]  -  @GS_Barrier  -  Waiting tasks for APP id: 94845164061560
+[   BINDING]  -  @GS_Barrier  -  noMoreTasks: false
+[(11197)    API]  -  Barrier for app 0 with noMoreTasks = false
+[BINDING-COMMONS]  -  @GS_Barrier  -  APP id: 94845164061560
+2019-07-24 15:23:31,979 DEBUG pycompss.streams.distro_stream distro_stream - Closing stream 15acc075-63f2-43b9-a96a-3c44dc52205e
+2019-07-24 15:23:31,979 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: CLOSE_STREAM
+2019-07-24 15:23:31,980 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: CLOSE_STREAM
+2019-07-24 15:23:31,980 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Sending request to server: CLOSE_STREAM 15acc075-63f2-43b9-a96a-3c44dc52205e
+2019-07-24 15:23:31,980 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Received answer from server: 
+[INFO] DONE
+[TIME] TOTAL ELAPSED: 50.918936
+2019-07-24 15:23:31,981 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Adding new request to client queue: STOP
+2019-07-24 15:23:31,982 DEBUG pycompss.streams.distro_stream_client distro_stream_client - Processing request: STOP
+2019-07-24 15:23:31,982 INFO pycompss.streams.distro_stream_client distro_stream_client - DS Client asked to stop
+[(51959)    API]  -  Deleting File /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-2
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-2
+[(51968)    API]  -  Deleting File /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-3
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-3
+[(51971)    API]  -  Deleting File /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-1
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-1
+[(51973)    API]  -  Deleting File /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-6
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-6
+[(51975)    API]  -  Deleting File /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-4
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-4
+[(51976)    API]  -  Deleting File /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-5
+[BINDING-COMMONS]  -  @GS_Delete_File  -  COMPSs filename: /home/cramonco/.COMPSs/filter.py/nestedCOMPSsLog/tmpFiles/pycompssxTzLLv/compss-serialized-obj_1c59513e-ae16-11e9-9ddc-a44cc871a000-5
+[BINDING-COMMONS]  -  @GS_Off
+[BINDING-COMMONS]  -  @Off - Waiting to end tasks
+[(51978)    API]  -  No more tasks for app 0
+[(51979)    API]  -  Getting Result Files 0
+[BINDING-COMMONS]  -  @Off - Stopping runtime
+[(51979)    API]  -  ------- COMPSs Task Execution Summary per Worker ------
+[(51980)    API]  -  --- Summary for COMPSs Worker COMPSsWorker01
+[(51980)    API]  -  5 big_filter.filter_files tasks have been executed
+[(51980)    API]  -  --- Total executed tasks in COMPSs Worker COMPSsWorker01: 5
+[(51980)    API]  -  -------------------------------------------------------
+[(51980)    API]  -  
+[(51980)    API]  -  ------------ COMPSs Task Execution Summary ------------
+[(51980)    API]  -  5 big_filter.filter_files tasks have been executed
+[(51980)    API]  -  Total executed tasks: 5
+[(51980)    API]  -  -------------------------------------------------------
+[(51980)    API]  -  Stop IT reached
+[(51980)    API]  -  Stopping Graph generation...
+[(51980)    API]  -  Stopping AP...
+[(51980)    API]  -  Stopping TD...
+[(52124)    API]  -  Stopping Comm...
+[(52125)    API]  -  Runtime stopped
+[(52125)    API]  -  Execution Finished
+[BINDING-COMMONS]  -  @Off - Removing JVM
+[BINDING-COMMONS]  -  @Off - End
+2019-07-24 15:23:32,484 INFO pycompss.streams.distro_stream_client distro_stream_client - DS Client stopped
+
+------------------------------------------------------------
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[BINARY EXECUTION WRAPPER] CMD EXIT VALUE: 0
+[BINARY EXECUTION WRAPPER] ------------------------------------
+[EXECUTOR] executeTask - End task execution

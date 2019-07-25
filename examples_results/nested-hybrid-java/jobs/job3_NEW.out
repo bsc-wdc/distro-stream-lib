@@ -1,0 +1,46 @@
+[EXECUTOR] executeTask - Begin task execution
+WORKER - Parameters of execution:
+  * Method type: METHOD
+  * Method definition: [DECLARING CLASS=mains.NestedHybridTasks, METHOD NAME=extractInfo]
+  * Parameter types: es.bsc.distrostreamlib.api.objects.ObjectDistroStream int int
+  * Parameter values: es.bsc.distrostreamlib.api.objects.ObjectDistroStream@2eeb6f49 500 100
+  * Parameter streams: UNSPECIFIED UNSPECIFIED UNSPECIFIED
+  * Parameter prefixes: null null null
+  * Has Target: false
+  * Has Return: true
+[INVOKER] COMPSS_HOSTNAMES: COMPSsWorker02
+[INVOKER] COMPSS_NUM_NODES: 1
+[INVOKER] COMPSS_NUM_THREADS: 1
+[DEBUG] Starting extractInfo
+[DEBUG] Polling new files
+[DEBUG] Polling new files
+[DEBUG] Polling new files
+[DEBUG] Polling new files
+[DEBUG] Polling new files
+[DEBUG] Processing object MyElement[IF=[object0,],P=false]
+[DEBUG] Processing object MyElement[IF=[object10,],P=false]
+[DEBUG] Polling new files
+[DEBUG] Processing object MyElement[IF=[object1,],P=false]
+[DEBUG] Processing object MyElement[IF=[object11,],P=false]
+[DEBUG] Processing object MyElement[IF=[object12,],P=false]
+[DEBUG] Processing object MyElement[IF=[object2,],P=false]
+[DEBUG] Processing object MyElement[IF=[object20,],P=false]
+[DEBUG] Processing object MyElement[IF=[object30,],P=false]
+[DEBUG] Processing object MyElement[IF=[object13,],P=false]
+[DEBUG] Polling new files
+[DEBUG] Processing object MyElement[IF=[object3,],P=false]
+[DEBUG] Polling new files
+[DEBUG] Processing object MyElement[IF=[object31,],P=false]
+[DEBUG] Processing object MyElement[IF=[object21,],P=false]
+[DEBUG] Processing object MyElement[IF=[object14,],P=false]
+[DEBUG] Processing object MyElement[IF=[object4,],P=false]
+[DEBUG] Processing object MyElement[IF=[object22,],P=false]
+[DEBUG] Processing object MyElement[IF=[object32,],P=false]
+[DEBUG] Processing object MyElement[IF=[object15,],P=false]
+[DEBUG] Processing object MyElement[IF=[object5,],P=false]
+[DEBUG] Processing object MyElement[IF=[object23,],P=false]
+[DEBUG] Processing object MyElement[IF=[object33,],P=false]
+[DEBUG] Polling new files
+[DEBUG] Polling new files
+[DEBUG] Detected valid elements: [MyElement[IF=[object30,],P=false], MyElement[IF=[object13,],P=false], MyElement[IF=[object3,],P=false], MyElement[IF=[object21,],P=false], MyElement[IF=[object14,],P=false], MyElement[IF=[object15,],P=false], MyElement[IF=[object33,],P=false]]
+[EXECUTOR] executeTask - End task execution
