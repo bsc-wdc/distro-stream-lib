@@ -1,0 +1,55 @@
+digraph {
+  rankdir=TB;
+  labeljust="l";
+  compound= true;
+  subgraph dependence_graph {
+    ranksep=0.20;
+    node[height=0.75];
+Synchro1[label="main", shape=octagon, style=filled fillcolor="#8B0000" fontcolor="#FFFFFF"];
+Synchro1 -> 1;
+Synchro1 -> 2;
+Synchro0[label="main", shape=octagon, style=filled fillcolor="#8B0000" fontcolor="#FFFFFF"];
+1[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+Stream1[shape=rect style="rounded,filled" width=0 height=0 margin=0.1 fontsize=10 fillcolor="#a9a9a9" fontcolor="#000000"]
+1 -> Stream1 [style=dashed];
+2[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+Stream2[shape=rect style="rounded,filled" width=0 height=0 margin=0.1 fontsize=10 fillcolor="#a9a9a9" fontcolor="#000000"]
+2 -> Stream2 [style=dashed];
+Stream1 -> Synchro0 [style=dashed];
+Stream2 -> Synchro0 [style=dashed];
+3[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+Synchro0 -> 3 [label="d3v1"];
+4[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+Synchro0 -> 4 [label="d5v1"];
+5[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+Synchro0 -> 5 [label="d7v1"];
+6[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+Synchro0 -> 6 [label="d9v1"];
+7[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+Synchro0 -> 7 [label="d11v1"];
+8[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+Synchro0 -> 8 [label="d13v1"];
+9[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+Synchro0 -> 9 [label="d15v1"];
+10[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+Synchro0 -> 10 [label="d17v1"];
+11[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+Synchro0 -> 11 [label="d19v1"];
+12[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+Synchro0 -> 12 [label="d21v1"];
+13[shape=circle, style=filled fillcolor="#ff00ae" fontcolor="#000000"];
+3 -> 13 [label="d4v2"];
+5 -> 13 [label="d8v2"];
+6 -> 13 [label="d10v2"];
+7 -> 13 [label="d12v2"];
+8 -> 13 [label="d14v2"];
+14[shape=circle, style=filled fillcolor="#ff00ae" fontcolor="#000000"];
+4 -> 14 [label="d6v2"];
+9 -> 14 [label="d16v2"];
+10 -> 14 [label="d18v2"];
+11 -> 14 [label="d20v2"];
+12 -> 14 [label="d22v2"];
+Synchro2[label="sync", shape=octagon, style=filled fillcolor="#ff0000" fontcolor="#FFFFFF"];
+13 -> Synchro2 [label="d23v2"];
+14 -> Synchro2 [label="d24v2"];  }
+}

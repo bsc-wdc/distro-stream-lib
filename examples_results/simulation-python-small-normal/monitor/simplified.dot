@@ -1,0 +1,49 @@
+digraph {
+  rankdir=TB;
+  labeljust="l";
+  compound= true;
+  subgraph dependence_graph {
+    ranksep=0.20;
+    node[height=0.75];
+
+Synchro0[label="main", shape=octagon, style=filled fillcolor="#8B0000" fontcolor="#FFFFFF"];
+1[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+Synchro0 -> 1;
+2[shape=circle, style=filled fillcolor="#0000ff" fontcolor="#ffffff"];
+Synchro0 -> 2;
+3[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+1 -> 3 [label="d1v2"];
+4[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+1 -> 4 [label="d2v2"];
+5[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+1 -> 5 [label="d3v2"];
+6[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+1 -> 6 [label="d4v2"];
+7[shape=circle, style=filled fillcolor="#ffffff" fontcolor="#000000"];
+1 -> 7 [label="d5v2"];
+8[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+2 -> 8 [label="d6v2"];
+9[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+2 -> 9 [label="d7v2"];
+10[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+2 -> 10 [label="d8v2"];
+11[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+2 -> 11 [label="d9v2"];
+12[shape=circle, style=filled fillcolor="#ff0000" fontcolor="#000000"];
+2 -> 12 [label="d10v2"];
+13[shape=circle, style=filled fillcolor="#ff00ae" fontcolor="#000000"];
+3 -> 13 [label="d11v2"];
+4 -> 13 [label="d12v2"];
+5 -> 13 [label="d13v2"];
+6 -> 13 [label="d14v2"];
+7 -> 13 [label="d15v2"];
+14[shape=circle, style=filled fillcolor="#ff00ae" fontcolor="#000000"];
+8 -> 14 [label="d16v2"];
+9 -> 14 [label="d17v2"];
+10 -> 14 [label="d18v2"];
+11 -> 14 [label="d19v2"];
+12 -> 14 [label="d20v2"];
+Synchro1[label="sync", shape=octagon, style=filled fillcolor="#ff0000" fontcolor="#FFFFFF"];
+13 -> Synchro1 [label="d21v2"];
+14 -> Synchro1 [label="d22v2"];  }
+}
