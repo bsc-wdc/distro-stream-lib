@@ -12,9 +12,6 @@
 <!-- Maven central packages version -->
 <!-- [![Maven Central](https://maven-badges.herokuapp.com/maven-central/XX)](https://maven-badges.herokuapp.com/maven-central/XX) -->
 
-<!-- Dependencies update status -->
-<!-- [![Dependency Status](https://www.versioneye.com/user/projects/59f6fd4c0fb24f1f1f38c653/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59f6fd4c0fb24f1f1f38c653) -->
-
 <!-- Java DOC status -->
 <!-- [![Javadocs](http://javadoc.io/badge/XX.svg)](http://javadoc.io/doc/XX) -->
 
@@ -28,10 +25,12 @@
 # Distributed Stream Library
 
 The implementation includes:
-* DistroStream: Stream interface and implementation to handle Distributed Streams
-* Client: Client backend process
-* Server: Centralized server backend
-* Test: Integration tests
+* DistroStream: Stream interface to handle stream accesses homogeneously regardless of the stream engine backing it (Python and Java).
+    * ObjectDistroStream: Implementation of the interface for object streams built on top of Kafka (Java).
+    * FileDistroStream: Implementation of the interface for file streams that monitors the creation of files inside a directory (Python and Java).
+* Client: Acts as a broker on behalf of the application and interacts with the corresponding stream backend (Python and Java).
+* Server: Centralized server to manage the streams metadata and coordinate the accesses (Java).
+* Test: Basic integration tests.
 
 ---
 
@@ -46,8 +45,7 @@ The implementation includes:
 
 ## Contributing
 
-All kinds of contributions are welcome. Please do not hesitate to open a new issue,
-submit a pull request or contact the author if necessary. 
+All kinds of contributions are welcome. Please do not hesitate to open a new issue, submit a pull request or contact the author if necessary. 
  
 
 ## Author
@@ -57,12 +55,12 @@ Cristián Ramón-Cortés Vilarrodona <cristian.ramoncortes(at)bsc.es> ([Personal
 This work is supervised by:
 - Rosa M. Badia ([BSC][bsc])
 - Jorge Ejarque ([BSC][bsc])
+- Francesc Lordan ([BSC][bsc])
 
 
 ## Disclaimer
 
-This is part of a PhD Thesis at the [Workflows and Distributed Computing Team][wdc-bsc] at [BSC][bsc] and is still
-under development. 
+This work is part of a PhD Thesis at the [Workflows and Distributed Computing Team][wdc-bsc] at [BSC][bsc] and is still under development. 
 
 
 ## License
