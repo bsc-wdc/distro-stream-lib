@@ -1,6 +1,6 @@
 package es.bsc.distrostreamlib.api.files;
 
-import es.bsc.distrostreamlib.DistroStream;
+import es.bsc.distrostreamlib.api.impl.DistroStreamImpl;
 import es.bsc.distrostreamlib.client.DistroStreamClient;
 import es.bsc.distrostreamlib.exceptions.BackendException;
 import es.bsc.distrostreamlib.exceptions.RegistrationException;
@@ -9,7 +9,6 @@ import es.bsc.distrostreamlib.requests.PollRequest;
 import es.bsc.distrostreamlib.types.ConsumerMode;
 import es.bsc.distrostreamlib.types.StreamType;
 
-import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
@@ -24,7 +23,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * Distributed Stream implementation for Files.
  */
-public class FileDistroStream extends DistroStream<String> implements Externalizable {
+public class FileDistroStream extends DistroStreamImpl<String> {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.FILE_DISTRO_STREAM);
     private static final boolean DEBUG = LOGGER.isDebugEnabled();

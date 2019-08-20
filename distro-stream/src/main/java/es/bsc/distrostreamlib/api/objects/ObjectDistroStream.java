@@ -1,6 +1,6 @@
 package es.bsc.distrostreamlib.api.objects;
 
-import es.bsc.distrostreamlib.DistroStream;
+import es.bsc.distrostreamlib.api.impl.DistroStreamImpl;
 import es.bsc.distrostreamlib.client.DistroStreamClient;
 import es.bsc.distrostreamlib.exceptions.BackendException;
 import es.bsc.distrostreamlib.exceptions.RegistrationException;
@@ -24,7 +24,7 @@ import org.apache.logging.log4j.Logger;
  *
  * @param <T> Internal Object Stream type.
  */
-public class ObjectDistroStream<T> extends DistroStream<T> {
+public class ObjectDistroStream<T> extends DistroStreamImpl<T> {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.OBJECT_DISTRO_STREAM);
     private static final boolean DEBUG = LOGGER.isDebugEnabled();

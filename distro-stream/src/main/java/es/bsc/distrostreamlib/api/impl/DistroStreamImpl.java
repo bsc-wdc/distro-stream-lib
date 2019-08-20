@@ -1,5 +1,6 @@
-package es.bsc.distrostreamlib;
+package es.bsc.distrostreamlib.api.impl;
 
+import es.bsc.distrostreamlib.api.DistroStream;
 import es.bsc.distrostreamlib.client.DistroStreamClient;
 import es.bsc.distrostreamlib.exceptions.BackendException;
 import es.bsc.distrostreamlib.exceptions.RegistrationException;
@@ -10,7 +11,6 @@ import es.bsc.distrostreamlib.requests.StreamStatusRequest;
 import es.bsc.distrostreamlib.types.ConsumerMode;
 import es.bsc.distrostreamlib.types.StreamType;
 
-import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
@@ -25,7 +25,7 @@ import org.apache.logging.log4j.Logger;
  * 
  * @param <T> Internal Stream type.
  */
-public abstract class DistroStream<T> implements Externalizable {
+public abstract class DistroStreamImpl<T> implements DistroStream<T> {
 
     private static final Logger LOGGER = LogManager.getLogger(Loggers.DISTRO_STREAM);
 
@@ -41,7 +41,7 @@ public abstract class DistroStream<T> implements Externalizable {
     /**
      * Creates a new DistroStream instance for serialization.
      */
-    public DistroStream() {
+    public DistroStreamImpl() {
         // Nothing to do, only for serialization
     }
 
@@ -54,8 +54,8 @@ public abstract class DistroStream<T> implements Externalizable {
      * @param internalStreamInfo Specific information about hte DistroStream implementation to be stored in the server
      * @throws RegistrationException When server cannot register the stream.
      */
-    public DistroStream(String alias, StreamType streamType, ConsumerMode accessMode, List<String> internalStreamInfo)
-            throws RegistrationException {
+    public DistroStreamImpl(String alias, StreamType streamType, ConsumerMode accessMode,
+        List<String> internalStreamInfo) throws RegistrationException {
 
         this.alias = alias;
         this.streamType = streamType;
@@ -82,81 +82,50 @@ public abstract class DistroStream<T> implements Externalizable {
         LOGGER.info("New Stream registered with ID = " + this.id);
     }
 
-    /**
-     * Returns the stream type.
-     * 
-     * @return The stream type.
+    /*
+     * METADATA METHODS
      */
-    public final StreamType getStreamType() {
-        return this.streamType;
+
+    @Override
+    public final String getId() {
+        return this.id;
     }
 
-    /**
-     * Returns the stream alias.
-     * 
-     * @return The stream alias.
-     */
+    @Override
     public final String getAlias() {
         return this.alias;
     }
 
-    /**
-     * Returns the stream Id.
-     * 
-     * @return The stream Id.
-     */
-    public final String getId() {
-        return this.id;
+    @Override
+    public final StreamType getStreamType() {
+        return this.streamType;
     }
 
     /*
      * PUBLISH METHODS
      */
 
-    /**
-     * Publishes the given message {@code message} to the current stream.
-     * 
-     * @param message T object to publish.
-     * @throws RegistrationException Raised if there is an internal error when creating the stream handler.
-     */
+    @Override
     public abstract void publish(T message) throws BackendException;
 
-    /**
-     * Publishes the given messages {@code messages} to the current stream.
-     * 
-     * @param messages List of T objects to publish.
-     * @throws RegistrationException Raised if there is an internal error when creating the stream handler.
-     */
+    @Override
     public abstract void publish(List<T> messages) throws BackendException;
 
     /*
      * POLL METHODS
      */
 
-    /**
-     * Retrieves all the unread messages of the current stream.
-     * 
-     * @return List of unread messages. Can be an empty list if any message have been published.
-     */
+    @Override
     public abstract List<T> poll() throws BackendException;
 
-    /**
-     * Retrieves all the unread messages of the current stream.
-     * 
-     * @param timeout Polling timeout in milliseconds.
-     * @return List of unread messages. Can be an empty list if any message have been published.
-     */
+    @Override
     public abstract List<T> poll(long timeout) throws BackendException;
 
     /*
      * CONTROL METHODS
      */
 
-    /**
-     * Returns whether the stream is closed or not.
-     * 
-     * @return {@code true} if the stream is closed, {@code false} otherwise.
-     */
+    @Override
     public final boolean isClosed() {
         StreamStatusRequest req = new StreamStatusRequest(this.id);
         DistroStreamClient.request(req);
@@ -177,9 +146,7 @@ public abstract class DistroStream<T> implements Externalizable {
         return Boolean.parseBoolean(req.getResponseMessage());
     }
 
-    /**
-     * Marks the stream as closed.
-     */
+    @Override
     public final void close() {
         CloseStreamRequest req = new CloseStreamRequest(this.id);
         DistroStreamClient.request(req);
