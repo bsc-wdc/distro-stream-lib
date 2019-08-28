@@ -56,7 +56,7 @@ def simulation(fds, num_files, base_sleep_time, sleep_random_range):
 
         # Sleep between generation to simulate time spent to generate the next file
         sleep_time = base_sleep_time + random.randint(0, sleep_random_range)
-        sleep_time = sleep_time / 1000  # from ms to s
+        sleep_time = sleep_time / 1000.0  # from ms to s
         time.sleep(sleep_time)
 
     # Close stream
@@ -88,7 +88,7 @@ def process_sim_file(input_file, output_image, base_sleep_time, sleep_random_ran
 
     # Sleep to simulate time spent to process the file
     sleep_time = base_sleep_time + random.randint(0, sleep_random_range)
-    sleep_time = sleep_time / 1000  # from ms to s
+    sleep_time = sleep_time / 1000.0  # from ms to s
     time.sleep(sleep_time)
 
     # Return the generated image
@@ -109,7 +109,7 @@ def merge_reduce(output_gif, base_sleep_time, sleep_random_range, *args):
 
     # Sleep to simulate gif generation time
     sleep_time = base_sleep_time + random.randint(0, sleep_random_range)
-    sleep_time = sleep_time / 1000  # from ms to s
+    sleep_time = sleep_time / 1000.0  # from ms to s
     time.sleep(sleep_time)
 
     # Return the generated gif
@@ -206,6 +206,7 @@ def main():
 
     # Create input streams
     print("[INFO] Creating input streams")
+    remove_and_create(app_args.stream_base_dir)
     input_streams = [None for _ in range(app_args.num_simulations)]
     for i in range(app_args.num_simulations):
         stream_dir = app_args.stream_base_dir + "/stream" + str(i) + "/"

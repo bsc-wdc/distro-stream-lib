@@ -28,12 +28,16 @@
     --project="${SCRIPT_DIR}/../xmls/project.xml" \
     --resources="${SCRIPT_DIR}/../xmls/resources.xml" \
     --jvm_workers_opts="-Dcompss.worker.removeWD=false" \
+    \
     --pythonpath="${SCRIPT_DIR}/../" \
+    \
     --streaming=FILES \
+    \
     -d \
     -g \
     -t \
     --summary \
+    \
     "${app_exec}" \
     "${stream_base_dir}" \
     "${num_simulations}" "${num_files}" \
