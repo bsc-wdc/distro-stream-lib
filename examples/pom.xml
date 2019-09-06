@@ -179,5 +179,8 @@
     <modules>
         <module>nested-hybrid-java</module>
         <module>nested-multisim-java</module>
+        <module>scalability-bench</module>
+        <module>simsync-bench</module>
+        <module>time-bench</module>
     </modules>
 </project>
