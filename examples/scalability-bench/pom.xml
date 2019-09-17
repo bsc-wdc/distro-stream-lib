@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- GENERAL INFORMATION -->
+	<groupId>es.bsc.distro-stream-lib.examples</groupId>
+	<artifactId>scalability-bench</artifactId>
+	<parent>
+		<groupId>es.bsc.distro-stream-lib</groupId>
+		<artifactId>examples</artifactId>
+		<version>1.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+	<!-- PROJECT INFORMATION -->
+	<name>Scalability Benchmark Example</name>
+	<description>Stream Writers and Readers Scalability Benchmark Example in Java</description>
+	<url>http://compss.bsc.es</url>
+	<inceptionYear>2014</inceptionYear>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+		</license>
+	</licenses>
+	<organization>
+		<name>BSC</name>
+		<url>http://www.bsc.es</url>
+	</organization>
+
+	<!-- PROPERTIES -->
+	<properties>
+	</properties>
+
+	<!-- DEPENCENCIES -->
+	<dependencies>
+		<!-- JUnit test dependency -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Log4j -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- COMPSs -->
+		<dependency>
+			<groupId>es.bsc.compss</groupId>
+			<artifactId>compss-api</artifactId>
+		</dependency>
+
+		<!-- DistroStream Stream -->
+		<dependency>
+			<groupId>es.bsc.distro-stream-lib</groupId>
+			<artifactId>distro-stream</artifactId>
+		</dependency>
+	</dependencies>
+
+	<!-- BUILD -->
+	<build>
+		<plugins>
+			<!-- Normal Compilation -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+
+			<!-- Create JAR with dependencies -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>${maven-shade-plugin.version}</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<finalName>${project.artifactId}</finalName>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Add revision to manifest -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven-jar-plugin.version}</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

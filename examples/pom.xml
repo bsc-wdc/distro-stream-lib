@@ -32,7 +32,7 @@
         <compss.version>2.5.rc1907</compss.version>
 
         <!-- DistroStreamLibrary version -->
-        <distro-stream-lib.version>1.0</distro-stream-lib.version>
+        <distro-stream-lib.version>1.1</distro-stream-lib.version>
 
         <!-- JUnit version -->
         <junit.version>4.12</junit.version>
@@ -179,5 +179,8 @@
     <modules>
         <module>nested-hybrid-java</module>
         <module>nested-multisim-java</module>
+        <module>scalability-bench</module>
+        <module>simsync-bench</module>
+        <module>time-bench</module>
     </modules>
 </project>

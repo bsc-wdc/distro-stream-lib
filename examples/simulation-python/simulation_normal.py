@@ -1,4 +1,19 @@
 #!/usr/bin/python
+#
+#  Copyright 2002-2019 Barcelona Supercomputing Center (www.bsc.es)
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
 
 # -*- coding: utf-8 -*-
 
@@ -50,7 +65,7 @@ def simulation(num_files, base_sleep_time, sleep_random_range, *args):
 
         # Sleep between generation to simulate time spent to generate the next file
         sleep_time = base_sleep_time + random.randint(0, sleep_random_range)
-        sleep_time = sleep_time / 1000  # from ms to s
+        sleep_time = sleep_time / 1000.0  # from ms to s
         time.sleep(sleep_time)
 
     # Add delay
@@ -79,7 +94,7 @@ def process_sim_file(input_file, output_image, base_sleep_time, sleep_random_ran
 
     # Sleep to simulate time spent to process the file
     sleep_time = base_sleep_time + random.randint(0, sleep_random_range)
-    sleep_time = sleep_time / 1000  # from ms to s
+    sleep_time = sleep_time / 1000.0  # from ms to s
     time.sleep(sleep_time)
 
     # Return the generated image
@@ -100,7 +115,7 @@ def merge_reduce(output_gif, base_sleep_time, sleep_random_range, *args):
 
     # Sleep to simulate gif generation time
     sleep_time = base_sleep_time + random.randint(0, sleep_random_range)
-    sleep_time = sleep_time / 1000  # from ms to s
+    sleep_time = sleep_time / 1000.0  # from ms to s
     time.sleep(sleep_time)
 
     # Return the generated gif
@@ -197,6 +212,7 @@ def main():
 
     # Create input streams
     print("[INFO] Creating simulation and image file paths")
+    remove_and_create(app_args.output_base_dir)
     sim_files = [[] for _ in range(app_args.num_simulations)]
     output_images = [[] for _ in range(app_args.num_simulations)]
     for i in range(app_args.num_simulations):
