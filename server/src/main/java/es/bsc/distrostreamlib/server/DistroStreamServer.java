@@ -125,8 +125,8 @@ public class DistroStreamServer extends Thread {
         LOGGER.debug("Processing requests...");
         while (this.keepRunning) {
             try (Socket socket = listener.accept();
-                    Scanner in = new Scanner(socket.getInputStream());
-                    PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
+                Scanner in = new Scanner(socket.getInputStream());
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
 
                 while (in.hasNextLine()) {
                     // Get message
@@ -177,10 +177,7 @@ public class DistroStreamServer extends Thread {
                 StreamType streamType = StreamType.valueOf(content[1].trim().toUpperCase());
                 ConsumerMode accessMode = ConsumerMode.valueOf(content[2].trim().toUpperCase());
                 String alias = content[3].trim();
-                List<String> internalStreamInfo = new LinkedList<>();
-                for (int i = 4; i < content.length; ++i) {
-                    internalStreamInfo.add(content[i].trim());
-                }
+                List<String> internalStreamInfo = parseInternalStreamInfo(content);
                 answer = registerStream(alias, streamType, accessMode, internalStreamInfo);
                 break;
             case STREAM_STATUS:
@@ -214,8 +211,17 @@ public class DistroStreamServer extends Thread {
         return answer;
     }
 
+    private List<String> parseInternalStreamInfo(String[] content) {
+        List<String> internalStreamInfo = new LinkedList<>();
+        for (int i = 4; i < content.length; ++i) {
+            internalStreamInfo.add(content[i].trim());
+        }
+
+        return internalStreamInfo;
+    }
+
     private String registerStream(String alias, StreamType streamType, ConsumerMode accessMode,
-            List<String> internalStreamInfo) {
+        List<String> internalStreamInfo) {
         if (alias != null && !alias.isEmpty() && !"null".equals(alias) && !"None".equals(alias)) {
             // Retrieve stream by alias
             String id = this.registeredStreamAlias.get(alias);
@@ -233,14 +239,13 @@ public class DistroStreamServer extends Thread {
                 return id;
             }
         } else {
-            // Register new stream
-            String id = addNewStream(alias, streamType, accessMode, internalStreamInfo);
-            return id;
+            // Register new stream (without alias, no need to store it)
+            return addNewStream(alias, streamType, accessMode, internalStreamInfo);
         }
     }
 
     private String addNewStream(String alias, StreamType streamType, ConsumerMode accessMode,
-            List<String> internalStreamInfo) {
+        List<String> internalStreamInfo) {
 
         String id = UUID.randomUUID().toString();
 
@@ -378,7 +383,7 @@ public class DistroStreamServer extends Thread {
         // Enqueue petition to wake up internal thread
         StopRequest sr = new StopRequest();
         try (Socket socket = new Socket(this.serverName, this.serverPort);
-                PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
             // Send petition
             String reqMsg = sr.getRequestMessage();
             out.println(reqMsg);
