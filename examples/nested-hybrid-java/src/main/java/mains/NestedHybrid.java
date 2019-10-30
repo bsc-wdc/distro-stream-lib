@@ -20,8 +20,6 @@ import compss.NESTED;
 
 import es.bsc.compss.api.COMPSs;
 import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
-import es.bsc.distrostreamlib.exceptions.BackendException;
-import es.bsc.distrostreamlib.exceptions.RegistrationException;
 import es.bsc.distrostreamlib.types.ConsumerMode;
 
 import java.util.LinkedList;
@@ -29,10 +27,16 @@ import java.util.LinkedList;
 
 public class NestedHybrid {
 
-    public static void main(String[] args) throws RegistrationException, BackendException, InterruptedException {
+    /**
+     * Main function.
+     * 
+     * @param args Command line arguments.
+     * @throws Exception When the example raises any exception.
+     */
+    public static void main(String[] args) throws Exception {
         // Start application
         System.out.println("[INFO] Starting application");
-        long start = System.currentTimeMillis();
+        final long start = System.currentTimeMillis();
 
         // Parse arguments
         System.out.println("[INFO] Parsing application arguments");
@@ -40,30 +44,30 @@ public class NestedHybrid {
 
         // Create streams
         System.out.println("[INFO] Creating streams");
-        ObjectDistroStream<MyElement> odsSensor = new ObjectDistroStream<MyElement>("sensor",
-                ConsumerMode.AT_MOST_ONCE);
-        ObjectDistroStream<MyElement> odsFiltered = new ObjectDistroStream<MyElement>("filtered",
-                ConsumerMode.AT_MOST_ONCE);
+        final ObjectDistroStream<MyElement> odsSensor =
+            new ObjectDistroStream<MyElement>("sensor", ConsumerMode.AT_MOST_ONCE);
+        final ObjectDistroStream<MyElement> odsFiltered =
+            new ObjectDistroStream<MyElement>("filtered", ConsumerMode.AT_MOST_ONCE);
 
         // Create sensor
         System.out.println("[INFO] Launching sensor");
         NestedHybridTasks.sensor(odsSensor, nhargs.getSensorNumFiles(), nhargs.getSensorSleepBaseTime(),
-                nhargs.getSensorSleepRandomRange());
+            nhargs.getSensorSleepRandomRange());
 
         // Create filters
         System.out.println("[INFO] Launching filter nested");
         NESTED.nestedBigFilter(odsSensor, odsFiltered, nhargs.getBatchSize(), nhargs.getFilterSleepBaseTime(),
-                nhargs.getFilterSleepRandomRange());
+            nhargs.getFilterSleepRandomRange());
 
         // Create extract
         System.out.println("[INFO] Launching extract");
         LinkedList<MyElement> elems = NestedHybridTasks.extractInfo(odsFiltered, nhargs.getExtractSleepBaseTime(),
-                nhargs.getExtractSleepRandomRange());
+            nhargs.getExtractSleepRandomRange());
 
         // Launch task flow computation
         System.out.println("[INFO] Launching task flow computation");
         Integer res = NESTED.nestedTaskFlow(elems, nhargs.getTaskFlowDepth(), nhargs.getTaskFlowSleepBaseTime(),
-                nhargs.getTaskFlowSleepRandomRange());
+            nhargs.getTaskFlowSleepRandomRange());
 
         // Synchronize
         System.out.println("[INFO] Synchronizing final output");

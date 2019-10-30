@@ -28,6 +28,12 @@ public class ReadWrite {
     private static final int NUM_TOTAL_ELEMENTS = 100;
 
 
+    /**
+     * Main function.
+     * 
+     * @param args Command line arguments.
+     * @throws Exception When the example raises any exception.
+     */
     public static void main(String[] args) throws Exception {
         // Start application
         System.out.println("[INFO] Starting application");

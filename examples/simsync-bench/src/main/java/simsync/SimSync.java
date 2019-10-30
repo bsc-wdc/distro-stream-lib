@@ -21,10 +21,11 @@ import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
 import es.bsc.distrostreamlib.exceptions.BackendException;
 import es.bsc.distrostreamlib.exceptions.RegistrationException;
 import es.bsc.distrostreamlib.types.ConsumerMode;
-import simsync.types.State;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import simsync.types.State;
 
 
 public class SimSync {
@@ -32,6 +33,12 @@ public class SimSync {
     private static final int NUM_SIMULATIONS = 2;
 
 
+    /**
+     * Main function.
+     * 
+     * @param args Command line arguments.
+     * @throws Exception When the example raises any exception.
+     */
     public static void main(String[] args) throws Exception {
         // Start application
         System.out.println("[INFO] Starting application");

@@ -16,15 +16,16 @@
  */
 package filters;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
 import es.bsc.compss.api.COMPSs;
 import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
 import es.bsc.distrostreamlib.exceptions.BackendException;
 import es.bsc.distrostreamlib.exceptions.RegistrationException;
 import es.bsc.distrostreamlib.types.ConsumerMode;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 import mains.MyElement;
 
 
@@ -34,8 +35,8 @@ public class BigFilter {
 
 
     private static void processObjects(ObjectDistroStream<MyElement> odsSensor,
-            ObjectDistroStream<MyElement> odsFiltered, Queue<MyElement> pendingObjects, FilterArguments fargs,
-            boolean forced) throws BackendException {
+        ObjectDistroStream<MyElement> odsFiltered, Queue<MyElement> pendingObjects, FilterArguments fargs,
+        boolean forced) throws BackendException {
 
         // Poll objects
         List<MyElement> newObjects = odsSensor.poll();
@@ -52,7 +53,7 @@ public class BigFilter {
             // Launch task
             System.out.println("[DEBUG] Launch filter task with " + batchObjects.size() + " elements");
             BigFilterTasks.filterObjects(batchObjects, odsFiltered, fargs.getSleepBaseTime(),
-                    fargs.getSleepRandomRange());
+                fargs.getSleepRandomRange());
         }
 
         if (forced) {
@@ -60,15 +61,23 @@ public class BigFilter {
             List<MyElement> batchObjects = (LinkedList<MyElement>) pendingObjects;
             System.out.println("[DEBUG] Launch filter task with " + batchObjects.size() + " elements");
             BigFilterTasks.filterObjects(batchObjects, odsFiltered, fargs.getSleepBaseTime(),
-                    fargs.getSleepRandomRange());
+                fargs.getSleepRandomRange());
             pendingObjects.clear();
         }
     }
 
+    /**
+     * Main application code.
+     * 
+     * @param args Application arguments.
+     * @throws RegistrationException When a registration exception occurs.
+     * @throws BackendException When a backend exception occurs.
+     * @throws InterruptedException When the thread is interrupted.
+     */
     public static void main(String[] args) throws RegistrationException, BackendException, InterruptedException {
         // Start application
         System.out.println("[INFO] Starting application");
-        long start = System.currentTimeMillis();
+        final long start = System.currentTimeMillis();
 
         // Parse arguments
         System.out.println("[INFO] Parsing application arguments");
@@ -76,10 +85,10 @@ public class BigFilter {
 
         // Initialize streams
         System.out.println("[INFO] Initializing streams");
-        ObjectDistroStream<MyElement> odsSensor = new ObjectDistroStream<MyElement>(fargs.getAliasSensor(),
-                ConsumerMode.AT_MOST_ONCE);
-        ObjectDistroStream<MyElement> odsFiltered = new ObjectDistroStream<MyElement>(fargs.getAliasFiltered(),
-                ConsumerMode.AT_MOST_ONCE);
+        ObjectDistroStream<MyElement> odsSensor =
+            new ObjectDistroStream<MyElement>(fargs.getAliasSensor(), ConsumerMode.AT_MOST_ONCE);
+        ObjectDistroStream<MyElement> odsFiltered =
+            new ObjectDistroStream<MyElement>(fargs.getAliasFiltered(), ConsumerMode.AT_MOST_ONCE);
 
         // Process input stream elements
         System.out.println("[INFO] Processing input stream elements");

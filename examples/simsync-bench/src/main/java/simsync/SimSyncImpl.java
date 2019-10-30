@@ -16,10 +16,11 @@
  */
 package simsync;
 
-import java.util.List;
-
 import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
 import es.bsc.distrostreamlib.exceptions.BackendException;
+
+import java.util.List;
+
 import simsync.types.State;
 
 
@@ -28,11 +29,22 @@ public class SimSyncImpl {
     private static final boolean DEBUG = false;
 
 
+    /**
+     * Initializes the state.
+     * 
+     * @return New initialized state.
+     */
     public static final State initializeState() {
         State currentState = new State();
         return currentState;
     }
 
+    /**
+     * Simulates an iteration.
+     * 
+     * @param myState Current state.
+     * @param processTime Process time.
+     */
     public static final void simulationIter(State myState, int processTime) {
         // Sleep to fake simulation
         if (DEBUG) {
@@ -41,11 +53,28 @@ public class SimSyncImpl {
         myState.accumulateLocal(processTime, 1);
     }
 
+    /**
+     * Simulates the exchange of information.
+     * 
+     * @param myState State 1.
+     * @param otherState State 2.
+     * @param processTime Exchange process time.
+     */
     public static final void exchangeInfo(State myState, State otherState, int processTime) {
         myState.accumulateForeign(processTime, 1);
         otherState.accumulateForeign(processTime, 1);
     }
 
+    /**
+     * Performs a full simulation.
+     * 
+     * @param myStates Output stream for current simulation states.
+     * @param theirStates List of input streams from other simulations.
+     * @param numIterations Number of iterations.
+     * @param processTime Process time.
+     * @return Final state.
+     * @throws BackendException When a stream backend error occurs.
+     */
     public static final State fullSimulation(ObjectDistroStream<State> myStates, ObjectDistroStream<State> theirStates,
         int numIterations, int processTime) throws BackendException {
 

@@ -16,13 +16,14 @@
  */
 package mains;
 
+import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
+import es.bsc.distrostreamlib.exceptions.BackendException;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
-import es.bsc.distrostreamlib.exceptions.BackendException;
 import mains.MyElement;
 
 
@@ -33,8 +34,19 @@ public class NestedHybridTasks {
     private static final int EXTRACT_ACCEPT_RATE = 5;
 
 
+    /**
+     * Simulates a sensor.
+     * 
+     * @param odsSensor Sensor's stream.
+     * @param numFiles Number of files to publish by the sensor.
+     * @param sleepBaseTime Sensor's sleep time.
+     * @param sleepRandomRange Sleep random range.
+     * @throws BackendException When a backend error occurs.
+     * @throws InterruptedException When the current thread is interrupted.
+     */
     public static void sensor(ObjectDistroStream<MyElement> odsSensor, int numFiles, int sleepBaseTime,
-            int sleepRandomRange) throws BackendException, InterruptedException {
+        int sleepRandomRange) throws BackendException, InterruptedException {
+
         System.out.println("[DEBUG] Starting sensor");
 
         // Initial sensor delay
@@ -63,8 +75,18 @@ public class NestedHybridTasks {
         System.out.println("[DEBUG] Stopping sensor");
     }
 
+    /**
+     * Simulates an extract process.
+     * 
+     * @param odsFiltered Stream of elements to extract.
+     * @param sleepBaseTime Extract's sleep time.
+     * @param sleepRandomRange Sleep random range.
+     * @return List of extracted elements.
+     * @throws BackendException When a backend error occurs.
+     * @throws InterruptedException When the current thread is interrupted.
+     */
     public static LinkedList<MyElement> extractInfo(ObjectDistroStream<MyElement> odsFiltered, int sleepBaseTime,
-            int sleepRandomRange) throws InterruptedException, BackendException {
+        int sleepRandomRange) throws BackendException, InterruptedException {
 
         System.out.println("[DEBUG] Starting extractInfo");
 
@@ -87,7 +109,7 @@ public class NestedHybridTasks {
     }
 
     private static List<MyElement> getAndExtract(ObjectDistroStream<MyElement> odsFiltered, int sleepBaseTime,
-            int sleepRandomRange) throws InterruptedException, BackendException {
+        int sleepRandomRange) throws InterruptedException, BackendException {
 
         System.out.println("[DEBUG] Polling new files");
         List<MyElement> newElements = odsFiltered.poll();

@@ -24,6 +24,11 @@ public class NestedMultiSimArguments {
     private final int simulationSleepRandomRange;
 
 
+    /**
+     * Parses the command line arguments to an internal structure.
+     * 
+     * @param args Command line arguments.
+     */
     public NestedMultiSimArguments(String[] args) {
         assert (args.length == 3);
 
@@ -32,14 +37,29 @@ public class NestedMultiSimArguments {
         this.simulationSleepRandomRange = Integer.valueOf(args[2]);
     }
 
+    /**
+     * Returns the number of iterations.
+     * 
+     * @return The number of iterations.
+     */
     public int getNumIterations() {
         return this.numIterations;
     }
 
+    /**
+     * Returns the simulation base time.
+     * 
+     * @return The simulation base time.
+     */
     public int getSimulationSleepBaseTime() {
         return this.simulationSleepBaseTime;
     }
 
+    /**
+     * Returns the simulation random range.
+     * 
+     * @return The simulation random range.
+     */
     public int getSimulationSleepRandomRange() {
         return this.simulationSleepRandomRange;
     }

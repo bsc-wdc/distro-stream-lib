@@ -16,18 +16,28 @@
  */
 package filters;
 
+import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
+import es.bsc.distrostreamlib.exceptions.BackendException;
+
 import java.util.List;
 import java.util.Random;
 
-import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
-import es.bsc.distrostreamlib.exceptions.BackendException;
 import mains.MyElement;
 
 
 public class BigFilterTasks {
 
+    /**
+     * Filter objects function.
+     * 
+     * @param pendingObjects Pending objects.
+     * @param odsFiltered Stream of filtered elements.
+     * @param sleepBaseTime Base sleep time.
+     * @param sleepRandomRange Sleep random range.
+     * @throws BackendException When a backend exception occurs.
+     */
     public static void filterObjects(List<MyElement> pendingObjects, ObjectDistroStream<MyElement> odsFiltered,
-            int sleepBaseTime, int sleepRandomRange) throws BackendException {
+        int sleepBaseTime, int sleepRandomRange) throws BackendException {
 
         for (MyElement e : pendingObjects) {
             // Print input object content

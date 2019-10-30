@@ -41,7 +41,8 @@ public interface NestedHybridItf {
     
     @COMPSs(runcompss = "$RUNCOMPSS", 
             appName = "filters.BigFilter", 
-            flags = "-d -g --summary --streaming=OBJECTS --streaming_master_name=localhost --streaming_master_port=49049", 
+            flags = "-d -g --summary --streaming=OBJECTS --streaming_master_name=localhost" 
+            + " --streaming_master_port=49049", 
             computingNodes = "${NESTED_COMPUTING_NODES}")
     @Constraints(computingUnits = "${CORES_BIG_FILTER}")
     void nestedBigFilter(
