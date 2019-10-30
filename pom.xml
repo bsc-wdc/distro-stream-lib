@@ -28,6 +28,9 @@
 
 	<!-- PROPERTIES -->
 	<properties>
+		<!-- COMPSs version -->
+		<compss.version>2.5.rc1907</compss.version>
+
 		<!-- JUnit version -->
 		<junit.version>4.12</junit.version>
 
@@ -143,6 +146,14 @@
 				<artifactId>server</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+
+			<!-- COMPSs -->
+			<dependency>
+				<groupId>es.bsc.compss</groupId>
+				<artifactId>compss-api</artifactId>
+				<version>${compss.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -169,5 +180,6 @@
 		<module>server</module>
 		<module>distro-stream</module>
 		<module>test</module>
+		<module>examples</module>
 	</modules>
 </project>

@@ -1,186 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <!-- GENERAL INFORMATION -->
-    <groupId>es.bsc.distro-stream-lib</groupId>
-    <artifactId>examples</artifactId>
-    <version>1.0</version>
-    <packaging>pom</packaging>
+	<!-- GENERAL INFORMATION -->
+	<groupId>es.bsc.distro-stream-lib</groupId>
+	<artifactId>examples</artifactId>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>es.bsc</groupId>
+		<artifactId>distro-stream-lib</artifactId>
+		<version>1.1</version>
+		<!-- <relativePath>..</relativePath> -->
+	</parent>
 
-    <!-- PROJECT INFORMATION -->
-    <name>Distributed Stream Library Examples</name>
-    <description>Distributed Stream Library Examples</description>
-    <url>http://compss.bsc.es</url>
-    <inceptionYear>2014</inceptionYear>
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-        </license>
-    </licenses>
-    <organization>
-        <name>BSC</name>
-        <url>http://www.bsc.es</url>
-    </organization>
+	<!-- PROJECT INFORMATION -->
+	<name>Distributed Stream Library Examples</name>
+	<description>Distributed Stream Library Examples</description>
+	<url>http://compss.bsc.es</url>
+	<inceptionYear>2014</inceptionYear>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+		</license>
+	</licenses>
+	<organization>
+		<name>BSC</name>
+		<url>http://www.bsc.es</url>
+	</organization>
 
-    <!-- PROPERTIES -->
-    <properties>
-        <!-- COMPSs version -->
-        <compss.version>2.5.rc1907</compss.version>
+	<!-- PROPERTIES -->
+	<properties>
+	</properties>
 
-        <!-- DistroStreamLibrary version -->
-        <distro-stream-lib.version>1.1</distro-stream-lib.version>
+	<!-- BUILD -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>${maven-release-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>${versions-maven-plugin.version}</version>
+			</plugin>
+		</plugins>
+	</build>
 
-        <!-- JUnit version -->
-        <junit.version>4.12</junit.version>
-
-        <!-- Log4j version -->
-        <log4j.version>2.7</log4j.version>
-
-        <!-- Maven Plugins -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
-        <maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
-        <maven-resources-plugin.version>3.0.1</maven-resources-plugin.version>
-        <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
-
-        <!-- Version maven -->
-        <versions-maven-plugin.version>2.3</versions-maven-plugin.version>
-        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
-
-        <!-- Project encoding -->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
-
-    <!-- SOURCE CONTROL MANAGEMENT -->
-    <scm>
-        <connection>scm:git:http://compss.bsc.es/gitlab/projects/distro_stream_lib.git</connection>
-        <developerConnection>scm:git:http://compss.bsc.es/gitlab/projects/distro_stream_lib.git</developerConnection>
-        <url>http://compss.bsc.es/gitlab/projects/distro_stream_lib.git</url>
-    </scm>
-
-    <!-- DISTRIBUTION MANAGEMENT -->
-    <distributionManagement>
-        <repository>
-            <id>compss-repo</id>
-            <name>BSC Workflows and Distributed Computing group</name>
-            <url>http://compss.bsc.es/artifactory/libs-release</url>
-        </repository>
-    </distributionManagement>
-
-    <!-- REPOSITORIES -->
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>central</id>
-            <name>Central Repository</name>
-            <url>http://repo1.maven.apache.org/maven2</url>
-        </repository>
-        <repository>
-            <id>compss-repo</id>
-            <name>BSC Grid computing and Clusters group</name>
-            <url>http://compss.bsc.es/artifactory/libs-release</url>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <releases>
-                <updatePolicy>never</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>central</id>
-            <name>Central Repository</name>
-            <url>http://repo1.maven.apache.org/maven2</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <!-- DEPENDENCIES -->
-    <dependencyManagement>
-        <dependencies>
-            <!-- JUnit -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- Log4j -->
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>${log4j.version}</version>
-            </dependency>
-
-            <!-- COMPSs -->
-			<dependency>
-				<groupId>es.bsc.compss</groupId>
-				<artifactId>compss-api</artifactId>
-				<version>${compss.version}</version>
-			</dependency>
-
-            <!-- DistroStream Stream -->
-            <dependency>
-                <groupId>es.bsc.distro-stream-lib</groupId>
-                <artifactId>distro-stream</artifactId>
-                <version>${distro-stream-lib.version}</version>
-            </dependency>
-
-            <!-- DistroStream Commons -->
-            <dependency>
-                <groupId>es.bsc.distro-stream-lib</groupId>
-                <artifactId>commons</artifactId>
-                <version>${distro-stream-lib.version}</version>
-            </dependency>
-
-            <!-- DistroStream Client -->
-            <dependency>
-                <groupId>es.bsc.distro-stream-lib</groupId>
-                <artifactId>client</artifactId>
-                <version>${distro-stream-lib.version}</version>
-            </dependency>
-
-            <!-- DistroStream Server -->
-            <dependency>
-                <groupId>es.bsc.distro-stream-lib</groupId>
-                <artifactId>server</artifactId>
-                <version>${distro-stream-lib.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <!-- BUILD -->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>${maven-release-plugin.version}</version>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>versions-maven-plugin</artifactId>
-                <version>${versions-maven-plugin.version}</version>
-            </plugin>
-        </plugins>
-    </build>
-
-    <!-- SUB-MODULES -->
-    <modules>
-        <module>nested-hybrid-java</module>
-        <module>nested-multisim-java</module>
-        <module>scalability-bench</module>
-        <module>simsync-bench</module>
-        <module>time-bench</module>
-    </modules>
+	<!-- SUB-MODULES -->
+	<modules>
+		<module>nested-hybrid-java</module>
+		<module>nested-multisim-java</module>
+		<module>scalability-bench</module>
+		<module>simsync-bench</module>
+		<module>time-bench</module>
+	</modules>
 </project>
