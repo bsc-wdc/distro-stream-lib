@@ -40,6 +40,7 @@ public class Loggers {
     public static final String DISTRO_STREAM = DSL_STREAM + ".DistroStream";
     public static final String FILE_DISTRO_STREAM = DSL_STREAM + ".FileDistroStream";
     public static final String OBJECT_DISTRO_STREAM = DSL_STREAM + ".ObjectDistroStream";
+    public static final String PSCO_DISTRO_STREAM = DSL_STREAM + ".PscoDistroStream";
     public static final String ODS_PUBLISHER = OBJECT_DISTRO_STREAM + ".Publisher";
     public static final String ODS_CONSUMER = OBJECT_DISTRO_STREAM + ".Consumer";
 

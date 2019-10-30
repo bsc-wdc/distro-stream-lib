@@ -200,6 +200,12 @@ public class DistroStreamServer extends Thread {
                 String pollStreamId = content[1].trim();
                 answer = pollFromStream(pollStreamId);
                 break;
+            case PUBLISH:
+                assert content.length == 3;
+                String publishStreamId = content[1].trim();
+                String pubMessage = content[2].trim();
+                answer = publishToStream(publishStreamId, pubMessage);
+                break;
             case STOP:
                 // This request is only self-emitted (never received through clients)
                 assert content.length == 1;
@@ -319,8 +325,7 @@ public class DistroStreamServer extends Thread {
                 LOGGER.warn("Skipping poll on OBJECT stream with ID = " + streamId);
                 return "";
             case PSCO:
-                LOGGER.warn("Skipping poll on PSCO stream with ID = " + streamId);
-                return "";
+                return pollPscoStream(streamInfo);
         }
 
         return "";
@@ -372,6 +377,60 @@ public class DistroStreamServer extends Thread {
 
         // Convert list and return as answer
         return newFilePaths.stream().map(s -> String.valueOf(s)).collect(Collectors.joining(" ", "", ""));
+    }
+
+    private String pollPscoStream(StreamInfo streamInfo) {
+        if (DEBUG) {
+            LOGGER.debug("Polling new PSCOs");
+        }
+        List<String> internalStreamInfo = streamInfo.getInternalStreamInfo();
+        String newPscos = String.join(" ", internalStreamInfo);
+        streamInfo.clearInternalStreamInfo();
+
+        // Log information
+        if (DEBUG) {
+            LOGGER.debug("Polled new pscos: " + newPscos);
+        }
+
+        return newPscos;
+    }
+
+    private String publishToStream(String streamId, String message) {
+        StreamInfo streamInfo = this.registeredStreams.get(streamId);
+
+        // Check if stream is registered
+        if (streamInfo == null) {
+            LOGGER.warn("Skipping publish on unregistered stream with ID = " + streamId);
+            return "";
+        }
+
+        // Check stream type
+        switch (streamInfo.getStreamType()) {
+            case FILE:
+                LOGGER.warn("Skipping publish on FILE stream with ID = " + streamId);
+                return "";
+            case OBJECT:
+                LOGGER.warn("Skipping poll on OBJECT stream with ID = " + streamId);
+                return "";
+            case PSCO:
+                return publishPscoStream(streamInfo, message);
+        }
+
+        return "";
+    }
+
+    private String publishPscoStream(StreamInfo streamInfo, String message) {
+        if (DEBUG) {
+            LOGGER.debug("Adding new PSCO message: " + message);
+        }
+
+        streamInfo.addInternalStreamInfo(message);
+
+        // Log information
+        if (DEBUG) {
+            LOGGER.debug("Registered new PSCO message");
+        }
+        return "DONE";
     }
 
     private void setStopFlag() {
