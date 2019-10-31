@@ -28,8 +28,7 @@ import simsync.types.State;
 public interface SimSyncItf {
 
     @Method(declaringClass = "simsync.SimSyncImpl")
-    State initializeState(
-    );
+    State initializeState();
 
     @Method(declaringClass = "simsync.SimSyncImpl")
     void simulationIter(

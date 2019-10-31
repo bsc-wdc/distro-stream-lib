@@ -34,8 +34,8 @@ public class Simulation {
         // Create simulation read stream
         System.out.println("[INFO] Creating read stream");
         String readStreamAlias = sArgs.getReadStreamAlias();
-        ObjectDistroStream<State> readStream = new ObjectDistroStream<State>(readStreamAlias,
-                ConsumerMode.AT_MOST_ONCE);
+        ObjectDistroStream<State> readStream =
+            new ObjectDistroStream<State>(readStreamAlias, ConsumerMode.AT_MOST_ONCE);
 
         // Create simulation write streams
         System.out.println("[INFO] Creating write streams");
@@ -79,7 +79,13 @@ public class Simulation {
         return currentState;
     }
 
-    public static void main(String[] args) throws RegistrationException, BackendException {
+    /**
+     * Main function.
+     * 
+     * @param args Command line arguments.
+     * @throws Exception When the example raises any exception.
+     */
+    public static void main(String[] args) throws Exception {
         // Start application
         System.out.println("[INFO] Starting application");
         long start = System.currentTimeMillis();

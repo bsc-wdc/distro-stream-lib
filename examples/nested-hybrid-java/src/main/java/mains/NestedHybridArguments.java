@@ -34,6 +34,11 @@ public class NestedHybridArguments {
     private final int taskFlowSleepRandomRange;
 
 
+    /**
+     * Parses the command line arguments to an internal structure.
+     * 
+     * @param args Command line arguments.
+     */
     public NestedHybridArguments(String[] args) {
         assert (args.length == 11);
 
@@ -53,46 +58,101 @@ public class NestedHybridArguments {
         this.taskFlowSleepRandomRange = Integer.parseInt(args[10]);
     }
 
+    /**
+     * Returns the number of sensor files.
+     * 
+     * @return The number of sensor files.
+     */
     public int getSensorNumFiles() {
         return this.sensorNumFiles;
     }
 
+    /**
+     * Returns the sensor's base sleep time.
+     * 
+     * @return The sensor's base sleep time.
+     */
     public int getSensorSleepBaseTime() {
         return this.sensorSleepBaseTime;
     }
 
+    /**
+     * Returns the sesor's sleep random range.
+     * 
+     * @return The sesor's sleep random range.
+     */
     public int getSensorSleepRandomRange() {
         return this.sensorSleepRandomRange;
     }
 
+    /**
+     * Returns the batch size.
+     * 
+     * @return The batch size.
+     */
     public int getBatchSize() {
         return this.batchSize;
     }
 
+    /**
+     * Returns the filter's base sleep time.
+     * 
+     * @return The filter's base sleep time.
+     */
     public int getFilterSleepBaseTime() {
         return this.filterSleepBaseTime;
     }
 
+    /**
+     * Returns the filter's sleep random range.
+     * 
+     * @return The filter's sleep random range.
+     */
     public int getFilterSleepRandomRange() {
         return this.filterSleepRandomRange;
     }
 
+    /**
+     * Returns the extract's base sleep time.
+     * 
+     * @return The extract's base sleep time.
+     */
     public int getExtractSleepBaseTime() {
         return this.extractSleepBaseTime;
     }
 
+    /**
+     * Returns the extract's sleep random range.
+     * 
+     * @return The extract's sleep random range.
+     */
     public int getExtractSleepRandomRange() {
         return this.extractSleepRandomRange;
     }
 
+    /**
+     * Returns the task flow depth.
+     * 
+     * @return The task flow depth.
+     */
     public int getTaskFlowDepth() {
         return this.taskFlowDepth;
     }
 
+    /**
+     * Returns the tf's base sleep time.
+     * 
+     * @return The tf's base sleep time.
+     */
     public int getTaskFlowSleepBaseTime() {
         return this.taskFlowSleepBaseTime;
     }
 
+    /**
+     * Returns the tf's sleep random range.
+     * 
+     * @return The tf's sleep random range.
+     */
     public int getTaskFlowSleepRandomRange() {
         return this.taskFlowSleepRandomRange;
     }

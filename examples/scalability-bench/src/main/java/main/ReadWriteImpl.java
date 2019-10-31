@@ -31,6 +31,14 @@ public class ReadWriteImpl {
     private static final int TIME_BETWEEN_POLLS = 300; // ms
 
 
+    /**
+     * Writes the given number of elements to the stream.
+     * 
+     * @param ods Output stream.
+     * @param numObjects Number of elements to write.
+     * @throws BackendException When a backend error exception occurs.
+     * @throws InterruptedException When the current thread is interrupted.
+     */
     public static void write(ObjectDistroStream<Element> ods, int numObjects)
         throws BackendException, InterruptedException {
 
@@ -47,6 +55,14 @@ public class ReadWriteImpl {
         ods.close();
     }
 
+    /**
+     * Reads the available objects in the given stream.
+     *
+     * @param ods Input stream.
+     * @return List of new elements.
+     * @throws BackendException When a backend error exception occurs.
+     * @throws InterruptedException When the current thread is interrupted.
+     */
     public static Integer read(ObjectDistroStream<Element> ods) throws BackendException, InterruptedException {
         int totalElems = 0;
         while (!ods.isClosed()) {

@@ -47,7 +47,7 @@ public class StreamInfo {
      * @param internalStreamInfo Internal stream information.
      */
     public StreamInfo(String id, String alias, StreamType streamType, ConsumerMode accessMode,
-            List<String> internalStreamInfo) {
+        List<String> internalStreamInfo) {
 
         this.id = id;
         this.alias = alias;
@@ -102,6 +102,22 @@ public class StreamInfo {
      */
     public List<String> getInternalStreamInfo() {
         return this.internalStreamInfo;
+    }
+
+    /**
+     * Adds a new specific stream information.
+     * 
+     * @param msg New specific stream information.
+     */
+    public void addInternalStreamInfo(String msg) {
+        this.internalStreamInfo.add(msg);
+    }
+
+    /**
+     * Clears all the specific stream information.
+     */
+    public void clearInternalStreamInfo() {
+        this.internalStreamInfo.clear();
     }
 
     /**

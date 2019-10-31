@@ -125,8 +125,8 @@ public class DistroStreamServer extends Thread {
         LOGGER.debug("Processing requests...");
         while (this.keepRunning) {
             try (Socket socket = listener.accept();
-                    Scanner in = new Scanner(socket.getInputStream());
-                    PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
+                Scanner in = new Scanner(socket.getInputStream());
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
 
                 while (in.hasNextLine()) {
                     // Get message
@@ -177,10 +177,7 @@ public class DistroStreamServer extends Thread {
                 StreamType streamType = StreamType.valueOf(content[1].trim().toUpperCase());
                 ConsumerMode accessMode = ConsumerMode.valueOf(content[2].trim().toUpperCase());
                 String alias = content[3].trim();
-                List<String> internalStreamInfo = new LinkedList<>();
-                for (int i = 4; i < content.length; ++i) {
-                    internalStreamInfo.add(content[i].trim());
-                }
+                List<String> internalStreamInfo = parseInternalStreamInfo(content);
                 answer = registerStream(alias, streamType, accessMode, internalStreamInfo);
                 break;
             case STREAM_STATUS:
@@ -203,6 +200,12 @@ public class DistroStreamServer extends Thread {
                 String pollStreamId = content[1].trim();
                 answer = pollFromStream(pollStreamId);
                 break;
+            case PUBLISH:
+                assert content.length == 3;
+                String publishStreamId = content[1].trim();
+                String pubMessage = content[2].trim();
+                answer = publishToStream(publishStreamId, pubMessage);
+                break;
             case STOP:
                 // This request is only self-emitted (never received through clients)
                 assert content.length == 1;
@@ -214,8 +217,17 @@ public class DistroStreamServer extends Thread {
         return answer;
     }
 
+    private List<String> parseInternalStreamInfo(String[] content) {
+        List<String> internalStreamInfo = new LinkedList<>();
+        for (int i = 4; i < content.length; ++i) {
+            internalStreamInfo.add(content[i].trim());
+        }
+
+        return internalStreamInfo;
+    }
+
     private String registerStream(String alias, StreamType streamType, ConsumerMode accessMode,
-            List<String> internalStreamInfo) {
+        List<String> internalStreamInfo) {
         if (alias != null && !alias.isEmpty() && !"null".equals(alias) && !"None".equals(alias)) {
             // Retrieve stream by alias
             String id = this.registeredStreamAlias.get(alias);
@@ -233,14 +245,13 @@ public class DistroStreamServer extends Thread {
                 return id;
             }
         } else {
-            // Register new stream
-            String id = addNewStream(alias, streamType, accessMode, internalStreamInfo);
-            return id;
+            // Register new stream (without alias, no need to store it)
+            return addNewStream(alias, streamType, accessMode, internalStreamInfo);
         }
     }
 
     private String addNewStream(String alias, StreamType streamType, ConsumerMode accessMode,
-            List<String> internalStreamInfo) {
+        List<String> internalStreamInfo) {
 
         String id = UUID.randomUUID().toString();
 
@@ -314,8 +325,7 @@ public class DistroStreamServer extends Thread {
                 LOGGER.warn("Skipping poll on OBJECT stream with ID = " + streamId);
                 return "";
             case PSCO:
-                LOGGER.warn("Skipping poll on PSCO stream with ID = " + streamId);
-                return "";
+                return pollPscoStream(streamInfo);
         }
 
         return "";
@@ -369,6 +379,60 @@ public class DistroStreamServer extends Thread {
         return newFilePaths.stream().map(s -> String.valueOf(s)).collect(Collectors.joining(" ", "", ""));
     }
 
+    private String pollPscoStream(StreamInfo streamInfo) {
+        if (DEBUG) {
+            LOGGER.debug("Polling new PSCOs");
+        }
+        List<String> internalStreamInfo = streamInfo.getInternalStreamInfo();
+        String newPscos = String.join(" ", internalStreamInfo);
+        streamInfo.clearInternalStreamInfo();
+
+        // Log information
+        if (DEBUG) {
+            LOGGER.debug("Polled new pscos: " + newPscos);
+        }
+
+        return newPscos;
+    }
+
+    private String publishToStream(String streamId, String message) {
+        StreamInfo streamInfo = this.registeredStreams.get(streamId);
+
+        // Check if stream is registered
+        if (streamInfo == null) {
+            LOGGER.warn("Skipping publish on unregistered stream with ID = " + streamId);
+            return "";
+        }
+
+        // Check stream type
+        switch (streamInfo.getStreamType()) {
+            case FILE:
+                LOGGER.warn("Skipping publish on FILE stream with ID = " + streamId);
+                return "";
+            case OBJECT:
+                LOGGER.warn("Skipping poll on OBJECT stream with ID = " + streamId);
+                return "";
+            case PSCO:
+                return publishPscoStream(streamInfo, message);
+        }
+
+        return "";
+    }
+
+    private String publishPscoStream(StreamInfo streamInfo, String message) {
+        if (DEBUG) {
+            LOGGER.debug("Adding new PSCO message: " + message);
+        }
+
+        streamInfo.addInternalStreamInfo(message);
+
+        // Log information
+        if (DEBUG) {
+            LOGGER.debug("Registered new PSCO message");
+        }
+        return "DONE";
+    }
+
     private void setStopFlag() {
         LOGGER.info("DS Server marked to stop");
         this.keepRunning = false;
@@ -378,7 +442,7 @@ public class DistroStreamServer extends Thread {
         // Enqueue petition to wake up internal thread
         StopRequest sr = new StopRequest();
         try (Socket socket = new Socket(this.serverName, this.serverPort);
-                PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
             // Send petition
             String reqMsg = sr.getRequestMessage();
             out.println(reqMsg);

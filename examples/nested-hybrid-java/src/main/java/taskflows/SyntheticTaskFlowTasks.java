@@ -23,6 +23,14 @@ import mains.MyElement;
 
 public class SyntheticTaskFlowTasks {
 
+    /**
+     * Processes the given element.
+     * 
+     * @param input Element to process.
+     * @param sleepBaseTime Process' base sleep time.
+     * @param sleepRandomRange Sleep random range.
+     * @return The output after processing the element.
+     */
     public static MyElement mapTask(MyElement input, int sleepBaseTime, int sleepRandomRange) {
         // Sleep to simulate computation
         try {
@@ -40,6 +48,14 @@ public class SyntheticTaskFlowTasks {
         return output;
     }
 
+    /**
+     * Merges the two given elements into the first one.
+     * 
+     * @param elem1 First element to merge.
+     * @param elem2 Second element to merge.
+     * @param sleepBaseTime Merge's base sleep time.
+     * @param sleepRandomRange Sleep random range.
+     */
     public static void mergeTask(MyElement elem1, MyElement elem2, int sleepBaseTime, int sleepRandomRange) {
         // Sleep to simulate computation
         try {

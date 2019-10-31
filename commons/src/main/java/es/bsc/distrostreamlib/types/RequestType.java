@@ -28,5 +28,6 @@ public enum RequestType {
     CLOSE_STREAM, // Marks an stream to be closed
     ADD_STREAM_WRITER, // Adds a new writer to the stream
     POLL, // Polls changes on a given stream
+    PUBLISH, // Publishes a new element on a given stream
     STOP; // Marks the server to stop
 }

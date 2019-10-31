@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>es.bsc</groupId>
 		<artifactId>distro-stream-lib</artifactId>
-		<version>1.1</version>
+		<version>1.2</version>
 		<!-- <relativePath>..</relativePath> -->
 	</parent>
 
@@ -65,7 +65,12 @@
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
-			<version>2.2.0</version>
+		</dependency>
+
+		<!-- PSCO Storage dependencies -->
+		<dependency>
+			<groupId>es.bsc.compss</groupId>
+			<artifactId>compss-storage</artifactId>
 		</dependency>
 	</dependencies>
 

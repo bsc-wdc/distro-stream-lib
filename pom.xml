@@ -7,7 +7,7 @@
 	<!-- GENERAL INFORMATION -->
 	<groupId>es.bsc</groupId>
 	<artifactId>distro-stream-lib</artifactId>
-	<version>1.1</version>
+	<version>1.2</version>
 	<packaging>pom</packaging>
 
 	<!-- PROJECT INFORMATION -->
@@ -28,6 +28,12 @@
 
 	<!-- PROPERTIES -->
 	<properties>
+		<!-- COMPSs version -->
+		<compss.version>2.5.rc1907</compss.version>
+
+		<!-- Kafka version -->
+		<kafka.version>2.2.0</kafka.version>
+
 		<!-- JUnit version -->
 		<junit.version>4.12</junit.version>
 
@@ -143,6 +149,27 @@
 				<artifactId>server</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+
+			<!-- COMPSs -->
+			<dependency>
+				<groupId>es.bsc.compss</groupId>
+				<artifactId>compss-api</artifactId>
+				<version>${compss.version}</version>
+			</dependency>
+
+			<!-- PSCO Storage dependencies -->
+			<dependency>
+				<groupId>es.bsc.compss</groupId>
+				<artifactId>compss-storage</artifactId>
+				<version>${compss.version}</version>
+			</dependency>
+
+			<!-- Kafka dependencies -->
+			<dependency>
+				<groupId>org.apache.kafka</groupId>
+				<artifactId>kafka-clients</artifactId>
+				<version>${kafka.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -169,5 +196,6 @@
 		<module>server</module>
 		<module>distro-stream</module>
 		<module>test</module>
+		<module>examples</module>
 	</modules>
 </project>

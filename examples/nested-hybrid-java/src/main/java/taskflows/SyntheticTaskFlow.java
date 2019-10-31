@@ -31,8 +31,8 @@ public class SyntheticTaskFlow {
         for (int i = 0; i < numElements; ++i) {
             MyElement input = tfargs.getElement(i);
             for (int j = 0; j < tfargs.getDepth(); ++j) {
-                outputs[i] = SyntheticTaskFlowTasks.mapTask(input, tfargs.getSleepBaseTime(),
-                        tfargs.getSleepRandomRange());
+                outputs[i] =
+                    SyntheticTaskFlowTasks.mapTask(input, tfargs.getSleepBaseTime(), tfargs.getSleepRandomRange());
             }
         }
 
@@ -46,13 +46,19 @@ public class SyntheticTaskFlow {
             int firstIndex = pendingIndexes.poll();
             int secondIndex = pendingIndexes.poll();
             SyntheticTaskFlowTasks.mergeTask(outputs[firstIndex], outputs[secondIndex], tfargs.getSleepBaseTime(),
-                    tfargs.getSleepRandomRange());
+                tfargs.getSleepRandomRange());
             pendingIndexes.add(firstIndex);
         }
 
         return outputs[pendingIndexes.poll()];
     }
 
+    /**
+     * Main function.
+     * 
+     * @param args Command line arguments.
+     * @throws Exception When the example raises any exception.
+     */
     public static void main(String[] args) {
         // Start application
         System.out.println("[INFO] Starting application");

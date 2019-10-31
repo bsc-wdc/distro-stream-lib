@@ -18,9 +18,10 @@ package timers;
 
 import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
 import es.bsc.distrostreamlib.exceptions.BackendException;
-import timers.types.MyObject;
 
 import java.util.List;
+
+import timers.types.MyObject;
 
 
 public class RuntimeTimersImpl {

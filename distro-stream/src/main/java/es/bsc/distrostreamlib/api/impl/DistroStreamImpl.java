@@ -18,7 +18,6 @@ package es.bsc.distrostreamlib.api.impl;
 
 import es.bsc.distrostreamlib.api.DistroStream;
 import es.bsc.distrostreamlib.client.DistroStreamClient;
-import es.bsc.distrostreamlib.exceptions.BackendException;
 import es.bsc.distrostreamlib.exceptions.RegistrationException;
 import es.bsc.distrostreamlib.loggers.Loggers;
 import es.bsc.distrostreamlib.requests.CloseStreamRequest;
@@ -116,26 +115,6 @@ public abstract class DistroStreamImpl<T> implements DistroStream<T> {
     public final StreamType getStreamType() {
         return this.streamType;
     }
-
-    /*
-     * PUBLISH METHODS
-     */
-
-    @Override
-    public abstract void publish(T message) throws BackendException;
-
-    @Override
-    public abstract void publish(List<T> messages) throws BackendException;
-
-    /*
-     * POLL METHODS
-     */
-
-    @Override
-    public abstract List<T> poll() throws BackendException;
-
-    @Override
-    public abstract List<T> poll(long timeout) throws BackendException;
 
     /*
      * CONTROL METHODS

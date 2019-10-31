@@ -30,14 +30,20 @@ public class NestedMultiSim {
     private static final int NUM_SIMULATIONS = 3;
 
 
+    /**
+     * Main function.
+     * 
+     * @param args Command line arguments.
+     * @throws Exception When the example raises any exception.
+     */
     public static void main(String[] args) throws Exception {
         // Start application
         System.out.println("[INFO] Starting application");
-        long start = System.currentTimeMillis();
+        final long start = System.currentTimeMillis();
 
         // Parse arguments
         System.out.println("[INFO] Parsing application arguments");
-        NestedMultiSimArguments nmargs = new NestedMultiSimArguments(args);
+        final NestedMultiSimArguments nmargs = new NestedMultiSimArguments(args);
 
         // Create streams
         System.out.println("[INFO] Creating streams");
@@ -52,11 +58,11 @@ public class NestedMultiSim {
         System.out.println("[INFO] Launching simulations");
         Integer[] evs = new Integer[NUM_SIMULATIONS];
         evs[0] = NESTED.simulation(streams.get(0), streams.get(1), streams.get(2), nmargs.getNumIterations(),
-                nmargs.getSimulationSleepBaseTime(), nmargs.getSimulationSleepRandomRange());
+            nmargs.getSimulationSleepBaseTime(), nmargs.getSimulationSleepRandomRange());
         evs[1] = NESTED.simulation(streams.get(1), streams.get(0), streams.get(2), nmargs.getNumIterations(),
-                nmargs.getSimulationSleepBaseTime(), nmargs.getSimulationSleepRandomRange());
+            nmargs.getSimulationSleepBaseTime(), nmargs.getSimulationSleepRandomRange());
         evs[2] = NESTED.simulation(streams.get(2), streams.get(0), streams.get(1), nmargs.getNumIterations(),
-                nmargs.getSimulationSleepBaseTime(), nmargs.getSimulationSleepRandomRange());
+            nmargs.getSimulationSleepBaseTime(), nmargs.getSimulationSleepRandomRange());
 
         // Synchronize
         System.out.println("[INFO] Waiting for simulations to finish");

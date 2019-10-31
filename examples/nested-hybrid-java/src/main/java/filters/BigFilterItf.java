@@ -16,14 +16,16 @@
  */
 package filters;
 
-import java.util.List;
-
 import es.bsc.compss.types.annotations.Constraints;
 import es.bsc.compss.types.annotations.Parameter;
 import es.bsc.compss.types.annotations.parameter.Direction;
 import es.bsc.compss.types.annotations.parameter.Type;
 import es.bsc.compss.types.annotations.task.Method;
+
 import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
+
+import java.util.List;
+
 import mains.MyElement;
 
 

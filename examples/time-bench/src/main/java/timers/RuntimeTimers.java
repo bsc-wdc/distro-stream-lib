@@ -19,10 +19,11 @@ package timers;
 import es.bsc.compss.api.COMPSs;
 import es.bsc.distrostreamlib.api.objects.ObjectDistroStream;
 import es.bsc.distrostreamlib.types.ConsumerMode;
-import timers.types.MyObject;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import timers.types.MyObject;
 
 
 public class RuntimeTimers {
@@ -30,6 +31,12 @@ public class RuntimeTimers {
     private static final int NUM_TASKS = 101;
 
 
+    /**
+     * Main function.
+     * 
+     * @param args Command line arguments.
+     * @throws Exception When the example raises any exception.
+     */
     public static void main(String[] args) throws Exception {
         // Start application
         System.out.println("[INFO] Starting application");

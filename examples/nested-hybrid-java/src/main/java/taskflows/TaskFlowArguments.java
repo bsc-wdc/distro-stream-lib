@@ -30,6 +30,11 @@ public class TaskFlowArguments {
     private final int sleepRandomRange;
 
 
+    /**
+     * Parses the command line arguments to an internal structure.
+     * 
+     * @param args Command line arguments.
+     */
     public TaskFlowArguments(String[] args) {
         assert (args.length >= 3);
 
@@ -60,10 +65,21 @@ public class TaskFlowArguments {
         return element;
     }
 
+    /**
+     * Returns the number of elements.
+     * 
+     * @return The number of elements.
+     */
     public int getNumElements() {
         return this.elements.size();
     }
 
+    /**
+     * Returns the element on the given position.
+     * 
+     * @param pos Element's position.
+     * @return Element on the given position or null if the position is not within ranges.
+     */
     public MyElement getElement(int pos) {
         if (pos < this.elements.size()) {
             return this.elements.get(pos);
@@ -71,14 +87,29 @@ public class TaskFlowArguments {
         return null;
     }
 
+    /**
+     * Returns the depth.
+     * 
+     * @return The depth.
+     */
     public int getDepth() {
         return this.depth;
     }
 
+    /**
+     * Returns the base sleep time.
+     * 
+     * @return The base sleep time.
+     */
     public int getSleepBaseTime() {
         return this.sleepBaseTime;
     }
 
+    /**
+     * Returns the sleep random range.
+     * 
+     * @return The sleep random range.
+     */
     public int getSleepRandomRange() {
         return this.sleepRandomRange;
     }

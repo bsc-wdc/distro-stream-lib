@@ -28,7 +28,8 @@ public interface NestedMultiSimItf {
 
     @COMPSs(runcompss = "$RUNCOMPSS", 
             appName = "simulations.Simulation", 
-            flags = "-d -g -t --summary --streaming=OBJECTS --streaming_master_name=localhost --streaming_master_port=49049",
+            flags = "-d -g -t --summary --streaming=OBJECTS --streaming_master_name=localhost" 
+            + " --streaming_master_port=49049",
             computingNodes = "${NESTED_COMPUTING_NODES}")
     @Constraints(computingUnits = "${CORES_SIMULATION}")
     Integer simulation(

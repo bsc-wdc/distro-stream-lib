@@ -31,6 +31,11 @@ public class SimulationArguments {
     private final int sleepRandomRange;
 
 
+    /**
+     * Parses the command line arguments to an internal structure.
+     * 
+     * @param args Command line arguments.
+     */
     public SimulationArguments(String[] args) {
         assert (args.length == 6);
 

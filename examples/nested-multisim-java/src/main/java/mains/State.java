@@ -28,19 +28,38 @@ public class State implements Serializable {
     private int foreignValue;
 
 
+    /**
+     * Creates a new State instance.
+     */
     public State() {
         this.localValue = 0;
         this.foreignValue = 0;
     }
 
+    /**
+     * Returns the local value.
+     * 
+     * @return The local value.
+     */
     public int getLocalValue() {
         return this.localValue;
     }
 
+    /**
+     * Returns the foreign value.
+     * 
+     * @return The foreign value.
+     */
     public int getForeignValue() {
         return this.foreignValue;
     }
 
+    /**
+     * Accumulates the local value.
+     * 
+     * @param sleepBaseTime Sleep time.
+     * @param sleepRandomRange Sleep random range.
+     */
     public void accumulateLocal(int sleepBaseTime, int sleepRandomRange) {
         // Accumulate
         this.localValue++;
@@ -56,6 +75,12 @@ public class State implements Serializable {
         }
     }
 
+    /**
+     * Accumulates the foreign value.
+     * 
+     * @param sleepBaseTime Sleep time.
+     * @param sleepRandomRange Sleep random range.
+     */
     public void accumulateForeign(int sleepBaseTime, int sleepRandomRange) {
         // Accumulate
         this.foreignValue++;

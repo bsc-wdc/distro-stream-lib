@@ -25,6 +25,11 @@ public class FilterArguments {
     private final int sleepRandomRange;
 
 
+    /**
+     * Parses the command line arguments to an internal structure.
+     * 
+     * @param args Command line arguments.
+     */
     public FilterArguments(String[] args) {
         assert (args.length == 5);
 
@@ -35,22 +40,47 @@ public class FilterArguments {
         this.sleepRandomRange = Integer.valueOf(args[4]);
     }
 
+    /**
+     * Returns the sensor's alias.
+     * 
+     * @return The sensor's alias.
+     */
     public String getAliasSensor() {
         return this.aliasSensor;
     }
 
+    /**
+     * Returns the filter alias.
+     * 
+     * @return The filter alias.
+     */
     public String getAliasFiltered() {
         return this.aliasFiltered;
     }
 
+    /**
+     * Returns the batch size.
+     * 
+     * @return The batch size.
+     */
     public int getBatchSize() {
         return this.batchSize;
     }
 
+    /**
+     * Returns the sleep base time.
+     * 
+     * @return The sleep base time.
+     */
     public int getSleepBaseTime() {
         return this.sleepBaseTime;
     }
 
+    /**
+     * Returns the sleep random range.
+     * 
+     * @return The sleep random range.
+     */
     public int getSleepRandomRange() {
         return this.sleepRandomRange;
     }
