@@ -42,6 +42,7 @@ REGISTER_STREAM = "REGISTER_STREAM"
 STREAM_STATUS = "STREAM_STATUS"
 CLOSE_STREAM = "CLOSE_STREAM"
 POLL = "POLL"
+PUBLISH = "PUBLISH"
 STOP = "STOP"
 
 
@@ -317,4 +318,35 @@ class PollRequest(Request):
     def get_request_msg(self):
         s = str(self.rt)
         s = s + " " + str(self.stream_id)
+        return s
+
+
+class PublishRequest(Request):
+    """
+    Request to publish a new element to the given stream.
+
+    Attributes:
+        - stream_id : Stream Id.
+            + type: UUID
+        - msg : Message to publish
+            + type: str
+    """
+
+    def __init__(self, stream_id, msg):
+        """
+        Creates a new PublishREquest instance.
+
+        :param stream_id: Stream Id.
+            + type: UUID
+        :param msg: Message to publish.
+            + type: str
+        """
+        super(PublishRequest, self).__init__(rt=PUBLISH)
+        self.stream_id = stream_id
+        self.msg = msg
+
+    def get_request_msg(self):
+        s = str(self.rt)
+        s = s + " " + str(self.stream_id)
+        s = s + " " + str(self.msg)
         return s

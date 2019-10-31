@@ -30,6 +30,7 @@ from pycompss.streams.types.requests import RegisterStreamRequest
 from pycompss.streams.types.requests import CloseStreamRequest
 from pycompss.streams.types.requests import StreamStatusRequest
 from pycompss.streams.types.requests import PollRequest
+from pycompss.streams.types.requests import PublishRequest
 from pycompss.streams.components.distro_stream_client import DistroStreamClientHandler
 
 #
@@ -346,7 +347,7 @@ class ObjectDistroStream(DistroStreamImpl):
         :raise RegistrationException: When client cannot register the stream into the server.
         """
         super(ObjectDistroStream, self).__init__(alias=alias,
-                                                 stream_type=FILE,
+                                                 stream_type=OBJECT,
                                                  access_mode=access_mode,
                                                  internal_stream_info=[])
         raise Exception("ERROR: ObjectDistroStream is not supported in Python")
@@ -359,6 +360,96 @@ class ObjectDistroStream(DistroStreamImpl):
 
     def poll(self, timeout=None):
         pass
+
+
+#
+# PscoDistroStream definition
+#
+
+class PscoDistroStream(DistroStreamImpl):
+    """
+    PSCO Distributed Stream implementation.
+
+    Attributes:
+
+    """
+
+    def __init__(self, alias=None, access_mode=AT_MOST_ONCE):
+        """
+        Creates a new PscoDistroStream instance.
+
+        :param alias: Stream alias.
+            + type: string
+        :param access_mode: Stream access mode.
+            + type: ConsumerMode
+        :raise RegistrationException: When client cannot register the stream into the server.
+        """
+        super(PscoDistroStream, self).__init__(alias=alias,
+                                               stream_type=PSCO,
+                                               access_mode=access_mode,
+                                               internal_stream_info=[])
+
+    def publish(self, message):
+        logger.info("Publishing new PSCO object...")
+        self._psco_publish(message)
+        logger.info("Publishing new PSCO object")
+
+    def publish_list(self, messages):
+        logger.info("Publishing new List of PSCOs...")
+        for msg in messages:
+            self._psco_publish(msg)
+        logger.info("Published new List of PSCOs")
+
+    def _psco_publish(self, psco):
+        # Persist the psco if its not
+        logger.debug("Persisting user PSCO...")
+        if psco.getID() is None:
+            import uuid
+            alias = str(uuid.uuid4())
+            psco.makePersistent(alias)
+        psco_id = psco.getID()
+
+        # Register the psco on the server
+        logger.debug("Registering PSCO publish...")
+        req = PublishRequest(self.id, psco_id)
+        DistroStreamClientHandler.request(req)
+
+        # Retrieve answer
+        req.wait_processed()
+        error = req.get_error_code()
+        if error != 0:
+            raise BackendException(error, req.get_error_msg())
+
+        # Parse answer
+        answer = req.get_response_msg()
+        if __debug__:
+            logger.debug("Publish stream answer: " + str(answer))
+
+    def poll(self, timeout=None):
+        logger.info("Polling new stream items...")
+
+        # Send request to server
+        req = PollRequest(self.id)
+        DistroStreamClientHandler.request(req)
+
+        # Retrieve answer
+        req.wait_processed()
+        error = req.get_error_code()
+        if error != 0:
+            raise BackendException(error, req.get_error_msg())
+
+        # Parse answer
+        info = req.get_response_msg()
+        if __debug__:
+            logger.debug("Retrieved stream items: " + str(info))
+
+        from pycompss.util.storages.persistent import get_by_id
+        retrieved_pscos = []
+        if info is not None and info and info != "null":
+            for psco_id in info.split():
+                psco = get_by_id(psco_id)
+                retrieved_pscos.append(psco)
+        return retrieved_pscos
 
 
 #
