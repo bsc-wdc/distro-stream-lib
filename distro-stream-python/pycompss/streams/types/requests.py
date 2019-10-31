@@ -249,6 +249,24 @@ class StopRequest(Request):
         return s
 
 
+class BootstrapServerRequest(Request):
+    """
+    Request to retrieve the bootstrap server information.
+
+    Attributes:
+    """
+
+    def __init__(self):
+        """
+        Creates a new BootstrapServerRequest instance.
+        """
+        super(BootstrapServerRequest, self).__init__(rt=BOOTSTRAP_SERVER)
+
+    def get_request_msg(self):
+        s = str(self.rt)
+        return s
+
+
 class StreamStatusRequest(Request):
     """
     Request to retrieve the status of the given stream.

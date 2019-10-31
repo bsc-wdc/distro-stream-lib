@@ -45,7 +45,6 @@ public class KafkaObjectSerializer implements Serializer<Object> {
     @Override
     public byte[] serialize(String arg0, Object arg1) {
         try (ByteArrayOutputStream bos = new ByteArrayOutputStream(); ObjectOutput out = new ObjectOutputStream(bos)) {
-
             out.writeObject(arg1);
             out.flush();
             return bos.toByteArray();

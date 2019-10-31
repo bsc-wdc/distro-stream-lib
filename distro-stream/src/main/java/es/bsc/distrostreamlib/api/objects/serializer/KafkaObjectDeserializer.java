@@ -46,7 +46,6 @@ public class KafkaObjectDeserializer implements Deserializer<Object> {
     @Override
     public Object deserialize(String arg0, byte[] arg1) {
         try (ByteArrayInputStream bis = new ByteArrayInputStream(arg1); ObjectInput in = new ObjectInputStream(bis)) {
-
             return in.readObject();
         } catch (IOException | ClassNotFoundException e) {
             LOGGER.error("ERROR: Exception deserializing object " + Arrays.hashCode(arg1), e);
