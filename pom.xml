@@ -7,7 +7,7 @@
 	<!-- GENERAL INFORMATION -->
 	<groupId>es.bsc</groupId>
 	<artifactId>distro-stream-lib</artifactId>
-	<version>1.1</version>
+	<version>1.2</version>
 	<packaging>pom</packaging>
 
 	<!-- PROJECT INFORMATION -->
