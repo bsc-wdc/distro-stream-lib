@@ -57,6 +57,7 @@ class ODSPublisher(object):
         # Create internal producer
         import socket
         from kafka import KafkaProducer
+
         bootstrap_server_info = str(bootstrap_server).split(":")
         bootstrap_server_ip = str(socket.gethostbyname(bootstrap_server_info[0]))
         bootstrap_server_port = str(bootstrap_server_info[1])
@@ -85,9 +86,20 @@ class ODSPublisher(object):
         """
         if __debug__:
             logger.debug("Publishing Message to " + str(topic) + " ...")
+
+        # Fix topic if required
+        if type(topic) == bytes:
+            topic = topic.decode('utf-8')
+        else:
+            topic = str(topic)
+
+        # Serialize message
         import pickle
         serialized_message = pickle.dumps(message)
+
+        # Send message
         self.kafka_producer.send(topic, value=serialized_message)
+        self.kafka_producer.flush()
         logger.debug("DONE Publishing Message")
 
 
@@ -121,7 +133,10 @@ class ODSConsumer(object):
         """
         logger.debug("Creating Consumer...")
 
-        self.topic = topic
+        if type(topic) == bytes:
+            self.topic = topic.decode('utf-8')
+        else:
+            self.topic = str(topic)
         self.access_mode = access_mode
 
         # Parse configuration
@@ -129,6 +144,7 @@ class ODSConsumer(object):
         # Create internal consumer
         import socket
         from kafka import KafkaConsumer
+
         bootstrap_server_info = str(bootstrap_server).split(":")
         bootstrap_server_ip = str(socket.gethostbyname(bootstrap_server_info[0]))
         bootstrap_server_port = str(bootstrap_server_info[1])
